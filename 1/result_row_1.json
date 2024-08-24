@@ -1,0 +1,188 @@
+{
+    "types": {
+        "A customer": "Actor",
+        "brings in": "Activity",
+        "a defective computer": "Activity Data",
+        "the CRS": "Actor",
+        "checks": "Activity",
+        "the defect": "Activity Data",
+        "hands out": "Activity",
+        "a repair cost calculation": "Activity Data",
+        "If": "XOR Gateway",
+        "the customer decides that the costs are acceptable": "Condition Specification",
+        "otherwise": "XOR Gateway",
+        "she": "Actor",
+        "takes": "Activity",
+        "her computer": "Activity Data",
+        "home unrepaired": "Further Specification",
+        "check": "Activity",
+        "repair": "Activity",
+        "the hardware": "Activity Data",
+        "whereas": "AND Gateway",
+        "configures": "Activity",
+        "the software": "Activity Data",
+        "the proper system functionality": "Activity Data",
+        "tested": "Activity",
+        "an error is detected": "Condition Specification",
+        "another arbitrary repair activity": "Activity Data",
+        "executed": "Activity"
+    },
+    "answer": [
+        [
+            "brings in",
+            "actor performer",
+            "A customer"
+        ],
+        [
+            "brings in",
+            "flow",
+            "checks"
+        ],
+        [
+            "checks",
+            "uses",
+            "the defect"
+        ],
+        [
+            "checks",
+            "actor performer",
+            "the CRS"
+        ],
+        [
+            "checks",
+            "flow",
+            "hands out"
+        ],
+        [
+            "hands out",
+            "uses",
+            "a repair cost calculation"
+        ],
+        [
+            "hands out",
+            "actor performer",
+            "the CRS"
+        ],
+        [
+            "hands out",
+            "flow",
+            "If"
+        ],
+        [
+            "If",
+            "flow",
+            "the customer decides that the costs are acceptable"
+        ],
+        [
+            "If",
+            "same gateway",
+            "otherwise"
+        ],
+        [
+            "the customer decides that the costs are acceptable",
+            "flow",
+            "whereas"
+        ],
+        [
+            "otherwise",
+            "flow",
+            "takes"
+        ],
+        [
+            "takes",
+            "uses",
+            "her computer"
+        ],
+        [
+            "takes",
+            "further specification",
+            "home unrepaired"
+        ],
+        [
+            "takes",
+            "actor performer",
+            "she"
+        ],
+        [
+            "check",
+            "uses",
+            "the hardware"
+        ],
+        [
+            "check",
+            "flow",
+            "repair"
+        ],
+        [
+            "repair",
+            "uses",
+            "the hardware"
+        ],
+        [
+            "repair",
+            "flow",
+            "tested"
+        ],
+        [
+            "whereas",
+            "flow",
+            "check"
+        ],
+        [
+            "whereas",
+            "flow",
+            "checks"
+        ],
+        [
+            "checks",
+            "uses",
+            "the software"
+        ],
+        [
+            "checks",
+            "flow",
+            "configures"
+        ],
+        [
+            "configures",
+            "uses",
+            "the software"
+        ],
+        [
+            "configures",
+            "flow",
+            "tested"
+        ],
+        [
+            "tested",
+            "uses",
+            "the proper system functionality"
+        ],
+        [
+            "tested",
+            "flow",
+            "If"
+        ],
+        [
+            "If",
+            "flow",
+            "an error is detected"
+        ],
+        [
+            "If",
+            "same gateway",
+            "otherwise"
+        ],
+        [
+            "an error is detected",
+            "flow",
+            "executed"
+        ],
+        [
+            "executed",
+            "uses",
+            "another arbitrary repair activity"
+        ]
+    ],
+    "dictionary": "{(0, 0): 'A customer', (2, 0): 'brings in', (4, 0): 'a defective computer', (8, 0): 'the CRS', (10, 0): 'checks', (11, 0): 'the defect', (14, 0): 'hands out', (16, 0): 'a repair cost calculation', (0, 1): 'If', (1, 1): 'the customer decides that the costs are acceptable', (14, 1): 'otherwise', (15, 1): 'she', (16, 1): 'takes', (17, 1): 'her computer', (19, 1): 'home unrepaired', (5, 3): 'check', (7, 3): 'repair', (8, 3): 'the hardware', (11, 3): 'whereas', (15, 3): 'checks', (17, 3): 'configures', (18, 3): 'the software', (6, 4): 'the proper system functionality', (11, 4): 'tested', (0, 5): 'If', (1, 5): 'an error is detected', (5, 5): 'another arbitrary repair activity', (10, 5): 'executed', (12, 5): 'otherwise'}"
+}
