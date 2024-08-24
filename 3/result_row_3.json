@@ -1,31 +1,31 @@
 {
     "types": {
-        "a company": "Actor",
+        "a company": "Actor",✅
         "makes": "Activity",
         "the decision to go public": "Activity Data",
-        "select": "Activity",
+        "select": "Activity",✅
         "the underwriters": "Activity Data",
         "They": "Actor",
-        "prepare": "Activity",
+        "prepare": "Activity",✅
         "a registration statement for the approval of the Securities and Exchange Commission ( SEC )": "Activity Data",
         "they": "Actor",
-        "check": "Activity",
+        "check": "Activity",✅
         "that the issue complies with the so-called blue-sky laws of each state that regulate sales of securities within the state": "Further Specification",
-        "While": "AND Gateway",
+        "While": "AND Gateway",✅
         "awaiting": "Activity",
         "approval": "Activity Data",
-        "underwriters": "Actor",
-        "firm up": "Activity",
+        "underwriters": "Actor",✅
+        "firm up": "Activity",✅
         "the issue price": "Activity Data",
-        "arrange": "Activity",
+        "arrange": "Activity",✅
         "a road show": "Activity Data",
         "to talk to potential investors": "Further Specification",
-        "receive": "Activity",
+        "receive": "Activity",✅
         "clearance": "Activity Data",
-        "fix": "Activity",
-        "enter": "Activity",
+        "fix": "Activity",✅
+        "enter": "Activity",✅
         "into a firm commitment to buy the stock": "Activity Data",
-        "offer": "Activity",
+        "offer": "Activity",✅
         "it": "Activity Data",
         "the public": "Actor"
     },
@@ -47,17 +47,17 @@
         ],
         [
             "select",
-            "uses",
+            "uses",✅
             "the underwriters"
         ],
         [
             "select",
-            "flow",
+            "flow",✅
             "prepare"
         ],
         [
             "prepare",
-            "uses",
+            "uses",✅
             "a registration statement for the approval of the Securities and Exchange Commission ( SEC )"
         ],
         [
@@ -67,7 +67,7 @@
         ],
         [
             "prepare",
-            "flow",
+            "flow",✅
             "check"
         ],
         [
@@ -87,7 +87,7 @@
         ],
         [
             "While",
-            "flow",
+            "flow",✅
             "firm up"
         ],
         [
@@ -117,7 +117,7 @@
         ],
         [
             "firm up",
-            "flow",
+            "flow",✅
             "arrange"
         ],
         [
@@ -133,7 +133,7 @@
         [
             "arrange",
             "flow",
-            "receive"
+            "receive"✅
         ],
         [
             "arrange",
@@ -143,7 +143,7 @@
         [
             "receive",
             "flow",
-            "fix"
+            "fix"✅
         ],
         [
             "receive",
@@ -152,12 +152,12 @@
         ],
         [
             "fix",
-            "uses",
+            "uses",✅
             "the issue price"
         ],
         [
             "fix",
-            "actor performer",
+            "actor performer",✅
             "underwriters"
         ],
         [
@@ -182,7 +182,7 @@
         ],
         [
             "offer",
-            "uses",
+            "uses",✅
             "it"
         ],
         [
@@ -192,7 +192,7 @@
         ],
         [
             "offer",
-            "actor recipient",
+            "actor recipient",✅
             "the public"
         ]
     ],

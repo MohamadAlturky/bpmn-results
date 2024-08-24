@@ -1,28 +1,28 @@
 {
     "types": {
-        "A customer": "Actor",
+        "A customer": "Actor",✅
         "brings in": "Activity",
         "a defective computer": "Activity Data",
-        "the CRS": "Actor",
+        "the CRS": "Actor",✅
         "checks": "Activity",
         "the defect": "Activity Data",
-        "hands out": "Activity",
+        "hands out": "Activity",✅
         "a repair cost calculation": "Activity Data",
         "If": "XOR Gateway",
-        "the customer decides that the costs are acceptable": "Condition Specification",
+        "the customer decides that the costs are acceptable": "Condition Specification",T
         "otherwise": "XOR Gateway",
-        "she": "Actor",
-        "takes": "Activity",
+        "she": "Actor",✅
+        "takes": "Activity",✅
         "her computer": "Activity Data",
         "home unrepaired": "Further Specification",
-        "check": "Activity",
-        "repair": "Activity",
+        "check": "Activity",✅
+        "repair": "Activity",✅
         "the hardware": "Activity Data",
         "whereas": "AND Gateway",
-        "configures": "Activity",
+        "configures": "Activity",✅
         "the software": "Activity Data",
         "the proper system functionality": "Activity Data",
-        "tested": "Activity",
+        "tested": "Activity",✅
         "an error is detected": "Condition Specification",
         "another arbitrary repair activity": "Activity Data",
         "executed": "Activity"
@@ -70,7 +70,7 @@
         ],
         [
             "If",
-            "flow",
+            "flow",✅
             "the customer decides that the costs are acceptable"
         ],
         [
@@ -80,7 +80,7 @@
         ],
         [
             "the customer decides that the costs are acceptable",
-            "flow",
+            "flow",✅
             "whereas"
         ],
         [
@@ -110,7 +110,7 @@
         ],
         [
             "check",
-            "flow",
+            "flow",✅
             "repair"
         ],
         [
@@ -120,17 +120,17 @@
         ],
         [
             "repair",
-            "flow",
+            "flow",✅
             "tested"
         ],
         [
             "whereas",
-            "flow",
+            "flow",✅
             "check"
         ],
         [
             "whereas",
-            "flow",
+            "flow",✅
             "checks"
         ],
         [
@@ -140,7 +140,7 @@
         ],
         [
             "checks",
-            "flow",
+            "flow",✅
             "configures"
         ],
         [
@@ -150,7 +150,7 @@
         ],
         [
             "configures",
-            "flow",
+            "flow",✅
             "tested"
         ],
         [
@@ -160,12 +160,12 @@
         ],
         [
             "tested",
-            "flow",
+            "flow",✅
             "If"
         ],
         [
             "If",
-            "flow",
+            "flow",✅
             "an error is detected"
         ],
         [
@@ -175,7 +175,7 @@
         ],
         [
             "an error is detected",
-            "flow",
+            "flow",✅
             "executed"
         ],
         [
@@ -185,4 +185,4 @@
         ]
     ],
     "dictionary": "{(0, 0): 'A customer', (2, 0): 'brings in', (4, 0): 'a defective computer', (8, 0): 'the CRS', (10, 0): 'checks', (11, 0): 'the defect', (14, 0): 'hands out', (16, 0): 'a repair cost calculation', (0, 1): 'If', (1, 1): 'the customer decides that the costs are acceptable', (14, 1): 'otherwise', (15, 1): 'she', (16, 1): 'takes', (17, 1): 'her computer', (19, 1): 'home unrepaired', (5, 3): 'check', (7, 3): 'repair', (8, 3): 'the hardware', (11, 3): 'whereas', (15, 3): 'checks', (17, 3): 'configures', (18, 3): 'the software', (6, 4): 'the proper system functionality', (11, 4): 'tested', (0, 5): 'If', (1, 5): 'an error is detected', (5, 5): 'another arbitrary repair activity', (10, 5): 'executed', (12, 5): 'otherwise'}"
-}
+  }

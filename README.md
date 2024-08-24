@@ -9,5 +9,9 @@
 ## each folder with number {num} contains four files
 - row_{num}.json: is the record from PET dataset
 - row_{num}.txt: contains the process description
-- row_{num}.json: contains converted json from PET to more understandable object
+- reult_row_{num}.json: contains converted json from PET to more understandable object
 - generated_row_{num}.json: contains the generated diagram by our model
+
+# Notes
+## we put ✅ in the reult_row_{num}.json file if the bpmn component found
+ 

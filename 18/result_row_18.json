@@ -1,23 +1,23 @@
 {
     "types": {
         "At": "Activity Data",
-        "the customer": "Actor",
+        "the customer": "Actor",✅
         "perceives": "Activity",
         "her subscribed service": "Activity Data",
         "has degraded": "Further Specification",
         "A list with all the problem parameters": "Activity Data",
         "sent": "Activity",
-        "the Customer Service department of TELECO": "Actor",
+        "the Customer Service department of TELECO": "Actor",✅
         "an employee": "Actor",
-        "enters": "Activity",
+        "enters": "Activity",✅
         "a problem report": "Activity Data",
         "the problem report": "Activity Data",
         "compared": "Activity",
-        "to the customer SLA": "Further Specification",
+        "to the customer SLA": "Further Specification",✅
         "identify": "Activity",
         "the details of the service degradation": "Activity Data",
         "the necessary counter measures": "Activity Data",
-        "determined": "Activity",
+        "determined": "Activity",✅
         "An electronic service": "Actor",
         "determines": "Activity",
         "the significance of the customer": "Activity Data",
@@ -28,45 +28,45 @@
         "the customer is of certain significance": "Condition Specification",
         "otherwise": "XOR Gateway",
         "a detailed problem report": "Activity Data",
-        "created": "Activity",
+        "created": "Activity",✅
         "The detailed problem report": "Activity Data",
         "Service Management": "Actor",
         "deals": "Activity",
         "violations of quality in services": "Activity Data",
         "Service management": "Actor",
-        "investigates": "Activity",
+        "investigates": "Activity",✅
         "the problem": "Activity Data",
         "Service Management assesses the problem to be not analyzable by themselves": "Condition Specification",
         "the detailed problem report": "Activity Data",
         "sent out": "Activity",
-        "Resource Provisioning": "Actor",
+        "Resource Provisioning": "Actor",✅
         "If": "XOR Gateway",
         "Service Management is sure they can analyze it": "Condition Specification",
         "they": "Actor",
         "perform": "Activity",
         "the analysis": "Activity Data",
-        "create": "Activity",
+        "create": "Activity",✅
         "a trouble report": "Activity Data",
-        "receives": "Activity",
+        "receives": "Activity",✅
         "it": "Activity Data",
-        "checked": "Activity",
+        "checked": "Activity",✅
         "no problems are detected": "Condition Specification",
         "a notification": "Activity Data",
         "a problem is detected": "Condition Specification",
         "this": "Activity Data",
-        "analyzed": "Activity",
+        "analyzed": "Activity",✅
         "trouble report": "Activity Data",
         "the normal execution notification": "Activity Data",
         "included": "Activity",
         "sent back": "Activity",
-        "prepares": "Activity",
+        "prepares": "Activity",✅
         "the final status report": "Activity Data",
         "For the case": "XOR Gateway",
         "no problem was detected at all": "Condition Specification",
         "the actual service performance": "Activity Data",
-        "the Customer Service": "Actor",
+        "the Customer Service": "Actor",✅
         "minor corrective actions are required": "Condition Specification",
-        "undertake": "Activity",
+        "undertake": "Activity",✅
         "corrective actions": "Activity Data",
         "the problem resolution report": "Activity Data",
         "Customer Service": "Actor",
@@ -76,8 +76,8 @@
         "the restoration request": "Activity Data",
         "received": "Activity",
         "all possible errors": "Activity Data",
-        "tracked": "Activity",
-        "undertaken": "Activity",
+        "tracked": "Activity",✅
+        "undertaken": "Activity",✅
         "a trouble-shooting report": "Activity Data",
         "This report": "Activity Data",
         "The trouble-shooting report": "Activity Data",
@@ -86,7 +86,7 @@
         "a report": "Activity Data",
         "an SLA violation rebate": "Activity Data",
         "reported": "Activity",
-        "Billing & Collections": "Actor",
+        "Billing & Collections": "Actor",✅
         "who": "Actor",
         "adjust": "Activity",
         "the billing": "Activity Data",
@@ -127,7 +127,7 @@
         ],
         [
             "sent",
-            "flow",
+            "flow",✅
             "enters"
         ],
         [
@@ -137,12 +137,12 @@
         ],
         [
             "enters",
-            "actor performer",
+            "actor performer",✅
             "an employee"
         ],
         [
             "enters",
-            "flow",
+            "flow",✅
             "compared"
         ],
         [
@@ -232,7 +232,7 @@
         ],
         [
             "otherwise",
-            "flow",
+            "flow",✅
             "created"
         ],
         [
@@ -242,7 +242,7 @@
         ],
         [
             "created",
-            "flow",
+            "flow",✅
             "sent"
         ],
         [
@@ -272,17 +272,17 @@
         ],
         [
             "deals",
-            "flow",
+            "flow",✅
             "investigates"
         ],
         [
             "investigates",
-            "actor performer",
+            "actor performer",✅
             "Service management"
         ],
         [
             "investigates",
-            "flow",
+            "flow",✅
             "In case"
         ],
         [
@@ -372,7 +372,7 @@
         ],
         [
             "receives",
-            "flow",
+            "flow",✅
             "checked"
         ],
         [
@@ -387,7 +387,7 @@
         ],
         [
             "If",
-            "flow",
+            "flow",✅
             "no problems are detected"
         ],
         [
@@ -397,7 +397,7 @@
         ],
         [
             "no problems are detected",
-            "flow",
+            "flow",✅
             "created"
         ],
         [
@@ -527,12 +527,12 @@
         ],
         [
             "minor corrective actions are required",
-            "flow",
+            "flow",✅
             "undertake"
         ],
         [
             "undertake",
-            "uses",
+            "uses",✅
             "corrective actions"
         ],
         [
@@ -572,12 +572,12 @@
         ],
         [
             "For the case",
-            "flow",
+            "flow",✅
             "automatic resource restoration from Resource Provisioning is required"
         ],
         [
             "automatic resource restoration from Resource Provisioning is required",
-            "flow",
+            "flow",✅
             "create"
         ],
         [
@@ -712,7 +712,7 @@
         ],
         [
             "receives",
-            "actor recipient",
+            "actor recipient",✅
             "Customer Service"
         ],
         [
@@ -792,7 +792,7 @@
         ],
         [
             "receives",
-            "actor performer",
+            "actor performer",✅
             "Customer Service"
         ]
     ],

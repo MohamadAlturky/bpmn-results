@@ -2,35 +2,35 @@
     "types": {
         "a guest": "Actor",
         "calls": "Activity",
-        "room service": "Actor",
-        "the room-service manager": "Actor",
-        "takes down": "Activity",
+        "room service": "Actor",✅
+        "the room-service manager": "Actor", ✅
+        "takes down": "Activity",✅
         "the order": "Activity Data",
-        "She": "Actor",
-        "submits": "Activity",
+        "She": "Actor",✅
+        "submits": "Activity",✅
         "an order ticket": "Activity Data",
-        "the kitchen": "Actor",
-        "to begin preparing the food": "Further Specification",
-        "gives": "Activity",
+        "the kitchen": "Actor",✅
+        "to begin preparing the food": "Further Specification",✅
+        "gives": "Activity",✅
         "an order": "Activity Data",
-        "the sommelier": "Actor",
-        "to fetch wine from the cellar and to prepare any other alcoholic beverages": "Further Specification",
+        "the sommelier": "Actor",✅
+        "to fetch wine from the cellar and to prepare any other alcoholic beverages": "Further Specification",✅
         "she": "Actor",
-        "assigns": "Activity",
-        "the waiter": "Actor",
-        "While": "AND Gateway",
+        "assigns": "Activity",✅
+        "the waiter": "Actor",✅✅
+        "While": "AND Gateway",✅
         "doing": "Activity",
         "their tasks": "Activity Data",
-        "readies": "Activity",
+        "readies": "Activity",✅
         "a cart": "Activity Data",
-        "delivers": "Activity",
+        "delivers": "Activity",✅
         "it": "Activity Data",
         "the guest \u2019 s room": "Actor",
         "returning": "Activity",
         "to the room-service station": "Further Specification",
-        "debits": "Activity",
+        "debits": "Activity",✅
         "the guest \u2019 s account": "Activity Data",
-        "The waiter": "Actor",
+        "The waiter": "Actor",✅✅
         "wait": "Activity",
         "to do the billing": "Activity Data",
         "if": "XOR Gateway",
@@ -63,7 +63,7 @@
             "the room-service manager"
         ],
         [
-            "takes down",
+            "takes down",✅
             "flow",
             "submits"
         ],
@@ -90,7 +90,7 @@
         [
             "submits",
             "further specification",
-            "to begin preparing the food"
+            "to begin preparing the food" ✅
         ],
         [
             "gives",
@@ -104,7 +104,7 @@
         ],
         [
             "gives",
-            "further specification",
+            "further specification",✅
             "to fetch wine from the cellar and to prepare any other alcoholic beverages"
         ],
         [
@@ -154,7 +154,7 @@
         ],
         [
             "doing",
-            "actor performer",
+            "actor performer",✅
             "the kitchen"
         ],
         [
@@ -164,7 +164,7 @@
         ],
         [
             "doing",
-            "actor performer",
+            "actor performer",✅
             "the sommelier"
         ],
         [
@@ -179,7 +179,7 @@
         ],
         [
             "readies",
-            "flow",
+            "flow",✅
             "delivers"
         ],
         [
@@ -189,7 +189,7 @@
         ],
         [
             "delivers",
-            "actor performer",
+            "actor performer",✅
             "the waiter"
         ],
         [
@@ -229,7 +229,7 @@
         ],
         [
             "debits",
-            "actor performer",
+            "actor performer",✅
             "the waiter"
         ],
         [
@@ -245,11 +245,11 @@
         [
             "if",
             "flow",
-            "debits"
+            "debits"✅
         ],
         [
             "if",
-            "flow",
+            "flow",✅
             "he has another order to prepare or deliver"
         ],
         [
@@ -259,4 +259,4 @@
         ]
     ],
     "dictionary": "{(1, 1): 'a guest', (3, 1): 'calls', (4, 1): 'room service', (10, 1): 'the room-service manager', (13, 1): 'takes down', (15, 1): 'the order', (0, 2): 'She', (2, 2): 'submits', (3, 2): 'an order ticket', (7, 2): 'the kitchen', (9, 2): 'to begin preparing the food', (0, 3): 'She', (2, 3): 'gives', (3, 3): 'an order', (6, 3): 'the sommelier', (16, 3): 'to fetch wine from the cellar and to prepare any other alcoholic beverages', (2, 5): 'she', (3, 5): 'assigns', (4, 5): 'the order', (7, 5): 'the waiter', (0, 6): 'While', (1, 6): 'the kitchen', (4, 6): 'the sommelier', (7, 6): 'doing', (8, 6): 'their tasks', (11, 6): 'the waiter', (13, 6): 'readies', (14, 6): 'a cart', (11, 8): 'the waiter', (13, 8): 'delivers', (14, 8): 'it', (16, 8): 'the guest \u2019 s room', (1, 9): 'returning', (2, 9): 'to the room-service station', (7, 9): 'the waiter', (9, 9): 'debits', (10, 9): 'the guest \u2019 s account', (0, 10): 'The waiter', (3, 10): 'wait', (4, 10): 'to do the billing', (8, 10): 'if', (9, 10): 'he has another order to prepare or deliver'}"
-}
+  }

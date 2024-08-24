@@ -3,54 +3,54 @@
         "the customer": "Actor",
         "transmits": "Activity",
         "his data": "Activity Data",
-        "the customer service department": "Actor",
+        "the customer service department": "Actor",✅
         "The customer data": "Activity Data",
         "received": "Activity",
         "customer service": "Actor",
         "a customer data object": "Activity Data",
-        "entered": "Activity",
-        "into the CRM system": "Further Specification",
+        "entered": "Activity",✅
+        "into the CRM system": "Further Specification",✅
         "it": "Activity Data",
-        "compared": "Activity",
+        "compared": "Activity",✅
         "the internal customer data base": "Activity Data",
-        "checked": "Activity",
-        "for completeness and plausibility": "Further Specification",
-        "In case of": "XOR Gateway",
+        "checked": "Activity",✅
+        "for completeness and plausibility": "Further Specification",✅
+        "In case of": "XOR Gateway",✅
         "any errors": "Condition Specification",
         "these": "Activity Data",
         "corrected": "Activity",
         "In case": "XOR Gateway",
         "the customer does not exist in the customer data base": "Condition Specification",
         "a new customer object": "Activity Data",
-        "created": "Activity",
-        "prepare": "Activity",
-        "the contract documents for the power supplier switch": "Activity Data",
-        "check": "Activity",
+        "created": "Activity",✅
+        "prepare": "Activity",✅
+        "the contract documents for the power supplier switch": "Activity Data",✅
+        "check": "Activity",✅
         "the contract documents": "Activity Data",
         "the CIS": "Actor",
         "a negative response": "Condition Specification",
         "the causing issues": "Activity Data",
-        "analyzed": "Activity",
+        "analyzed": "Activity",✅
         "resolved": "Activity",
         "generated": "Activity",
         "a positive response": "Condition Specification",
         "a confirmation document": "Activity Data",
         "sent out": "Activity",
-        "A request": "Activity Data",
-        "the grid operator": "Actor",
-        "The switch-over request": "Activity Data",
+        "A request": "Activity Data",✅
+        "the grid operator": "Actor",✅
+        "The switch-over request": "Activity Data",✅
         "a response comment": "Activity Data",
         "In the case of": "XOR Gateway",
-        "supplier concurrence": "Condition Specification",
-        "inform": "Activity",
+        "supplier concurrence": "Condition Specification",✅
+        "inform": "Activity",✅
         "all involved suppliers": "Actor",
         "demand": "Activity",
-        "the resolution of the conflict": "Activity Data",
+        "the resolution of the conflict": "Activity Data",✅
         "The grid operator": "Actor",
         "communicates": "Activity",
         "the old supplier": "Actor",
         "carries out": "Activity",
-        "the termination of the sales agreement": "Activity Data",
+        "the termination of the sales agreement": "Activity Data",✅
         "If": "XOR Gateway",
         "there are not any objections by the grid operator": "Condition Specification",
         "creates": "Activity",
@@ -58,20 +58,20 @@
         "The customer": "Actor",
         "the contract details": "Activity Data",
         "either": "XOR Gateway",
-        "withdraw": "Activity",
+        "withdraw": "Activity",✅
         "the switch contract": "Activity Data",
         "or": "XOR Gateway",
-        "confirm": "Activity",
-        "the power meter data": "Activity Data",
-        "the customer service": "Actor",
+        "confirm": "Activity",✅
+        "the power meter data": "Activity Data",✅
+        "the customer service": "Actor",✅
         "via messages containing a services consumption report": "Further Specification",
         "At the same time": "AND Gateway",
-        "computes": "Activity",
-        "the final billing": "Activity Data",
-        "sends": "Activity",
-        "receiving": "Activity",
+        "computes": "Activity",✅
+        "the final billing": "Activity Data",✅
+        "sends": "Activity",✅
+        "receiving": "Activity",✅
         "the meter data": "Activity Data",
-        "imports": "Activity"
+        "imports": "Activity"✅
     },
     "answer": [
         [
@@ -81,17 +81,17 @@
         ],
         [
             "transmits",
-            "actor performer",
+            "actor performer",✅
             "the customer"
         ],
         [
             "transmits",
-            "actor recipient",
+            "actor recipient",✅
             "the customer service department"
         ],
         [
             "transmits",
-            "flow",
+            "flow",✅
             "received"
         ],
         [
@@ -101,12 +101,12 @@
         ],
         [
             "received",
-            "flow",
+            "flow",✅
             "entered"
         ],
         [
             "received",
-            "actor recipient",
+            "actor recipient",✅
             "customer service"
         ],
         [
@@ -116,12 +116,12 @@
         ],
         [
             "entered",
-            "flow",
+            "flow",✅
             "compared"
         ],
         [
             "entered",
-            "further specification",
+            "further specification",✅
             "into the CRM system"
         ],
         [
@@ -131,7 +131,7 @@
         ],
         [
             "compared",
-            "flow",
+            "flow",✅
             "checked"
         ],
         [
@@ -161,7 +161,7 @@
         ],
         [
             "any errors",
-            "flow",
+            "flow",✅
             "corrected"
         ],
         [
@@ -196,12 +196,12 @@
         ],
         [
             "created",
-            "flow",
+            "flow",✅
             "prepare"
         ],
         [
             "prepare",
-            "uses",
+            "uses",✅
             "the contract documents for the power supplier switch"
         ],
         [
@@ -216,12 +216,12 @@
         ],
         [
             "check",
-            "uses",
+            "uses",✅
             "the contract documents"
         ],
         [
             "check",
-            "actor performer",
+            "actor performer",✅
             "the CIS"
         ],
         [
@@ -236,7 +236,7 @@
         ],
         [
             "a negative response",
-            "flow",
+            "flow",✅
             "analyzed"
         ],
         [
@@ -246,7 +246,7 @@
         ],
         [
             "analyzed",
-            "flow",
+            "flow",✅
             "resolved"
         ],
         [
@@ -286,7 +286,7 @@
         ],
         [
             "sent out",
-            "actor recipient",
+            "actor recipient",✅
             "the customer"
         ],
         [
@@ -296,12 +296,12 @@
         ],
         [
             "sent out",
-            "uses",
+            "uses",✅
             "A request"
         ],
         [
             "sent out",
-            "actor recipient",
+            "actor recipient",✅
             "the grid operator"
         ],
         [
@@ -316,7 +316,7 @@
         ],
         [
             "checked",
-            "uses",
+            "uses",✅
             "The switch-over request"
         ],
         [
@@ -396,7 +396,7 @@
         ],
         [
             "communicates",
-            "actor recipient",
+            "actor recipient",✅
             "the old supplier"
         ],
         [
@@ -431,7 +431,7 @@
         ],
         [
             "creates",
-            "actor performer",
+            "actor performer",✅
             "customer service"
         ],
         [
@@ -446,7 +446,7 @@
         ],
         [
             "check",
-            "actor performer",
+            "actor performer",✅
             "The customer"
         ],
         [
@@ -457,7 +457,7 @@
         [
             "either",
             "flow",
-            "withdraw"
+            "withdraw"✅
         ],
         [
             "either",
@@ -491,12 +491,12 @@
         ],
         [
             "transmits",
-            "uses",
+            "uses",✅
             "the power meter data"
         ],
         [
             "transmits",
-            "actor performer",
+            "actor performer",✅
             "the grid operator"
         ],
         [
@@ -526,7 +526,7 @@
         ],
         [
             "At the same time",
-            "flow",
+            "flow",✅
             "computes"
         ],
         [
@@ -541,7 +541,7 @@
         ],
         [
             "computes",
-            "actor performer",
+            "actor performer",✅
             "the grid operator"
         ],
         [
@@ -556,12 +556,12 @@
         ],
         [
             "sends",
-            "actor performer",
+            "actor performer",✅
             "the grid operator"
         ],
         [
             "sends",
-            "actor recipient",
+            "actor recipient",✅
             "the old supplier"
         ],
         [
@@ -596,12 +596,12 @@
         ],
         [
             "sends",
-            "actor recipient",
+            "actor recipient",✅
             "the customer"
         ],
         [
             "sends",
-            "actor performer",
+            "actor performer",✅
             "the old supplier"
         ],
         [
@@ -626,7 +626,7 @@
         ],
         [
             "imports",
-            "actor performer",
+            "actor performer",✅
             "customer service"
         ]
     ],

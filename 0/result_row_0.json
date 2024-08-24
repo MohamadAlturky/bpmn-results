@@ -1,33 +1,33 @@
 {
     "types": {
-        "the sales department": "Actor", 
-        "receives": "Activity",
+        "the sales department": "Actor", ✅
+        "receives": "Activity",✅
         "an order": "Activity Data",
-        "reject": "Activity",
+        "reject": "Activity",✅
         "or": "XOR Gateway",
-        "accept": "Activity",
+        "accept": "Activity",✅
         "the order": "Activity Data",
         "the storehouse": "Actor",
-        "the engineering department": "Actor",
-        "informed": "Activity",
-        "The storehouse": "Actor",
-        "processes": "Activity",
+        "the engineering department": "Actor",✅
+        "informed": "Activity",✅
+        "The storehouse": "Actor",✅
+        "processes": "Activity",✅
         "the part list of the order": "Activity Data",
         "checks": "Activity",
         "the required quantity of each part": "Activity Data",
         "If": "XOR Gateway",
         "the part is available in-house": "Condition Specification",
         "it": "Activity Data",
-        "reserved": "Activity",
+        "reserved": "Activity",✅
         "it is not available": "Condition Specification",
-        "back-ordered": "Activity",
+        "back-ordered": "Activity",✅
         "In the meantime": "AND Gateway",
-        "prepares": "Activity",
+        "prepares": "Activity",✅
         "everything": "Activity Data",
         "the storehouse has successfully reserved or back-ordered every item of the part list": "Condition Specification",
-        "assembles": "Activity",
+        "assembles": "Activity",✅
         "the bicycle": "Activity Data",
-        "ships": "Activity",
+        "ships": "Activity",✅
         "the customer": "Actor"
     },
     "answer": [
@@ -38,12 +38,12 @@
         ],
         [
             "receives",
-            "flow",
+            "flow",✅
             "or"
         ],
         [
             "receives",
-            "actor recipient",
+            "actor recipient",✅
             "the sales department"
         ],
         [
@@ -67,7 +67,7 @@
             "the order"
         ],
         [
-            "accept",
+            "accept",✅
             "flow",
             "informed"
         ],
@@ -87,7 +87,7 @@
             "the engineering department"
         ],
         [
-            "processes",
+            "processes",✅
             "uses",
             "the part list of the order"
         ],
@@ -97,7 +97,7 @@
             "The storehouse"
         ],
         [
-            "processes",
+            "processes",✅
             "flow",
             "checks"
         ],
@@ -127,7 +127,7 @@
             "If"
         ],
         [
-            "the part is available in-house",
+            "the part is available in-house",✅
             "flow",
             "reserved"
         ],
@@ -138,7 +138,7 @@
         ],
         [
             "reserved",
-            "flow",
+            "flow",✅
             "If"
         ],
         [
@@ -147,7 +147,7 @@
             "it is not available"
         ],
         [
-            "it is not available",
+            "it is not available",✅
             "flow",
             "back-ordered"
         ],
@@ -157,7 +157,7 @@
             "it"
         ],
         [
-            "back-ordered",
+            "back-ordered",✅
             "flow",
             "If"
         ],
@@ -188,12 +188,12 @@
         ],
         [
             "If",
-            "flow",
+            "flow",✅
             "the storehouse has successfully reserved or back-ordered every item of the part list"
         ],
         [
             "the storehouse has successfully reserved or back-ordered every item of the part list",
-            "flow",
+            "flow",✅
             "assembles"
         ],
         [
@@ -207,7 +207,7 @@
             "the engineering department"
         ],
         [
-            "assembles",
+            "assembles",✅
             "flow",
             "ships"
         ],
