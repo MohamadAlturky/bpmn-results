@@ -1,33 +1,33 @@
 {
     "types": {
-        "the sales department": "Actor", ✅
-        "receives": "Activity",✅
+        "the sales department": "Actor", 
+        "receives": "Activity",
         "an order": "Activity Data",
-        "reject": "Activity",✅
+        "reject": "Activity",
         "or": "XOR Gateway",
-        "accept": "Activity",✅
+        "accept": "Activity",
         "the order": "Activity Data",
-        "the storehouse": "Actor",✅
+        "the storehouse": "Actor",
         "the engineering department": "Actor",
-        "informed": "Activity",✅
-        "The storehouse": "Actor",✅
-        "processes": "Activity",✅
+        "informed": "Activity",
+        "The storehouse": "Actor",
+        "processes": "Activity",
         "the part list of the order": "Activity Data",
         "checks": "Activity",
         "the required quantity of each part": "Activity Data",
         "If": "XOR Gateway",
         "the part is available in-house": "Condition Specification",
         "it": "Activity Data",
-        "reserved": "Activity",✅
+        "reserved": "Activity",
         "it is not available": "Condition Specification",
-        "back-ordered": "Activity",✅
+        "back-ordered": "Activity",
         "In the meantime": "AND Gateway",
-        "prepares": "Activity",✅
+        "prepares": "Activity",
         "everything": "Activity Data",
         "the storehouse has successfully reserved or back-ordered every item of the part list": "Condition Specification",
-        "assembles": "Activity",✅
+        "assembles": "Activity",
         "the bicycle": "Activity Data",
-        "ships": "Activity",✅
+        "ships": "Activity",
         "the customer": "Actor"
     },
     "answer": [

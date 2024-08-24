@@ -1,508 +1,415 @@
 {
   "nodes": [
     {
-      "id": "202c7a98-8c6d-4f51-bf14-63f1aca519a0",
-      "name": "Underwriters",
+      "id": "a14bd658-5712-48ae-b302-1d57dfee9697",
+      "name": "Underwriter",
+      "parentId": null,
       "type": "pool"
     },
     {
-      "id": "89af20f6-6845-485c-b099-a161e89b11d8",
-      "name": "Prepare registration statement",
+      "id": "13b53745-9ac8-4b60-847d-fc35b751610e",
+      "name": "Prepare Registration Statement",
+      "parentId": "a14bd658-5712-48ae-b302-1d57dfee9697",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "ee72f1d5-df34-4eda-80e3-97708a136621",
+      "name": "Register the Issue with the SEC",
+      "parentId": "a14bd658-5712-48ae-b302-1d57dfee9697",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "2a2fd60f-d923-493e-a7ee-f876d832f756",
+      "name": "Check Compliance with Blue-Sky Laws",
+      "parentId": "a14bd658-5712-48ae-b302-1d57dfee9697",
       "type": "ManualTask"
     },
     {
-      "id": "ef8f3555-8e3b-456b-95f5-514fd099b740",
-      "name": "Register issue with SEC",
-      "type": "ManualTask"
+      "id": "b689f75f-dcf6-499f-871e-4b586a396bbe",
+      "name": "Firm up the Issue Price",
+      "parentId": "a14bd658-5712-48ae-b302-1d57dfee9697",
+      "type": "UserTask"
     },
     {
-      "id": "03fc6947-7eae-4b38-99d2-68635428c06b",
-      "name": "Check blue-sky laws",
-      "type": "ManualTask"
+      "id": "be1741dd-f901-420e-af24-faed9a1b2b2b",
+      "name": "Arrange a Road Show",
+      "parentId": "a14bd658-5712-48ae-b302-1d57dfee9697",
+      "type": "UserTask"
     },
     {
-      "id": "029f2470-a5d9-4ea9-a8e6-fa10ac30803d",
-      "name": "Firm up issue price",
-      "type": "ManualTask"
+      "id": "96550191-62c6-44ab-ad52-475f50dcf9af",
+      "name": "Fix the Issue Price",
+      "parentId": "a14bd658-5712-48ae-b302-1d57dfee9697",
+      "type": "UserTask"
     },
     {
-      "id": "1d1dc326-aa68-49f2-b7cf-9c0479faaaef",
-      "name": "Arrange road show",
-      "type": "ManualTask"
+      "id": "019da95d-4d7f-459c-ab05-a03bf29029ba",
+      "name": "Enter into a Firm Commitment to Buy the Stock",
+      "parentId": "a14bd658-5712-48ae-b302-1d57dfee9697",
+      "type": "UserTask"
     },
     {
-      "id": "c0cf9414-5b87-4be2-b9f4-ef3f0ab1f3e4",
-      "name": "Receive clearance from SEC",
-      "type": "Intermediate_Event"
-    },
-    {
-      "id": "fc9494f7-d7e3-4e05-83dd-ecf766613940",
-      "name": "Fix issue price",
-      "type": "ManualTask"
-    },
-    {
-      "id": "26a55e4c-7786-422d-a41b-368d4b66b3e1",
-      "name": "Enter into firm commitment",
-      "type": "ManualTask"
-    },
-    {
-      "id": "6fe74652-bf2b-4e30-93ce-e8bbc81b1913",
-      "name": "Offer stock to public",
+      "id": "8ec7ec38-f1c8-47b8-aa35-383b860af163",
+      "name": "Offer the Stock to the Public",
+      "parentId": "a14bd658-5712-48ae-b302-1d57dfee9697",
       "type": "End_Event"
     },
     {
-      "id": "74918a54-da62-4a08-a239-e4b9969c4766",
-      "name": "Select underwriters",
+      "id": "aeca5aec-e6c1-4856-9e9c-e4c572ccc4fd",
+      "name": "Company",
+      "parentId": null,
+      "type": "pool"
+    },
+    {
+      "id": "c9a03c09-5d94-4e94-a7b0-95e80eaa05b4",
+      "name": "Select Underwriters",
+      "parentId": "aeca5aec-e6c1-4856-9e9c-e4c572ccc4fd",
       "type": "Start_Event"
     },
     {
-      "id": "173a0ae4-8b70-48b1-be63-063a8993a54a",
+      "id": "e0be19f0-b197-4144-807c-b0b2bd393d70",
+      "name": "SEC",
+      "parentId": null,
+      "type": "pool"
+    },
+    {
+      "id": "4d10e6a0-53eb-42d1-8159-8abf7bf874dd",
+      "name": "Receive Clearance from the SEC",
+      "parentId": "e0be19f0-b197-4144-807c-b0b2bd393d70",
+      "type": "Intermediate_Event"
+    },
+    {
+      "id": "da152e0e-141d-46af-92e4-880fa4971fff",
       "name": "gateway 1",
+      "parentId": null,
       "type": "XOR"
     },
     {
-      "id": "3e975e68-2c1d-4436-bb74-b35e7bad2ab9",
+      "id": "3c25e165-1146-4614-a036-a81e95b1f653",
       "name": "gateway 2",
+      "parentId": null,
       "type": "AND"
     },
     {
-      "id": "386faf7d-d158-432d-8c0e-9e38099ac79d",
+      "id": "025ed10d-0168-4279-8e38-e22b41935b39",
       "name": "gateway 3",
-      "type": "AND"
+      "parentId": null,
+      "type": "XOR"
     },
     {
-      "id": "0d954bdf-87d2-43a7-ae9f-12070a7f277e",
+      "id": "0342da05-0e33-4d52-9918-55f95ef5e76b",
       "name": "gateway 4",
+      "parentId": null,
       "type": "AND"
     },
     {
-      "id": "be3707e9-2f21-43cc-82be-7c140c14ffac",
+      "id": "3494bd8e-7dd3-47e3-995f-ae24c2e23564",
       "name": "gateway 5",
-      "type": "AND"
+      "parentId": null,
+      "type": "XOR"
     },
     {
-      "id": "96d9b6bb-0efb-4e16-9606-d958f87d82e8",
+      "id": "b0899149-7921-4e38-9183-3c56b40333e2",
       "name": "gateway 6",
-      "type": "AND"
-    },
-    {
-      "id": "4345da4e-dc1e-4bc0-af43-202d6e978260",
-      "name": "gateway 7",
-      "type": "AND"
-    },
-    {
-      "id": "49162cfc-0370-425f-8cf9-a421526fcc9e",
-      "name": "gateway 8",
+      "parentId": null,
       "type": "XOR"
     }
   ],
   "edges": [
     {
-      "id": "28538a48-2484-48b6-a44c-7a034f482a2a",
-      "source": "74918a54-da62-4a08-a239-e4b9969c4766",
-      "source_name": "Select underwriters",
-      "target": "173a0ae4-8b70-48b1-be63-063a8993a54a",
+      "id": "1e28aca4-e1d5-4157-8962-966e748d7ff0",
+      "source": "c9a03c09-5d94-4e94-a7b0-95e80eaa05b4",
+      "source_name": "Select Underwriters",
+      "target": "13b53745-9ac8-4b60-847d-fc35b751610e",
+      "target_name": "Prepare Registration Statement"
+    },
+    {
+      "id": "d6963116-6f83-4937-8d1c-839271504545",
+      "source": "13b53745-9ac8-4b60-847d-fc35b751610e",
+      "source_name": "Prepare Registration Statement",
+      "target": "da152e0e-141d-46af-92e4-880fa4971fff",
       "target_name": "gateway 1"
     },
     {
-      "id": "18f9bc1d-4a7b-431b-9d0a-d314c308e189",
-      "source": "173a0ae4-8b70-48b1-be63-063a8993a54a",
+      "id": "05c2d399-94e1-484c-8b81-def5b5b6b046",
+      "source": "da152e0e-141d-46af-92e4-880fa4971fff",
       "source_name": "gateway 1",
-      "target": "89af20f6-6845-485c-b099-a161e89b11d8",
-      "target_name": "Prepare registration statement",
-      "condition": "Underwriters provide procedural and financial advice."
+      "target": "ee72f1d5-df34-4eda-80e3-97708a136621",
+      "target_name": "Register the Issue with the SEC",
+      "condition": "Underwriters need to register the issue with the SEC after preparing the registration statement."
     },
     {
-      "id": "4a583efb-1615-49cd-952d-4e0312d9369f",
-      "source": "173a0ae4-8b70-48b1-be63-063a8993a54a",
+      "id": "c264d3c9-986e-4885-9ce8-c0d67ea72fb1",
+      "source": "da152e0e-141d-46af-92e4-880fa4971fff",
       "source_name": "gateway 1",
-      "target": "ef8f3555-8e3b-456b-95f5-514fd099b740",
-      "target_name": "Register issue with SEC",
-      "condition": "Underwriters register the issue with the SEC."
+      "target": "2a2fd60f-d923-493e-a7ee-f876d832f756",
+      "target_name": "Check Compliance with Blue-Sky Laws",
+      "condition": "Underwriters need to check compliance with blue-sky laws of each state."
     },
     {
-      "id": "2d0e021d-ed15-4cbd-a853-f25b925f0a90",
-      "source": "173a0ae4-8b70-48b1-be63-063a8993a54a",
+      "id": "8a0e50e4-2328-466a-b544-e258751b7794",
+      "source": "da152e0e-141d-46af-92e4-880fa4971fff",
       "source_name": "gateway 1",
-      "target": "03fc6947-7eae-4b38-99d2-68635428c06b",
-      "target_name": "Check blue-sky laws",
-      "condition": "Underwriters check that the issue complies with the blue-sky laws of each state."
+      "target": "b689f75f-dcf6-499f-871e-4b586a396bbe",
+      "target_name": "Firm up the Issue Price",
+      "condition": "Underwriters need to firm up the issue price after registering the issue."
     },
     {
-      "id": "13ab9b47-60da-4d11-a4f5-2e06864c3002",
-      "source": "173a0ae4-8b70-48b1-be63-063a8993a54a",
+      "id": "aba0b82b-7f1d-40ad-8880-8d3be5782526",
+      "source": "da152e0e-141d-46af-92e4-880fa4971fff",
       "source_name": "gateway 1",
-      "target": "029f2470-a5d9-4ea9-a8e6-fa10ac30803d",
-      "target_name": "Firm up issue price",
-      "condition": "Underwriters firm up the issue price after receiving clearance from the SEC."
+      "target": "be1741dd-f901-420e-af24-faed9a1b2b2b",
+      "target_name": "Arrange a Road Show",
+      "condition": "Underwriters need to arrange a road show to talk to potential investors."
     },
     {
-      "id": "8623129a-8d0b-4510-9d46-990867066795",
-      "source": "173a0ae4-8b70-48b1-be63-063a8993a54a",
+      "id": "6751c1fe-6bfa-4284-b264-bb62326463f4",
+      "source": "da152e0e-141d-46af-92e4-880fa4971fff",
       "source_name": "gateway 1",
-      "target": "1d1dc326-aa68-49f2-b7cf-9c0479faaaef",
-      "target_name": "Arrange road show",
-      "condition": "Underwriters arrange a road show to talk to potential investors."
+      "target": "4d10e6a0-53eb-42d1-8159-8abf7bf874dd",
+      "target_name": "Receive Clearance from the SEC",
+      "condition": "Underwriters need to receive clearance from the SEC before fixing the issue price."
     },
     {
-      "id": "3c4e0106-b522-49ae-ae93-41d355d36f52",
-      "source": "173a0ae4-8b70-48b1-be63-063a8993a54a",
+      "id": "ec43d8d1-4fb0-4a1c-bcfe-35eb1b64a542",
+      "source": "da152e0e-141d-46af-92e4-880fa4971fff",
       "source_name": "gateway 1",
-      "target": "c0cf9414-5b87-4be2-b9f4-ef3f0ab1f3e4",
-      "target_name": "Receive clearance from SEC",
-      "condition": "Underwriters receive clearance from the SEC."
+      "target": "96550191-62c6-44ab-ad52-475f50dcf9af",
+      "target_name": "Fix the Issue Price",
+      "condition": "Underwriters need to fix the issue price after receiving clearance from the SEC."
     },
     {
-      "id": "fde2af34-0b2b-41bf-adf0-263f1375351f",
-      "source": "173a0ae4-8b70-48b1-be63-063a8993a54a",
+      "id": "8b9aad7d-e956-41eb-b46c-44900c9174df",
+      "source": "da152e0e-141d-46af-92e4-880fa4971fff",
       "source_name": "gateway 1",
-      "target": "fc9494f7-d7e3-4e05-83dd-ecf766613940",
-      "target_name": "Fix issue price",
-      "condition": "Underwriters fix the issue price after receiving clearance from the SEC."
+      "target": "019da95d-4d7f-459c-ab05-a03bf29029ba",
+      "target_name": "Enter into a Firm Commitment to Buy the Stock",
+      "condition": "Underwriters need to enter into a firm commitment to buy the stock after fixing the issue price."
     },
     {
-      "id": "943ed06a-9651-4cb5-9510-13ffa5f18f98",
-      "source": "173a0ae4-8b70-48b1-be63-063a8993a54a",
+      "id": "660d57a2-c888-4f9a-b2b8-28f051b0283e",
+      "source": "da152e0e-141d-46af-92e4-880fa4971fff",
       "source_name": "gateway 1",
-      "target": "26a55e4c-7786-422d-a41b-368d4b66b3e1",
-      "target_name": "Enter into firm commitment",
-      "condition": "Underwriters enter into a firm commitment to buy the stock and then offer it to the public."
+      "target": "8ec7ec38-f1c8-47b8-aa35-383b860af163",
+      "target_name": "Offer the Stock to the Public",
+      "condition": "Underwriters need to offer the stock to the public after entering into a firm commitment to buy the stock."
     },
     {
-      "id": "27e310e6-b797-4c16-a6cb-3af06e851d91",
-      "source": "89af20f6-6845-485c-b099-a161e89b11d8",
-      "source_name": "Prepare registration statement",
-      "target": "3e975e68-2c1d-4436-bb74-b35e7bad2ab9",
+      "id": "a66ebd82-3439-4e0f-98cb-76d3af3256ef",
+      "source": "ee72f1d5-df34-4eda-80e3-97708a136621",
+      "source_name": "Register the Issue with the SEC",
+      "target": "3c25e165-1146-4614-a036-a81e95b1f653",
       "target_name": "gateway 2"
     },
     {
-      "id": "6e4be604-1c63-49d4-926b-d4060d81085e",
-      "source": "3e975e68-2c1d-4436-bb74-b35e7bad2ab9",
+      "id": "01849056-c8a6-4cb0-a2de-b2b1932d1efa",
+      "source": "3c25e165-1146-4614-a036-a81e95b1f653",
       "source_name": "gateway 2",
-      "target": "ef8f3555-8e3b-456b-95f5-514fd099b740",
-      "target_name": "Register issue with SEC",
-      "condition": "The registration statement is approved by the SEC."
+      "target": "2a2fd60f-d923-493e-a7ee-f876d832f756",
+      "target_name": "Check Compliance with Blue-Sky Laws",
+      "condition": "Underwriters need to check compliance with blue-sky laws of each state."
     },
     {
-      "id": "b818f145-2a7b-44cb-bf1b-0970fd85dad6",
-      "source": "3e975e68-2c1d-4436-bb74-b35e7bad2ab9",
+      "id": "19bc0c0b-a250-4244-a8ff-401a376426cf",
+      "source": "3c25e165-1146-4614-a036-a81e95b1f653",
       "source_name": "gateway 2",
-      "target": "03fc6947-7eae-4b38-99d2-68635428c06b",
-      "target_name": "Check blue-sky laws",
-      "condition": "The issue complies with the blue-sky laws of each state."
+      "target": "b689f75f-dcf6-499f-871e-4b586a396bbe",
+      "target_name": "Firm up the Issue Price",
+      "condition": "Underwriters need to firm up the issue price after registering the issue."
     },
     {
-      "id": "b149fb39-9ed3-4a72-8bbf-aa980359b742",
-      "source": "3e975e68-2c1d-4436-bb74-b35e7bad2ab9",
+      "id": "dd47db45-d12d-46a1-8a25-5d2a18395dc6",
+      "source": "3c25e165-1146-4614-a036-a81e95b1f653",
       "source_name": "gateway 2",
-      "target": "029f2470-a5d9-4ea9-a8e6-fa10ac30803d",
-      "target_name": "Firm up issue price",
-      "condition": "The issue price is firmed up after receiving clearance from the SEC."
+      "target": "be1741dd-f901-420e-af24-faed9a1b2b2b",
+      "target_name": "Arrange a Road Show",
+      "condition": "Underwriters need to arrange a road show to talk to potential investors."
     },
     {
-      "id": "509d4104-6731-4e6f-9dc2-df98435c9779",
-      "source": "3e975e68-2c1d-4436-bb74-b35e7bad2ab9",
+      "id": "c02cbbc5-64c0-4d40-9069-86cf8258a362",
+      "source": "3c25e165-1146-4614-a036-a81e95b1f653",
       "source_name": "gateway 2",
-      "target": "1d1dc326-aa68-49f2-b7cf-9c0479faaaef",
-      "target_name": "Arrange road show",
-      "condition": "A road show is arranged to talk to potential investors."
+      "target": "4d10e6a0-53eb-42d1-8159-8abf7bf874dd",
+      "target_name": "Receive Clearance from the SEC",
+      "condition": "Underwriters need to receive clearance from the SEC before fixing the issue price."
     },
     {
-      "id": "b3a7c9f8-2e48-49cf-a72a-8ae1f905fc76",
-      "source": "3e975e68-2c1d-4436-bb74-b35e7bad2ab9",
+      "id": "1bc61a29-ceff-44fe-b8da-ae3f2fa3c7ef",
+      "source": "3c25e165-1146-4614-a036-a81e95b1f653",
       "source_name": "gateway 2",
-      "target": "c0cf9414-5b87-4be2-b9f4-ef3f0ab1f3e4",
-      "target_name": "Receive clearance from SEC",
-      "condition": "Clearance is received from the SEC."
+      "target": "96550191-62c6-44ab-ad52-475f50dcf9af",
+      "target_name": "Fix the Issue Price",
+      "condition": "Underwriters need to fix the issue price after receiving clearance from the SEC."
     },
     {
-      "id": "f9fb2659-af74-42ba-90da-8ff07ad4917c",
-      "source": "3e975e68-2c1d-4436-bb74-b35e7bad2ab9",
+      "id": "3d0b0ec5-28a7-4889-b7e6-803c78c97c64",
+      "source": "3c25e165-1146-4614-a036-a81e95b1f653",
       "source_name": "gateway 2",
-      "target": "fc9494f7-d7e3-4e05-83dd-ecf766613940",
-      "target_name": "Fix issue price",
-      "condition": "The issue price is fixed after receiving clearance from the SEC."
+      "target": "019da95d-4d7f-459c-ab05-a03bf29029ba",
+      "target_name": "Enter into a Firm Commitment to Buy the Stock",
+      "condition": "Underwriters need to enter into a firm commitment to buy the stock after fixing the issue price."
     },
     {
-      "id": "377ea519-5be8-48cd-97e2-3ef0b495d79b",
-      "source": "3e975e68-2c1d-4436-bb74-b35e7bad2ab9",
+      "id": "6b8cb935-1d9f-44d6-a91a-65e3c39891f7",
+      "source": "3c25e165-1146-4614-a036-a81e95b1f653",
       "source_name": "gateway 2",
-      "target": "26a55e4c-7786-422d-a41b-368d4b66b3e1",
-      "target_name": "Enter into firm commitment",
-      "condition": "A firm commitment is entered into to buy the stock and then offer it to the public."
+      "target": "8ec7ec38-f1c8-47b8-aa35-383b860af163",
+      "target_name": "Offer the Stock to the Public",
+      "condition": "Underwriters need to offer the stock to the public after entering into a firm commitment to buy the stock."
     },
     {
-      "id": "532fb92b-05aa-4c9e-8e95-878211cece38",
-      "source": "3e975e68-2c1d-4436-bb74-b35e7bad2ab9",
-      "source_name": "gateway 2",
-      "target": "6fe74652-bf2b-4e30-93ce-e8bbc81b1913",
-      "target_name": "Offer stock to public",
-      "condition": "The stock is offered to the public."
+      "id": "efb5d247-f33d-4c44-980f-271b32e550c5",
+      "source": "2a2fd60f-d923-493e-a7ee-f876d832f756",
+      "source_name": "Check Compliance with Blue-Sky Laws",
+      "target": "b689f75f-dcf6-499f-871e-4b586a396bbe",
+      "target_name": "Firm up the Issue Price"
     },
     {
-      "id": "f8c20b2f-fc12-49df-9616-e0d650c543ea",
-      "source": "ef8f3555-8e3b-456b-95f5-514fd099b740",
-      "source_name": "Register issue with SEC",
-      "target": "386faf7d-d158-432d-8c0e-9e38099ac79d",
+      "id": "d4ec52ae-1126-4711-a617-1defd231a9a7",
+      "source": "b689f75f-dcf6-499f-871e-4b586a396bbe",
+      "source_name": "Firm up the Issue Price",
+      "target": "025ed10d-0168-4279-8e38-e22b41935b39",
       "target_name": "gateway 3"
     },
     {
-      "id": "97881e15-7d36-497e-a030-b51ea844913c",
-      "source": "386faf7d-d158-432d-8c0e-9e38099ac79d",
+      "id": "3affdb5e-ae87-4720-a803-8f40b23322f9",
+      "source": "025ed10d-0168-4279-8e38-e22b41935b39",
       "source_name": "gateway 3",
-      "target": "03fc6947-7eae-4b38-99d2-68635428c06b",
-      "target_name": "Check blue-sky laws",
-      "condition": "The issue complies with the blue-sky laws of each state."
+      "target": "be1741dd-f901-420e-af24-faed9a1b2b2b",
+      "target_name": "Arrange a Road Show",
+      "condition": "Underwriters need to arrange a road show to talk to potential investors."
     },
     {
-      "id": "6124cebb-cffa-479f-a10d-080835de2b0e",
-      "source": "386faf7d-d158-432d-8c0e-9e38099ac79d",
+      "id": "6857c49d-09df-41ad-9bd0-79542e6dc454",
+      "source": "025ed10d-0168-4279-8e38-e22b41935b39",
       "source_name": "gateway 3",
-      "target": "029f2470-a5d9-4ea9-a8e6-fa10ac30803d",
-      "target_name": "Firm up issue price",
-      "condition": "The issue price is firmed up after receiving clearance from the SEC."
+      "target": "4d10e6a0-53eb-42d1-8159-8abf7bf874dd",
+      "target_name": "Receive Clearance from the SEC",
+      "condition": "Underwriters need to receive clearance from the SEC before fixing the issue price."
     },
     {
-      "id": "96b9f268-5f1f-4c94-99d2-a2d3f86e9bf9",
-      "source": "386faf7d-d158-432d-8c0e-9e38099ac79d",
+      "id": "dfaec229-1602-4b21-8eed-ec0462d99a03",
+      "source": "025ed10d-0168-4279-8e38-e22b41935b39",
       "source_name": "gateway 3",
-      "target": "1d1dc326-aa68-49f2-b7cf-9c0479faaaef",
-      "target_name": "Arrange road show",
-      "condition": "A road show is arranged to talk to potential investors."
+      "target": "96550191-62c6-44ab-ad52-475f50dcf9af",
+      "target_name": "Fix the Issue Price",
+      "condition": "Underwriters need to fix the issue price after receiving clearance from the SEC."
     },
     {
-      "id": "ea46d115-25ca-428f-96c3-f7c12f0e9101",
-      "source": "386faf7d-d158-432d-8c0e-9e38099ac79d",
+      "id": "72d12b8f-b1dc-4b0b-a1b9-be865fc209ec",
+      "source": "025ed10d-0168-4279-8e38-e22b41935b39",
       "source_name": "gateway 3",
-      "target": "c0cf9414-5b87-4be2-b9f4-ef3f0ab1f3e4",
-      "target_name": "Receive clearance from SEC",
-      "condition": "Clearance is received from the SEC."
+      "target": "019da95d-4d7f-459c-ab05-a03bf29029ba",
+      "target_name": "Enter into a Firm Commitment to Buy the Stock",
+      "condition": "Underwriters need to enter into a firm commitment to buy the stock after fixing the issue price."
     },
     {
-      "id": "5f0b8cab-7f00-403c-aa13-80f0f7557fd4",
-      "source": "386faf7d-d158-432d-8c0e-9e38099ac79d",
+      "id": "b9d87869-a312-46a6-aa01-d14aff115c0d",
+      "source": "025ed10d-0168-4279-8e38-e22b41935b39",
       "source_name": "gateway 3",
-      "target": "fc9494f7-d7e3-4e05-83dd-ecf766613940",
-      "target_name": "Fix issue price",
-      "condition": "The issue price is fixed after receiving clearance from the SEC."
+      "target": "8ec7ec38-f1c8-47b8-aa35-383b860af163",
+      "target_name": "Offer the Stock to the Public",
+      "condition": "Underwriters need to offer the stock to the public after entering into a firm commitment to buy the stock."
     },
     {
-      "id": "fbd74c5d-9fe2-4b11-bc19-60c85bd2a5e2",
-      "source": "386faf7d-d158-432d-8c0e-9e38099ac79d",
-      "source_name": "gateway 3",
-      "target": "26a55e4c-7786-422d-a41b-368d4b66b3e1",
-      "target_name": "Enter into firm commitment",
-      "condition": "A firm commitment is entered into to buy the stock and then offer it to the public."
-    },
-    {
-      "id": "26544aff-6542-48d3-8af6-3b5b2a38822c",
-      "source": "386faf7d-d158-432d-8c0e-9e38099ac79d",
-      "source_name": "gateway 3",
-      "target": "6fe74652-bf2b-4e30-93ce-e8bbc81b1913",
-      "target_name": "Offer stock to public",
-      "condition": "The stock is offered to the public."
-    },
-    {
-      "id": "c072e3b8-9744-48e9-a09f-ffe50b30b018",
-      "source": "03fc6947-7eae-4b38-99d2-68635428c06b",
-      "source_name": "Check blue-sky laws",
-      "target": "0d954bdf-87d2-43a7-ae9f-12070a7f277e",
+      "id": "846e7a26-377b-4e8f-8d01-5aa5afc8ec33",
+      "source": "be1741dd-f901-420e-af24-faed9a1b2b2b",
+      "source_name": "Arrange a Road Show",
+      "target": "0342da05-0e33-4d52-9918-55f95ef5e76b",
       "target_name": "gateway 4"
     },
     {
-      "id": "7412632e-2479-42b4-b245-2bdf8ad9f380",
-      "source": "0d954bdf-87d2-43a7-ae9f-12070a7f277e",
+      "id": "5a2cbdf4-379f-432b-a9c1-8fa7a926decb",
+      "source": "0342da05-0e33-4d52-9918-55f95ef5e76b",
       "source_name": "gateway 4",
-      "target": "029f2470-a5d9-4ea9-a8e6-fa10ac30803d",
-      "target_name": "Firm up issue price",
-      "condition": "The issue price is firmed up after receiving clearance from the SEC."
+      "target": "4d10e6a0-53eb-42d1-8159-8abf7bf874dd",
+      "target_name": "Receive Clearance from the SEC",
+      "condition": "Underwriters need to receive clearance from the SEC before fixing the issue price."
     },
     {
-      "id": "2db7f016-2217-419c-8e9b-600acc171e37",
-      "source": "0d954bdf-87d2-43a7-ae9f-12070a7f277e",
+      "id": "4c0685cd-1a5c-496a-8d19-6b9bad00a393",
+      "source": "0342da05-0e33-4d52-9918-55f95ef5e76b",
       "source_name": "gateway 4",
-      "target": "1d1dc326-aa68-49f2-b7cf-9c0479faaaef",
-      "target_name": "Arrange road show",
-      "condition": "A road show is arranged to talk to potential investors."
+      "target": "96550191-62c6-44ab-ad52-475f50dcf9af",
+      "target_name": "Fix the Issue Price",
+      "condition": "Underwriters need to fix the issue price after receiving clearance from the SEC."
     },
     {
-      "id": "111c2ca5-19b5-4964-a1bd-a4517ea06cee",
-      "source": "0d954bdf-87d2-43a7-ae9f-12070a7f277e",
+      "id": "99dbc795-3edf-4c93-bcb6-76459bead198",
+      "source": "0342da05-0e33-4d52-9918-55f95ef5e76b",
       "source_name": "gateway 4",
-      "target": "c0cf9414-5b87-4be2-b9f4-ef3f0ab1f3e4",
-      "target_name": "Receive clearance from SEC",
-      "condition": "Clearance is received from the SEC."
+      "target": "019da95d-4d7f-459c-ab05-a03bf29029ba",
+      "target_name": "Enter into a Firm Commitment to Buy the Stock",
+      "condition": "Underwriters need to enter into a firm commitment to buy the stock after fixing the issue price."
     },
     {
-      "id": "b235c1a1-d898-46fb-b3b4-f19dbce23485",
-      "source": "0d954bdf-87d2-43a7-ae9f-12070a7f277e",
+      "id": "3f1a4f96-1486-4b41-a8e5-40d6fc975386",
+      "source": "0342da05-0e33-4d52-9918-55f95ef5e76b",
       "source_name": "gateway 4",
-      "target": "fc9494f7-d7e3-4e05-83dd-ecf766613940",
-      "target_name": "Fix issue price",
-      "condition": "The issue price is fixed after receiving clearance from the SEC."
+      "target": "8ec7ec38-f1c8-47b8-aa35-383b860af163",
+      "target_name": "Offer the Stock to the Public",
+      "condition": "Underwriters need to offer the stock to the public after entering into a firm commitment to buy the stock."
     },
     {
-      "id": "0fd5d95d-0a59-4189-92a8-7a72ab618dbd",
-      "source": "0d954bdf-87d2-43a7-ae9f-12070a7f277e",
-      "source_name": "gateway 4",
-      "target": "26a55e4c-7786-422d-a41b-368d4b66b3e1",
-      "target_name": "Enter into firm commitment",
-      "condition": "A firm commitment is entered into to buy the stock and then offer it to the public."
-    },
-    {
-      "id": "445c6563-5601-46cb-9f4d-cd4337a795fc",
-      "source": "0d954bdf-87d2-43a7-ae9f-12070a7f277e",
-      "source_name": "gateway 4",
-      "target": "6fe74652-bf2b-4e30-93ce-e8bbc81b1913",
-      "target_name": "Offer stock to public",
-      "condition": "The stock is offered to the public."
-    },
-    {
-      "id": "5cf47855-695c-484d-924e-eaa3c09f238b",
-      "source": "029f2470-a5d9-4ea9-a8e6-fa10ac30803d",
-      "source_name": "Firm up issue price",
-      "target": "be3707e9-2f21-43cc-82be-7c140c14ffac",
+      "id": "714d37d0-5ef3-4bae-a479-ed315a2eb464",
+      "source": "4d10e6a0-53eb-42d1-8159-8abf7bf874dd",
+      "source_name": "Receive Clearance from the SEC",
+      "target": "3494bd8e-7dd3-47e3-995f-ae24c2e23564",
       "target_name": "gateway 5"
     },
     {
-      "id": "7c7750be-a511-44e2-8697-08f65c6f8764",
-      "source": "be3707e9-2f21-43cc-82be-7c140c14ffac",
+      "id": "a210f718-58ba-4301-bf0d-1da46ce2ebaf",
+      "source": "3494bd8e-7dd3-47e3-995f-ae24c2e23564",
       "source_name": "gateway 5",
-      "target": "1d1dc326-aa68-49f2-b7cf-9c0479faaaef",
-      "target_name": "Arrange road show",
-      "condition": "A road show is arranged to talk to potential investors."
+      "target": "96550191-62c6-44ab-ad52-475f50dcf9af",
+      "target_name": "Fix the Issue Price",
+      "condition": "Underwriters need to fix the issue price after receiving clearance from the SEC."
     },
     {
-      "id": "25dce651-7168-4761-b46e-e9d1cdf78371",
-      "source": "be3707e9-2f21-43cc-82be-7c140c14ffac",
+      "id": "2d2bc262-dc61-4e4d-9cdb-9e5236713b6b",
+      "source": "3494bd8e-7dd3-47e3-995f-ae24c2e23564",
       "source_name": "gateway 5",
-      "target": "c0cf9414-5b87-4be2-b9f4-ef3f0ab1f3e4",
-      "target_name": "Receive clearance from SEC",
-      "condition": "Clearance is received from the SEC."
+      "target": "019da95d-4d7f-459c-ab05-a03bf29029ba",
+      "target_name": "Enter into a Firm Commitment to Buy the Stock",
+      "condition": "Underwriters need to enter into a firm commitment to buy the stock after fixing the issue price."
     },
     {
-      "id": "72184765-dd30-494d-9715-6d04ba67e584",
-      "source": "be3707e9-2f21-43cc-82be-7c140c14ffac",
+      "id": "402af995-4545-4a47-b86d-177cedccb35a",
+      "source": "3494bd8e-7dd3-47e3-995f-ae24c2e23564",
       "source_name": "gateway 5",
-      "target": "fc9494f7-d7e3-4e05-83dd-ecf766613940",
-      "target_name": "Fix issue price",
-      "condition": "The issue price is fixed after receiving clearance from the SEC."
+      "target": "8ec7ec38-f1c8-47b8-aa35-383b860af163",
+      "target_name": "Offer the Stock to the Public",
+      "condition": "Underwriters need to offer the stock to the public after entering into a firm commitment to buy the stock."
     },
     {
-      "id": "733c1100-373e-4e41-866a-2cce73cc99f4",
-      "source": "be3707e9-2f21-43cc-82be-7c140c14ffac",
-      "source_name": "gateway 5",
-      "target": "26a55e4c-7786-422d-a41b-368d4b66b3e1",
-      "target_name": "Enter into firm commitment",
-      "condition": "A firm commitment is entered into to buy the stock and then offer it to the public."
-    },
-    {
-      "id": "47d5917b-8780-4efd-8aa7-9c8a864a7b2b",
-      "source": "be3707e9-2f21-43cc-82be-7c140c14ffac",
-      "source_name": "gateway 5",
-      "target": "6fe74652-bf2b-4e30-93ce-e8bbc81b1913",
-      "target_name": "Offer stock to public",
-      "condition": "The stock is offered to the public."
-    },
-    {
-      "id": "545f0649-a907-4d2b-8c4e-3bfdba0cc9b5",
-      "source": "1d1dc326-aa68-49f2-b7cf-9c0479faaaef",
-      "source_name": "Arrange road show",
-      "target": "96d9b6bb-0efb-4e16-9606-d958f87d82e8",
+      "id": "e310655c-aac6-4def-8029-22b47e93e5b6",
+      "source": "96550191-62c6-44ab-ad52-475f50dcf9af",
+      "source_name": "Fix the Issue Price",
+      "target": "b0899149-7921-4e38-9183-3c56b40333e2",
       "target_name": "gateway 6"
     },
     {
-      "id": "3fb8beae-b793-4129-92e3-030689c9be91",
-      "source": "96d9b6bb-0efb-4e16-9606-d958f87d82e8",
+      "id": "8493460d-c483-496d-8131-3b14e02d1ffa",
+      "source": "b0899149-7921-4e38-9183-3c56b40333e2",
       "source_name": "gateway 6",
-      "target": "c0cf9414-5b87-4be2-b9f4-ef3f0ab1f3e4",
-      "target_name": "Receive clearance from SEC",
-      "condition": "Clearance is received from the SEC."
+      "target": "019da95d-4d7f-459c-ab05-a03bf29029ba",
+      "target_name": "Enter into a Firm Commitment to Buy the Stock",
+      "condition": "Underwriters need to enter into a firm commitment to buy the stock after fixing the issue price."
     },
     {
-      "id": "6819d2dd-e000-4ecb-92bc-8ca0264bafef",
-      "source": "96d9b6bb-0efb-4e16-9606-d958f87d82e8",
+      "id": "53ac1257-d35b-4c30-9e9b-05af5e295fe5",
+      "source": "b0899149-7921-4e38-9183-3c56b40333e2",
       "source_name": "gateway 6",
-      "target": "fc9494f7-d7e3-4e05-83dd-ecf766613940",
-      "target_name": "Fix issue price",
-      "condition": "The issue price is fixed after receiving clearance from the SEC."
+      "target": "8ec7ec38-f1c8-47b8-aa35-383b860af163",
+      "target_name": "Offer the Stock to the Public",
+      "condition": "Underwriters need to offer the stock to the public after entering into a firm commitment to buy the stock."
     },
     {
-      "id": "759a056b-1f58-4c71-a84b-9221c0d16117",
-      "source": "96d9b6bb-0efb-4e16-9606-d958f87d82e8",
-      "source_name": "gateway 6",
-      "target": "26a55e4c-7786-422d-a41b-368d4b66b3e1",
-      "target_name": "Enter into firm commitment",
-      "condition": "A firm commitment is entered into to buy the stock and then offer it to the public."
-    },
-    {
-      "id": "6690786c-4f7f-4a81-8c6b-fd8751082a1a",
-      "source": "96d9b6bb-0efb-4e16-9606-d958f87d82e8",
-      "source_name": "gateway 6",
-      "target": "6fe74652-bf2b-4e30-93ce-e8bbc81b1913",
-      "target_name": "Offer stock to public",
-      "condition": "The stock is offered to the public."
-    },
-    {
-      "id": "dfcd35a7-aa12-41ff-926c-d44019abca56",
-      "source": "c0cf9414-5b87-4be2-b9f4-ef3f0ab1f3e4",
-      "source_name": "Receive clearance from SEC",
-      "target": "4345da4e-dc1e-4bc0-af43-202d6e978260",
-      "target_name": "gateway 7"
-    },
-    {
-      "id": "01c75cf8-2ab8-4fb4-8efa-ac322ee88624",
-      "source": "4345da4e-dc1e-4bc0-af43-202d6e978260",
-      "source_name": "gateway 7",
-      "target": "fc9494f7-d7e3-4e05-83dd-ecf766613940",
-      "target_name": "Fix issue price",
-      "condition": "The issue price is fixed after receiving clearance from the SEC."
-    },
-    {
-      "id": "35f7fbb6-b82d-4d9d-aaea-62f443706a8e",
-      "source": "4345da4e-dc1e-4bc0-af43-202d6e978260",
-      "source_name": "gateway 7",
-      "target": "26a55e4c-7786-422d-a41b-368d4b66b3e1",
-      "target_name": "Enter into firm commitment",
-      "condition": "A firm commitment is entered into to buy the stock and then offer it to the public."
-    },
-    {
-      "id": "22f8216a-c2ea-4d7c-94ef-4196360b69a8",
-      "source": "4345da4e-dc1e-4bc0-af43-202d6e978260",
-      "source_name": "gateway 7",
-      "target": "6fe74652-bf2b-4e30-93ce-e8bbc81b1913",
-      "target_name": "Offer stock to public",
-      "condition": "The stock is offered to the public."
-    },
-    {
-      "id": "9b746491-2f3f-4566-bc3a-507412684b82",
-      "source": "fc9494f7-d7e3-4e05-83dd-ecf766613940",
-      "source_name": "Fix issue price",
-      "target": "49162cfc-0370-425f-8cf9-a421526fcc9e",
-      "target_name": "gateway 8"
-    },
-    {
-      "id": "e92644dc-cedc-4f44-ae72-892ed8af1e27",
-      "source": "49162cfc-0370-425f-8cf9-a421526fcc9e",
-      "source_name": "gateway 8",
-      "target": "26a55e4c-7786-422d-a41b-368d4b66b3e1",
-      "target_name": "Enter into firm commitment",
-      "condition": "A firm commitment is entered into to buy the stock and then offer it to the public."
-    },
-    {
-      "id": "59fa7ecc-9729-435e-94d1-b31d6739d5dd",
-      "source": "49162cfc-0370-425f-8cf9-a421526fcc9e",
-      "source_name": "gateway 8",
-      "target": "6fe74652-bf2b-4e30-93ce-e8bbc81b1913",
-      "target_name": "Offer stock to public",
-      "condition": "The stock is offered to the public."
-    },
-    {
-      "id": "78744419-d645-4559-8796-d850752e23b9",
-      "source": "26a55e4c-7786-422d-a41b-368d4b66b3e1",
-      "source_name": "Enter into firm commitment",
-      "target": "6fe74652-bf2b-4e30-93ce-e8bbc81b1913",
-      "target_name": "Offer stock to public"
+      "id": "93b09cd3-0f7c-4b4f-b5e0-9ffbddcd18c5",
+      "source": "019da95d-4d7f-459c-ab05-a03bf29029ba",
+      "source_name": "Enter into a Firm Commitment to Buy the Stock",
+      "target": "8ec7ec38-f1c8-47b8-aa35-383b860af163",
+      "target_name": "Offer the Stock to the Public"
     }
   ]
 }

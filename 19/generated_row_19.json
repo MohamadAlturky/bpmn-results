@@ -1,372 +1,515 @@
 {
   "nodes": [
     {
-      "id": "fa6830d0-ebee-4ef9-8229-59e0faea6012",
-      "name": "Customer",
+      "id": "dd620985-ebb9-4118-8b68-7466a4edb870",
+      "name": "Customer Service",
+      "parentId": null,
       "type": "pool"
     },
     {
-      "id": "266d96ba-3c86-4b74-9d9f-c0bb87266797",
-      "name": "Switch-over request",
+      "id": "41464479-6cfa-47e3-b67d-768664990aff",
+      "name": "Enter Customer Data into CRM System",
+      "parentId": "dd620985-ebb9-4118-8b68-7466a4edb870",
+      "type": "UserTask"
+    },
+    {
+      "id": "bd1df94f-5f81-4f89-91cc-7ba8ce97b0e7",
+      "name": "Analyze and Resolve Issues",
+      "parentId": "dd620985-ebb9-4118-8b68-7466a4edb870",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "e5e8ee1b-9f3c-4d27-8063-8163f6188387",
+      "name": "Correct Errors",
+      "parentId": "dd620985-ebb9-4118-8b68-7466a4edb870",
+      "type": "End_Event"
+    },
+    {
+      "id": "5a23705a-bdd4-4815-a0c2-c9916d38ef87",
+      "name": "Send Confirmation Document",
+      "parentId": "dd620985-ebb9-4118-8b68-7466a4edb870",
+      "type": "UserTask"
+    },
+    {
+      "id": "22773902-7b42-4a9f-852c-3199ed971df2",
+      "name": "Prepare Contract Documents",
+      "parentId": "dd620985-ebb9-4118-8b68-7466a4edb870",
+      "type": "ManualTask"
+    },
+    {
+      "id": "db4da72f-67df-458e-81bf-ddfeb8970813",
+      "name": "Create CIS Contract",
+      "parentId": "dd620985-ebb9-4118-8b68-7466a4edb870",
+      "type": "ManualTask"
+    },
+    {
+      "id": "2693b2fe-6218-4e4a-96b7-504d8bf86d94",
+      "name": "Check Contract Details",
+      "parentId": "dd620985-ebb9-4118-8b68-7466a4edb870",
+      "type": "UserTask"
+    },
+    {
+      "id": "818a8179-26b9-4633-9b9e-0faf4d2665c0",
+      "name": "Customer",
+      "parentId": null,
+      "type": "pool"
+    },
+    {
+      "id": "75f10bba-ee4e-4d89-9bb1-0002699eacec",
+      "name": "Switch-over Request",
+      "parentId": "818a8179-26b9-4633-9b9e-0faf4d2665c0",
       "type": "Start_Event"
     },
     {
-      "id": "3095eac7-c414-4d62-870a-083d3a2eafb0",
-      "name": "Check contract details",
+      "id": "152973b7-ab27-4a97-a254-2aaaf91c7a57",
+      "name": "Withdraw from Switch Contract",
+      "parentId": "818a8179-26b9-4633-9b9e-0faf4d2665c0",
       "type": "UserTask"
     },
     {
-      "id": "778d47f2-0056-43bc-9b54-3fbcc20604b7",
-      "name": "Withdraw from switch contract",
+      "id": "2ae7d123-9b7f-4716-a4ef-0eda4f772c36",
+      "name": "Confirm Switch Contract",
+      "parentId": "818a8179-26b9-4633-9b9e-0faf4d2665c0",
       "type": "UserTask"
     },
     {
-      "id": "b4d443ad-fac2-4d0f-86c4-635e4345ecf0",
-      "name": "Confirm switch contract",
-      "type": "UserTask"
-    },
-    {
-      "id": "5c117888-e239-4b2e-8ae9-83cc0f7f2dc8",
-      "name": "Customer Service",
-      "type": "pool"
-    },
-    {
-      "id": "45a967ff-7499-443f-a5bc-c163bce48526",
-      "name": "Receive customer data",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "f7eb07de-5b04-4778-985d-e25558a60b0e",
-      "name": "Enter customer data into CRM system",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "b297107a-483e-46a2-9192-c75ea56b6ea1",
-      "name": "Compare customer data with internal database",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "e4d4b09f-efe4-4b11-ada4-c5c48b0bbc27",
-      "name": "Check for completeness and plausibility",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "c4c36e68-f9f0-418e-9b5f-b74a7e564610",
-      "name": "Correct errors",
-      "type": "ManualTask"
-    },
-    {
-      "id": "d3fa0f8b-a56f-4442-91cf-61c00dcd4130",
-      "name": "Create new customer object",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "4d3bdc05-47af-4777-98a0-62dd793d6703",
-      "name": "Prepare contract documents",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "c56a32f5-e5d5-49e7-9e83-45019f82a931",
-      "name": "Automated check of contract documents",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "e61cdf83-db3e-49da-a102-c0324305e67a",
-      "name": "Analyze and resolve issues",
-      "type": "ManualTask"
-    },
-    {
-      "id": "f96e5652-9b91-4d7f-9542-0bab35ccacdc",
-      "name": "Regenerate contract documents",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "84140a11-eb1f-4663-a596-4d8c1df3f6fb",
-      "name": "Send confirmation document to customer",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "0b8530a2-4f09-4962-8bde-23fef67ef980",
-      "name": "Create CIS contract",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "d08bb741-5ebd-481c-a145-1d1d04c35697",
-      "name": "Import meter data to systems",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "cc31f773-7fa0-4e87-80e0-0917e78661cd",
+      "id": "1487564f-14a4-4296-9506-e7a62e89e665",
       "name": "Grid Operator",
+      "parentId": null,
       "type": "pool"
     },
     {
-      "id": "eb400cbd-6cf9-4c93-bb1b-712a4143c80a",
-      "name": "Request to grid operator",
+      "id": "33940b77-220d-4500-af81-7fe1e0638128",
+      "name": "Check for Supplier Conurrence",
+      "parentId": "1487564f-14a4-4296-9506-e7a62e89e665",
       "type": "ServiceTask"
     },
     {
-      "id": "7ac23707-45de-4d10-8cff-8c2070d2c5cf",
-      "name": "Check for supplier concurrence",
+      "id": "802eb7ef-fb6a-4dd7-95b4-fded67ed181a",
+      "name": "No Supplier Conurrence",
+      "parentId": "1487564f-14a4-4296-9506-e7a62e89e665",
       "type": "ServiceTask"
     },
     {
-      "id": "4e8c1f6d-5ab7-4479-86e1-eefd808a1435",
-      "name": "Inform involved suppliers and resolve conflict",
+      "id": "a00887d6-711a-4348-887e-edf29a26b6af",
+      "name": "Inform Involved Suppliers",
+      "parentId": "1487564f-14a4-4296-9506-e7a62e89e665",
       "type": "ManualTask"
     },
     {
-      "id": "ee5ffc9d-e6da-4de3-b4a4-9ea0dc39deb5",
-      "name": "No supplier concurrence",
+      "id": "20f04456-d119-41bb-99db-6f400cd49d86",
+      "name": "Terminate Sales Agreement",
+      "parentId": "1487564f-14a4-4296-9506-e7a62e89e665",
       "type": "ServiceTask"
     },
     {
-      "id": "f9f66e5f-b5cc-4425-9c4b-9f3de5d54462",
-      "name": "Terminate sales agreement with old supplier",
-      "type": "ManualTask"
+      "id": "ccc1db6b-578d-42d1-adc9-a1d5aaea14ea",
+      "name": "Send Final Billing",
+      "parentId": "1487564f-14a4-4296-9506-e7a62e89e665",
+      "type": "UserTask"
     },
     {
-      "id": "642adb18-0b7c-423d-8b94-ab699aee3ebd",
-      "name": "Receive power meter data",
+      "id": "d67d3881-773e-45e2-8f9f-8383d3fad19d",
+      "name": "Compute Final Billing",
+      "parentId": "1487564f-14a4-4296-9506-e7a62e89e665",
       "type": "ServiceTask"
     },
     {
-      "id": "b758cf48-73d4-4eaa-acf5-a2ebcb20c3e5",
+      "id": "6383c92d-2e5e-4f0c-bd8e-0c35cabed71e",
+      "name": "System",
+      "parentId": null,
+      "type": "pool"
+    },
+    {
+      "id": "1739367a-5f54-4e70-9ebd-abdd4ad1eee1",
+      "name": "Receive Customer Data",
+      "parentId": "6383c92d-2e5e-4f0c-bd8e-0c35cabed71e",
+      "type": null
+    },
+    {
+      "id": "7d1825ce-9c7d-4ee0-8ac3-da955f49bcd7",
+      "name": "Compare with Internal Customer Data Base",
+      "parentId": "6383c92d-2e5e-4f0c-bd8e-0c35cabed71e",
+      "type": "UserTask"
+    },
+    {
+      "id": "62224375-114d-4e34-980b-760258e0ffc5",
+      "name": "Automated Check of Contract Documents",
+      "parentId": "6383c92d-2e5e-4f0c-bd8e-0c35cabed71e",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "9ba5c35a-a1e3-4a15-9850-d7a72efa49aa",
+      "name": "Receive Meter Data",
+      "parentId": "6383c92d-2e5e-4f0c-bd8e-0c35cabed71e",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "fb07040b-83a6-4401-a8db-ecf2ddbad081",
+      "name": "Import Meter Data",
+      "parentId": "6383c92d-2e5e-4f0c-bd8e-0c35cabed71e",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "29ef9543-2af4-4cd9-804f-6daba64416c0",
+      "name": "Gatekeeper",
+      "parentId": null,
+      "type": "pool"
+    },
+    {
+      "id": "dc46f4fe-3216-435c-b3c1-e17379582618",
       "name": "gateway 1",
+      "parentId": null,
       "type": "XOR"
     },
     {
-      "id": "70976bfd-ed8e-4aa8-9cfc-2c898f10603d",
+      "id": "ab0d45f2-c225-4a1a-bec0-2646f5e55266",
+      "name": "Check for Completeness and Plausibility",
+      "parentId": null,
+      "type": "End_Event"
+    },
+    {
+      "id": "5358f82c-1627-46b8-8462-2cdc47d25ff9",
+      "name": "Create New Customer Object",
+      "parentId": null,
+      "type": "ServiceTask"
+    },
+    {
+      "id": "1f06ea7a-07de-4f6b-9167-20f05a037201",
       "name": "gateway 2",
+      "parentId": null,
       "type": "XOR"
     },
     {
-      "id": "7af3bc5a-2611-4fff-a5a3-9a9c3ec6be24",
+      "id": "d408d175-ce9e-450e-8e24-d1442bcf3c96",
       "name": "gateway 3",
+      "parentId": null,
       "type": "XOR"
     },
     {
-      "id": "47b39df0-0522-4124-9ad9-c9e8c2878387",
-      "name": "End process",
+      "id": "f76df11d-c5de-4141-8a19-deb3dbb06dc4",
+      "name": "gateway 4",
+      "parentId": null,
+      "type": "XOR"
+    },
+    {
+      "id": "84e07e77-84d2-4c41-8453-b68ac290a26d",
+      "name": "Request to Grid Operator",
+      "parentId": null,
+      "type": "ManualTask"
+    },
+    {
+      "id": "94160707-0c3b-4450-8125-7ba45ccc3fdd",
+      "name": "gateway 5",
+      "parentId": null,
+      "type": "XOR"
+    },
+    {
+      "id": "81b7cdc2-5b07-4f7a-91d2-4ba3be8c2a33",
+      "name": "gateway 6",
+      "parentId": null,
+      "type": "XOR"
+    },
+    {
+      "id": "2a1962ad-438b-4bf3-b06a-adcf711e5c94",
+      "name": "Resolve Conflict",
+      "parentId": null,
+      "type": "ManualTask"
+    },
+    {
+      "id": "5be33818-554d-4a35-ac65-a3999b129436",
+      "name": "gateway 7",
+      "parentId": null,
+      "type": "XOR"
+    },
+    {
+      "id": "7c9a2f75-df27-4451-9534-d3a3edcb2c66",
+      "name": "End Process",
+      "parentId": null,
       "type": "End_Event"
     }
   ],
   "edges": [
     {
-      "id": "7acd19ec-f9cb-4a1c-b242-473a46ea665a",
-      "source": "266d96ba-3c86-4b74-9d9f-c0bb87266797",
-      "source_name": "Switch-over request",
-      "target": "45a967ff-7499-443f-a5bc-c163bce48526",
-      "target_name": "Receive customer data"
+      "id": "e4c599fe-c7e0-4dbe-ba58-bfe5caf48858",
+      "source": "75f10bba-ee4e-4d89-9bb1-0002699eacec",
+      "source_name": "Switch-over Request",
+      "target": "1739367a-5f54-4e70-9ebd-abdd4ad1eee1",
+      "target_name": "Receive Customer Data"
     },
     {
-      "id": "32d1fb55-c2e4-464d-932d-06ea48e79ed2",
-      "source": "45a967ff-7499-443f-a5bc-c163bce48526",
-      "source_name": "Receive customer data",
-      "target": "f7eb07de-5b04-4778-985d-e25558a60b0e",
-      "target_name": "Enter customer data into CRM system"
+      "id": "ddc500e8-37c9-4951-aa0d-dd31c19f57a9",
+      "source": "1739367a-5f54-4e70-9ebd-abdd4ad1eee1",
+      "source_name": "Receive Customer Data",
+      "target": "41464479-6cfa-47e3-b67d-768664990aff",
+      "target_name": "Enter Customer Data into CRM System"
     },
     {
-      "id": "58c2427f-7b3f-425c-8646-5b1291e5566d",
-      "source": "f7eb07de-5b04-4778-985d-e25558a60b0e",
-      "source_name": "Enter customer data into CRM system",
-      "target": "b297107a-483e-46a2-9192-c75ea56b6ea1",
-      "target_name": "Compare customer data with internal database"
+      "id": "b1adcd1a-45fa-407a-8b84-c2400945af52",
+      "source": "41464479-6cfa-47e3-b67d-768664990aff",
+      "source_name": "Enter Customer Data into CRM System",
+      "target": "7d1825ce-9c7d-4ee0-8ac3-da955f49bcd7",
+      "target_name": "Compare with Internal Customer Data Base"
     },
     {
-      "id": "c24f199a-cffa-4ce9-997e-13c86e1a1738",
-      "source": "b297107a-483e-46a2-9192-c75ea56b6ea1",
-      "source_name": "Compare customer data with internal database",
-      "target": "e4d4b09f-efe4-4b11-ada4-c5c48b0bbc27",
-      "target_name": "Check for completeness and plausibility"
-    },
-    {
-      "id": "44846b59-0ee8-4cd9-8d3e-f07f1cc40426",
-      "source": "e4d4b09f-efe4-4b11-ada4-c5c48b0bbc27",
-      "source_name": "Check for completeness and plausibility",
-      "target": "c4c36e68-f9f0-418e-9b5f-b74a7e564610",
-      "target_name": "Correct errors"
-    },
-    {
-      "id": "8c4b562a-fb6c-4620-a60d-57d35e85b503",
-      "source": "c4c36e68-f9f0-418e-9b5f-b74a7e564610",
-      "source_name": "Correct errors",
-      "target": "d3fa0f8b-a56f-4442-91cf-61c00dcd4130",
-      "target_name": "Create new customer object"
-    },
-    {
-      "id": "22fecfa4-b177-49c5-952e-e9d89fc4180f",
-      "source": "d3fa0f8b-a56f-4442-91cf-61c00dcd4130",
-      "source_name": "Create new customer object",
-      "target": "4d3bdc05-47af-4777-98a0-62dd793d6703",
-      "target_name": "Prepare contract documents"
-    },
-    {
-      "id": "34687eff-a2c1-4436-975d-344ce3f708d2",
-      "source": "4d3bdc05-47af-4777-98a0-62dd793d6703",
-      "source_name": "Prepare contract documents",
-      "target": "c56a32f5-e5d5-49e7-9e83-45019f82a931",
-      "target_name": "Automated check of contract documents"
-    },
-    {
-      "id": "17b27376-7ebb-4c07-99de-331be5cccc25",
-      "source": "c56a32f5-e5d5-49e7-9e83-45019f82a931",
-      "source_name": "Automated check of contract documents",
-      "target": "b758cf48-73d4-4eaa-acf5-a2ebcb20c3e5",
+      "id": "95a79f8e-fceb-41fc-8109-18c22c505f7a",
+      "source": "7d1825ce-9c7d-4ee0-8ac3-da955f49bcd7",
+      "source_name": "Compare with Internal Customer Data Base",
+      "target": "dc46f4fe-3216-435c-b3c1-e17379582618",
       "target_name": "gateway 1"
     },
     {
-      "id": "1099d2c2-b337-4916-afe7-e6e5f5643afa",
-      "source": "b758cf48-73d4-4eaa-acf5-a2ebcb20c3e5",
+      "id": "ba50bf3b-1e60-4a40-916a-008bdc615a57",
+      "source": "dc46f4fe-3216-435c-b3c1-e17379582618",
       "source_name": "gateway 1",
-      "target": "e61cdf83-db3e-49da-a102-c0324305e67a",
-      "target_name": "Analyze and resolve issues",
-      "condition": "Contract documents are not (or incorrectly) generated"
+      "target": "ab0d45f2-c225-4a1a-bec0-2646f5e55266",
+      "target_name": "Check for Completeness and Plausibility",
+      "condition": "Errors detected in customer data"
     },
     {
-      "id": "6a2ede2c-6029-4e86-a439-12739805ea9d",
-      "source": "b758cf48-73d4-4eaa-acf5-a2ebcb20c3e5",
+      "id": "464326cc-a7aa-4ffd-b398-c154f7602beb",
+      "source": "dc46f4fe-3216-435c-b3c1-e17379582618",
       "source_name": "gateway 1",
-      "target": "84140a11-eb1f-4663-a596-4d8c1df3f6fb",
-      "target_name": "Send confirmation document to customer",
-      "condition": "Contract documents are successfully generated"
+      "target": "5358f82c-1627-46b8-8462-2cdc47d25ff9",
+      "target_name": "Create New Customer Object",
+      "condition": "No errors detected and customer does not exist in internal database"
     },
     {
-      "id": "d5492292-4628-43c1-a6c9-7abe68311438",
-      "source": "e61cdf83-db3e-49da-a102-c0324305e67a",
-      "source_name": "Analyze and resolve issues",
-      "target": "f96e5652-9b91-4d7f-9542-0bab35ccacdc",
-      "target_name": "Regenerate contract documents"
+      "id": "f8763dc7-925c-449c-a10d-9e46fe5bf8ec",
+      "source": "dc46f4fe-3216-435c-b3c1-e17379582618",
+      "source_name": "gateway 1",
+      "target": "e5e8ee1b-9f3c-4d27-8063-8163f6188387",
+      "target_name": "Correct Errors",
+      "condition": "Errors detected in customer data"
     },
     {
-      "id": "57b443e2-91e5-40d3-b20e-9f2a01de78c9",
-      "source": "f96e5652-9b91-4d7f-9542-0bab35ccacdc",
-      "source_name": "Regenerate contract documents",
-      "target": "84140a11-eb1f-4663-a596-4d8c1df3f6fb",
-      "target_name": "Send confirmation document to customer"
-    },
-    {
-      "id": "cca6436e-65b4-4419-9de0-7202f8d2914c",
-      "source": "84140a11-eb1f-4663-a596-4d8c1df3f6fb",
-      "source_name": "Send confirmation document to customer",
-      "target": "eb400cbd-6cf9-4c93-bb1b-712a4143c80a",
-      "target_name": "Request to grid operator"
-    },
-    {
-      "id": "2e67b5be-dc9a-49e4-abf5-4523301c3f5e",
-      "source": "eb400cbd-6cf9-4c93-bb1b-712a4143c80a",
-      "source_name": "Request to grid operator",
-      "target": "7ac23707-45de-4d10-8cff-8c2070d2c5cf",
-      "target_name": "Check for supplier concurrence"
-    },
-    {
-      "id": "4cfbbdb0-3cc6-4106-988f-df883becd1d5",
-      "source": "7ac23707-45de-4d10-8cff-8c2070d2c5cf",
-      "source_name": "Check for supplier concurrence",
-      "target": "70976bfd-ed8e-4aa8-9cfc-2c898f10603d",
+      "id": "7efdce35-9128-4a26-a6e6-fc6cf5397832",
+      "source": "5358f82c-1627-46b8-8462-2cdc47d25ff9",
+      "source_name": "Create New Customer Object",
+      "target": "1f06ea7a-07de-4f6b-9167-20f05a037201",
       "target_name": "gateway 2"
     },
     {
-      "id": "58f1c477-9347-4e34-9823-ad377d236ee8",
-      "source": "70976bfd-ed8e-4aa8-9cfc-2c898f10603d",
+      "id": "76d92c4d-7a46-4401-9bf8-f527bcf0e1c8",
+      "source": "1f06ea7a-07de-4f6b-9167-20f05a037201",
       "source_name": "gateway 2",
-      "target": "4e8c1f6d-5ab7-4479-86e1-eefd808a1435",
-      "target_name": "Inform involved suppliers and resolve conflict",
-      "condition": "Supplier concurrence"
+      "target": "22773902-7b42-4a9f-852c-3199ed971df2",
+      "target_name": "Prepare Contract Documents",
+      "condition": "Customer object successfully created"
     },
     {
-      "id": "0a07da6b-8658-467a-9064-2c6c29dfdcc8",
-      "source": "70976bfd-ed8e-4aa8-9cfc-2c898f10603d",
+      "id": "57e200ef-66cd-473f-9a07-f3fc96c5d063",
+      "source": "1f06ea7a-07de-4f6b-9167-20f05a037201",
       "source_name": "gateway 2",
-      "target": "ee5ffc9d-e6da-4de3-b4a4-9ea0dc39deb5",
-      "target_name": "No supplier concurrence",
-      "condition": "No supplier concurrence"
+      "target": "bd1df94f-5f81-4f89-91cc-7ba8ce97b0e7",
+      "target_name": "Analyze and Resolve Issues",
+      "condition": "Issues occurred while creating customer object"
     },
     {
-      "id": "811ea4b8-43bd-4abb-885c-489687809cfd",
-      "source": "4e8c1f6d-5ab7-4479-86e1-eefd808a1435",
-      "source_name": "Inform involved suppliers and resolve conflict",
-      "target": "f9f66e5f-b5cc-4425-9c4b-9f3de5d54462",
-      "target_name": "Terminate sales agreement with old supplier"
-    },
-    {
-      "id": "f3326b5f-2b7a-47b0-b5c6-3c8917b13cfe",
-      "source": "f9f66e5f-b5cc-4425-9c4b-9f3de5d54462",
-      "source_name": "Terminate sales agreement with old supplier",
-      "target": "0b8530a2-4f09-4962-8bde-23fef67ef980",
-      "target_name": "Create CIS contract"
-    },
-    {
-      "id": "6040638c-b4da-45c1-9c5b-c160b6a992c6",
-      "source": "0b8530a2-4f09-4962-8bde-23fef67ef980",
-      "source_name": "Create CIS contract",
-      "target": "3095eac7-c414-4d62-870a-083d3a2eafb0",
-      "target_name": "Check contract details"
-    },
-    {
-      "id": "099a2418-8a0d-406f-bc08-2a16c9a4c629",
-      "source": "3095eac7-c414-4d62-870a-083d3a2eafb0",
-      "source_name": "Check contract details",
-      "target": "7af3bc5a-2611-4fff-a5a3-9a9c3ec6be24",
+      "id": "1cc116d2-c6ac-4b39-9cae-56c781eda320",
+      "source": "22773902-7b42-4a9f-852c-3199ed971df2",
+      "source_name": "Prepare Contract Documents",
+      "target": "d408d175-ce9e-450e-8e24-d1442bcf3c96",
       "target_name": "gateway 3"
     },
     {
-      "id": "81e95cb9-358f-4a07-a11e-cc69eb4b9f91",
-      "source": "7af3bc5a-2611-4fff-a5a3-9a9c3ec6be24",
+      "id": "45aad62a-0f57-485c-82ec-19bb4be6b5bf",
+      "source": "d408d175-ce9e-450e-8e24-d1442bcf3c96",
       "source_name": "gateway 3",
-      "target": "778d47f2-0056-43bc-9b54-3fbcc20604b7",
-      "target_name": "Withdraw from switch contract",
-      "condition": "Customer decides to withdraw from the switch contract"
+      "target": "62224375-114d-4e34-980b-760258e0ffc5",
+      "target_name": "Automated Check of Contract Documents",
+      "condition": "Contract documents preparation successful"
     },
     {
-      "id": "684ce05c-cd47-4e11-9e73-7ecbbfda2fd9",
-      "source": "7af3bc5a-2611-4fff-a5a3-9a9c3ec6be24",
+      "id": "063d137a-f197-423b-978c-16fd5260a561",
+      "source": "d408d175-ce9e-450e-8e24-d1442bcf3c96",
       "source_name": "gateway 3",
-      "target": "b4d443ad-fac2-4d0f-86c4-635e4345ecf0",
-      "target_name": "Confirm switch contract",
-      "condition": "Customer decides to confirm the switch contract or does not respond within 7 days"
+      "target": "bd1df94f-5f81-4f89-91cc-7ba8ce97b0e7",
+      "target_name": "Analyze and Resolve Issues",
+      "condition": "Contract documents preparation failed"
     },
     {
-      "id": "4f6d9197-3f93-479d-ad10-2dbc096d2e8d",
-      "source": "778d47f2-0056-43bc-9b54-3fbcc20604b7",
-      "source_name": "Withdraw from switch contract",
-      "target": "47b39df0-0522-4124-9ad9-c9e8c2878387",
-      "target_name": "End process"
+      "id": "88e0eedd-e12b-46a3-8e58-800069de7174",
+      "source": "62224375-114d-4e34-980b-760258e0ffc5",
+      "source_name": "Automated Check of Contract Documents",
+      "target": "f76df11d-c5de-4141-8a19-deb3dbb06dc4",
+      "target_name": "gateway 4"
     },
     {
-      "id": "83b2772f-7d9f-4a78-a9f0-a0d25dce3319",
-      "source": "47b39df0-0522-4124-9ad9-c9e8c2878387",
-      "source_name": "End process",
-      "target": "b4d443ad-fac2-4d0f-86c4-635e4345ecf0",
-      "target_name": "Confirm switch contract"
+      "id": "28702352-b8b3-4833-8c30-d05df07c068f",
+      "source": "f76df11d-c5de-4141-8a19-deb3dbb06dc4",
+      "source_name": "gateway 4",
+      "target": "5a23705a-bdd4-4815-a0c2-c9916d38ef87",
+      "target_name": "Send Confirmation Document",
+      "condition": "Contract documents check successful"
     },
     {
-      "id": "f9f2023b-42c6-433e-9928-6becbeb43ea0",
-      "source": "b4d443ad-fac2-4d0f-86c4-635e4345ecf0",
-      "source_name": "Confirm switch contract",
-      "target": "642adb18-0b7c-423d-8b94-ab699aee3ebd",
-      "target_name": "Receive power meter data"
+      "id": "5c669a52-df01-46df-a27b-d1f4fb02afed",
+      "source": "f76df11d-c5de-4141-8a19-deb3dbb06dc4",
+      "source_name": "gateway 4",
+      "target": "bd1df94f-5f81-4f89-91cc-7ba8ce97b0e7",
+      "target_name": "Analyze and Resolve Issues",
+      "condition": "Contract documents check failed"
     },
     {
-      "id": "2eb60a80-0980-49fa-accc-3c184cb77e23",
-      "source": "642adb18-0b7c-423d-8b94-ab699aee3ebd",
-      "source_name": "Receive power meter data",
-      "target": "d08bb741-5ebd-481c-a145-1d1d04c35697",
-      "target_name": "Import meter data to systems"
+      "id": "73019f93-fafc-46b1-8290-3e75905e3169",
+      "source": "5a23705a-bdd4-4815-a0c2-c9916d38ef87",
+      "source_name": "Send Confirmation Document",
+      "target": "84e07e77-84d2-4c41-8453-b68ac290a26d",
+      "target_name": "Request to Grid Operator"
     },
     {
-      "id": "2ac3c0c6-9311-472d-8103-874439059c03",
-      "source": "d08bb741-5ebd-481c-a145-1d1d04c35697",
-      "source_name": "Import meter data to systems",
-      "target": "47b39df0-0522-4124-9ad9-c9e8c2878387",
-      "target_name": "End process"
+      "id": "0d024551-bcf4-4f02-abba-f4e052558dde",
+      "source": "bd1df94f-5f81-4f89-91cc-7ba8ce97b0e7",
+      "source_name": "Analyze and Resolve Issues",
+      "target": "84e07e77-84d2-4c41-8453-b68ac290a26d",
+      "target_name": "Request to Grid Operator"
     },
     {
-      "id": "abff3d7f-338e-481b-8813-b3f03e4b5f72",
-      "source": "ee5ffc9d-e6da-4de3-b4a4-9ea0dc39deb5",
-      "source_name": "No supplier concurrence",
-      "target": "0b8530a2-4f09-4962-8bde-23fef67ef980",
-      "target_name": "Create CIS contract"
+      "id": "0477e692-a4e8-49b0-8c05-c286f8b39d91",
+      "source": "84e07e77-84d2-4c41-8453-b68ac290a26d",
+      "source_name": "Request to Grid Operator",
+      "target": "94160707-0c3b-4450-8125-7ba45ccc3fdd",
+      "target_name": "gateway 5"
+    },
+    {
+      "id": "6b2b006e-a7f8-40a3-a835-e566800e0bc7",
+      "source": "94160707-0c3b-4450-8125-7ba45ccc3fdd",
+      "source_name": "gateway 5",
+      "target": "33940b77-220d-4500-af81-7fe1e0638128",
+      "target_name": "Check for Supplier Conurrence",
+      "condition": "Grid operator allows supplier change"
+    },
+    {
+      "id": "5fed7980-83c5-412e-a991-955942fe02f5",
+      "source": "94160707-0c3b-4450-8125-7ba45ccc3fdd",
+      "source_name": "gateway 5",
+      "target": "802eb7ef-fb6a-4dd7-95b4-fded67ed181a",
+      "target_name": "No Supplier Conurrence",
+      "condition": "Grid operator does not allow supplier change"
+    },
+    {
+      "id": "e2eccb77-8c3b-4c63-85f5-d3c1fe28d4e0",
+      "source": "33940b77-220d-4500-af81-7fe1e0638128",
+      "source_name": "Check for Supplier Conurrence",
+      "target": "81b7cdc2-5b07-4f7a-91d2-4ba3be8c2a33",
+      "target_name": "gateway 6"
+    },
+    {
+      "id": "c77ebc68-23d5-4976-995b-0fa51fcd8b1c",
+      "source": "81b7cdc2-5b07-4f7a-91d2-4ba3be8c2a33",
+      "source_name": "gateway 6",
+      "target": "a00887d6-711a-4348-887e-edf29a26b6af",
+      "target_name": "Inform Involved Suppliers",
+      "condition": "Supplier concurrence detected"
+    },
+    {
+      "id": "31f60e48-d3a3-4024-b225-df2fccee7dc4",
+      "source": "81b7cdc2-5b07-4f7a-91d2-4ba3be8c2a33",
+      "source_name": "gateway 6",
+      "target": "20f04456-d119-41bb-99db-6f400cd49d86",
+      "target_name": "Terminate Sales Agreement",
+      "condition": "No supplier concurrence detected"
+    },
+    {
+      "id": "01aeb937-c485-465f-8f91-269abc67ca2d",
+      "source": "802eb7ef-fb6a-4dd7-95b4-fded67ed181a",
+      "source_name": "No Supplier Conurrence",
+      "target": "db4da72f-67df-458e-81bf-ddfeb8970813",
+      "target_name": "Create CIS Contract"
+    },
+    {
+      "id": "136edc14-1773-48a9-957a-7f98727d2079",
+      "source": "a00887d6-711a-4348-887e-edf29a26b6af",
+      "source_name": "Inform Involved Suppliers",
+      "target": "2a1962ad-438b-4bf3-b06a-adcf711e5c94",
+      "target_name": "Resolve Conflict"
+    },
+    {
+      "id": "c23bebb9-3056-499d-80b1-7fc388f65ef2",
+      "source": "20f04456-d119-41bb-99db-6f400cd49d86",
+      "source_name": "Terminate Sales Agreement",
+      "target": "db4da72f-67df-458e-81bf-ddfeb8970813",
+      "target_name": "Create CIS Contract"
+    },
+    {
+      "id": "7693e293-68ca-482b-8545-9c9c0f36537d",
+      "source": "db4da72f-67df-458e-81bf-ddfeb8970813",
+      "source_name": "Create CIS Contract",
+      "target": "2693b2fe-6218-4e4a-96b7-504d8bf86d94",
+      "target_name": "Check Contract Details"
+    },
+    {
+      "id": "fef96e95-6931-4e7b-bebd-3b9859360dd0",
+      "source": "2a1962ad-438b-4bf3-b06a-adcf711e5c94",
+      "source_name": "Resolve Conflict",
+      "target": "db4da72f-67df-458e-81bf-ddfeb8970813",
+      "target_name": "Create CIS Contract"
+    },
+    {
+      "id": "8ccd3640-8929-499c-8e01-132cc08c54b4",
+      "source": "2693b2fe-6218-4e4a-96b7-504d8bf86d94",
+      "source_name": "Check Contract Details",
+      "target": "5be33818-554d-4a35-ac65-a3999b129436",
+      "target_name": "gateway 7"
+    },
+    {
+      "id": "297ff904-4df1-4da0-8b58-89c9091040f9",
+      "source": "5be33818-554d-4a35-ac65-a3999b129436",
+      "source_name": "gateway 7",
+      "target": "152973b7-ab27-4a97-a254-2aaaf91c7a57",
+      "target_name": "Withdraw from Switch Contract",
+      "condition": "Customer withdraws from switch contract"
+    },
+    {
+      "id": "337fda0b-494d-40d4-bd0a-215a8e12db90",
+      "source": "5be33818-554d-4a35-ac65-a3999b129436",
+      "source_name": "gateway 7",
+      "target": "2ae7d123-9b7f-4716-a4ef-0eda4f772c36",
+      "target_name": "Confirm Switch Contract",
+      "condition": "Customer confirms switch contract"
+    },
+    {
+      "id": "de4f2235-d391-46e4-ab9e-e06d9ff8b8d5",
+      "source": "152973b7-ab27-4a97-a254-2aaaf91c7a57",
+      "source_name": "Withdraw from Switch Contract",
+      "target": "7c9a2f75-df27-4451-9534-d3a3edcb2c66",
+      "target_name": "End Process"
+    },
+    {
+      "id": "9585bee6-307d-4060-8d9d-99193c7dd463",
+      "source": "2ae7d123-9b7f-4716-a4ef-0eda4f772c36",
+      "source_name": "Confirm Switch Contract",
+      "target": "9ba5c35a-a1e3-4a15-9850-d7a72efa49aa",
+      "target_name": "Receive Meter Data"
+    },
+    {
+      "id": "da3152ba-42e1-4975-9b09-9c9b37c323f6",
+      "source": "9ba5c35a-a1e3-4a15-9850-d7a72efa49aa",
+      "source_name": "Receive Meter Data",
+      "target": "fb07040b-83a6-4401-a8db-ecf2ddbad081",
+      "target_name": "Import Meter Data"
+    },
+    {
+      "id": "f652181a-3f6b-48c4-ad08-c07205173923",
+      "source": "fb07040b-83a6-4401-a8db-ecf2ddbad081",
+      "source_name": "Import Meter Data",
+      "target": "d67d3881-773e-45e2-8f9f-8383d3fad19d",
+      "target_name": "Compute Final Billing"
+    },
+    {
+      "id": "4ef28671-0499-4d85-91f3-dd002591f0e8",
+      "source": "d67d3881-773e-45e2-8f9f-8383d3fad19d",
+      "source_name": "Compute Final Billing",
+      "target": "ccc1db6b-578d-42d1-adc9-a1d5aaea14ea",
+      "target_name": "Send Final Billing"
+    },
+    {
+      "id": "9d7bf3ab-8331-495f-8cdd-0d4c2903070c",
+      "source": "ccc1db6b-578d-42d1-adc9-a1d5aaea14ea",
+      "source_name": "Send Final Billing",
+      "target": "7c9a2f75-df27-4451-9534-d3a3edcb2c66",
+      "target_name": "End Process"
     }
   ]
 }

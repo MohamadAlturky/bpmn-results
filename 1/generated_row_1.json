@@ -1,172 +1,108 @@
 {
-    "nodes": [
-      {
-        "id": "2b0f8dbe-49ec-4f26-922b-ff09da684668",
-        "name": "CRS",
-        "type": "pool"
-      },
-      {
-        "id": "4e89c253-a569-4967-96dd-f8ef29312741",
-        "name": "CRS Check",
-        "type": "Start_Event"
-      },
-      {
-        "id": "c66b4cab-6e59-483d-bb83-f76905bc8c7f",
-        "name": "Repair Technician",
-        "type": "pool"
-      },
-      {
-        "id": "d47b11fb-d8ae-470f-af0c-f6773ce15ea7",
-        "name": "Check Hardware",
-        "type": "ManualTask"
-      },
-      {
-        "id": "3581cb45-21b4-4701-890e-38303c252ee5",
-        "name": "Check Software",
-        "type": "ManualTask"
-      },
-      {
-        "id": "42f0b8c7-4954-4189-af86-a20e7745e8b2",
-        "name": "Repair Hardware",
-        "type": "ManualTask"
-      },
-      {
-        "id": "6880a4ae-29e6-47f9-8007-c09342f05be8",
-        "name": "Repair Software",
-        "type": "ManualTask"
-      },
-      {
-        "id": "d6f3eb9f-7424-4472-b2e6-3cc5593bd581",
-        "name": "Test Functionality",
-        "type": "ServiceTask"
-      },
-      {
-        "id": "3c6328c1-d899-4c49-84d2-73a1103e0475",
-        "name": "gateway 1",
-        "type": "XOR"
-      },
-      {
-        "id": "bd4132a7-3ae0-4163-bc61-c28193632750",
-        "name": "gateway 2",
-        "type": "XOR"
-      },
-      {
-        "id": "6ee19af5-1374-494c-8072-18578a242a09",
-        "name": "gateway 3",
-        "type": "XOR"
-      },
-      {
-        "id": "cd914d0c-6eea-4bbb-b81e-06a68339c217",
-        "name": "gateway 4",
-        "type": "XOR"
-      }
-    ],
-    "edges": [
-      {
-        "id": "72d2f401-fbc2-428a-a4ff-4c8f37102a62",
-        "source": "4e89c253-a569-4967-96dd-f8ef29312741",
-        "source_name": "CRS Check",
-        "target": "3c6328c1-d899-4c49-84d2-73a1103e0475",
-        "target_name": "gateway 1"
-      },
-      {
-        "id": "f25cb873-a559-40bf-a3ea-7ff27d3a55b7",
-        "source": "3c6328c1-d899-4c49-84d2-73a1103e0475",
-        "source_name": "gateway 1",
-        "target": "d47b11fb-d8ae-470f-af0c-f6773ce15ea7",
-        "target_name": "Check Hardware",
-        "condition": "Hardware issue detected"
-      },
-      {
-        "id": "b7979f5d-4b6b-4312-8571-587bba112236",
-        "source": "3c6328c1-d899-4c49-84d2-73a1103e0475",
-        "source_name": "gateway 1",
-        "target": "3581cb45-21b4-4701-890e-38303c252ee5",
-        "target_name": "Check Software",
-        "condition": "Software issue detected"
-      },
-      {
-        "id": "40426314-4280-4cda-8d8b-7a83f825b4e2",
-        "source": "d47b11fb-d8ae-470f-af0c-f6773ce15ea7",
-        "source_name": "Check Hardware",
-        "target": "bd4132a7-3ae0-4163-bc61-c28193632750",
-        "target_name": "gateway 2"
-      },
-      {
-        "id": "e8b19259-9647-412e-8887-6e04b38ac9e5",
-        "source": "bd4132a7-3ae0-4163-bc61-c28193632750",
-        "source_name": "gateway 2",
-        "target": "d6f3eb9f-7424-4472-b2e6-3cc5593bd581",
-        "target_name": "Test Functionality",
-        "condition": "Error not detected"
-      },
-      {
-        "id": "dce88da9-06e9-40f0-aac0-71e9bc25dc46",
-        "source": "bd4132a7-3ae0-4163-bc61-c28193632750",
-        "source_name": "gateway 2",
-        "target": "42f0b8c7-4954-4189-af86-a20e7745e8b2",
-        "target_name": "Repair Hardware",
-        "condition": "Error detected"
-      },
-      {
-        "id": "bcb69182-3a3f-4da8-829f-22c736433db3",
-        "source": "d6f3eb9f-7424-4472-b2e6-3cc5593bd581",
-        "source_name": "Test Functionality",
-        "target": "6ee19af5-1374-494c-8072-18578a242a09",
-        "target_name": "gateway 3"
-      },
-      {
-        "id": "66d79800-e342-4ea4-ad2d-1436022b9049",
-        "source": "6ee19af5-1374-494c-8072-18578a242a09",
-        "source_name": "gateway 3",
-        "target": "42f0b8c7-4954-4189-af86-a20e7745e8b2",
-        "target_name": "Repair Hardware",
-        "condition": "Hardware error detected during testing"
-      },
-      {
-        "id": "14a56b0e-1f98-42c5-a196-9f1feb999e6c",
-        "source": "6ee19af5-1374-494c-8072-18578a242a09",
-        "source_name": "gateway 3",
-        "target": "6880a4ae-29e6-47f9-8007-c09342f05be8",
-        "target_name": "Repair Software",
-        "condition": "Software error detected during testing or previously"
-      },
-      {
-        "id": "d4fe1ff6-0040-471c-b86e-c1ed8aa10be0",
-        "source": "42f0b8c7-4954-4189-af86-a20e7745e8b2",
-        "source_name": "Repair Hardware",
-        "target": "d6f3eb9f-7424-4472-b2e6-3cc5593bd581",
-        "target_name": "Test Functionality"
-      },
-      {
-        "id": "eddb3cae-b2f7-4b71-b182-07aed74f6a6f",
-        "source": "3581cb45-21b4-4701-890e-38303c252ee5",
-        "source_name": "Check Software",
-        "target": "cd914d0c-6eea-4bbb-b81e-06a68339c217",
-        "target_name": "gateway 4"
-      },
-      {
-        "id": "4cf532d6-f21b-4529-b591-5a2385e9e4f2",
-        "source": "cd914d0c-6eea-4bbb-b81e-06a68339c217",
-        "source_name": "gateway 4",
-        "target": "d6f3eb9f-7424-4472-b2e6-3cc5593bd581",
-        "target_name": "Test Functionality",
-        "condition": "Error not detected"
-      },
-      {
-        "id": "86b1142f-1ca1-420f-ac16-6039da74d7ae",
-        "source": "cd914d0c-6eea-4bbb-b81e-06a68339c217",
-        "source_name": "gateway 4",
-        "target": "6880a4ae-29e6-47f9-8007-c09342f05be8",
-        "target_name": "Repair Software",
-        "condition": "Error detected"
-      },
-      {
-        "id": "bdeccbe1-72d8-4dc3-99f5-337914d5750c",
-        "source": "6880a4ae-29e6-47f9-8007-c09342f05be8",
-        "source_name": "Repair Software",
-        "target": "d6f3eb9f-7424-4472-b2e6-3cc5593bd581",
-        "target_name": "Test Functionality"
-      }
-    ]
-  }
+  "nodes": [
+    {
+      "id": "495d74d1-37f6-4578-bf24-5183ce3e846a",
+      "name": "CRS",
+      "parentId": null,
+      "type": "pool"
+    },
+    {
+      "id": "d2b82e55-4d6d-493c-87c6-a265aefeeeb4",
+      "name": "Check Defect",
+      "parentId": "495d74d1-37f6-4578-bf24-5183ce3e846a",
+      "type": "Start_Event"
+    },
+    {
+      "id": "a73681c1-eeb9-42ee-aefd-8a8e26fc8d39",
+      "name": "Check and Repair Hardware",
+      "parentId": "495d74d1-37f6-4578-bf24-5183ce3e846a",
+      "type": "ManualTask"
+    },
+    {
+      "id": "52ee1ff1-db57-4fee-a235-0fd2d806f8e3",
+      "name": "Check and Configure Software",
+      "parentId": "495d74d1-37f6-4578-bf24-5183ce3e846a",
+      "type": "ManualTask"
+    },
+    {
+      "id": "d37d0783-bf03-446d-b073-b049183ae512",
+      "name": "Test System Functionality",
+      "parentId": "495d74d1-37f6-4578-bf24-5183ce3e846a",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "d4f212a6-6521-4d47-adfc-b318b5a5e7aa",
+      "name": "gateway 1",
+      "parentId": null,
+      "type": "XOR"
+    },
+    {
+      "id": "ad74b910-b479-4437-a1fe-a43e75ebc8c5",
+      "name": "gateway 2",
+      "parentId": null,
+      "type": "XOR"
+    }
+  ],
+  "edges": [
+    {
+      "id": "3a9a0c14-c527-4e53-8902-9085c19ba0a8",
+      "source": "d2b82e55-4d6d-493c-87c6-a265aefeeeb4",
+      "source_name": "Check Defect",
+      "target": "d4f212a6-6521-4d47-adfc-b318b5a5e7aa",
+      "target_name": "gateway 1"
+    },
+    {
+      "id": "021ae5ce-2601-41d0-8af1-64f9db72808a",
+      "source": "d4f212a6-6521-4d47-adfc-b318b5a5e7aa",
+      "source_name": "gateway 1",
+      "target": "a73681c1-eeb9-42ee-aefd-8a8e26fc8d39",
+      "target_name": "Check and Repair Hardware",
+      "condition": "Customer accepts the cost"
+    },
+    {
+      "id": "25650c2a-d619-4f98-b822-56918e754534",
+      "source": "d4f212a6-6521-4d47-adfc-b318b5a5e7aa",
+      "source_name": "gateway 1",
+      "target": "52ee1ff1-db57-4fee-a235-0fd2d806f8e3",
+      "target_name": "Check and Configure Software",
+      "condition": "Customer accepts the cost"
+    },
+    {
+      "id": "3c73ded2-1308-403d-929d-1984d9286ee3",
+      "source": "a73681c1-eeb9-42ee-aefd-8a8e26fc8d39",
+      "source_name": "Check and Repair Hardware",
+      "target": "d37d0783-bf03-446d-b073-b049183ae512",
+      "target_name": "Test System Functionality"
+    },
+    {
+      "id": "0dd28add-78f3-4cb1-afb1-59365ff4c15c",
+      "source": "d37d0783-bf03-446d-b073-b049183ae512",
+      "source_name": "Test System Functionality",
+      "target": "ad74b910-b479-4437-a1fe-a43e75ebc8c5",
+      "target_name": "gateway 2"
+    },
+    {
+      "id": "bcd7fb94-29a6-4cae-a402-9287027915b5",
+      "source": "ad74b910-b479-4437-a1fe-a43e75ebc8c5",
+      "source_name": "gateway 2",
+      "target": "a73681c1-eeb9-42ee-aefd-8a8e26fc8d39",
+      "target_name": "Check and Repair Hardware",
+      "condition": "Error detected"
+    },
+    {
+      "id": "96aa2cc0-e9aa-452e-82c9-56fbcafc6cb9",
+      "source": "ad74b910-b479-4437-a1fe-a43e75ebc8c5",
+      "source_name": "gateway 2",
+      "target": "52ee1ff1-db57-4fee-a235-0fd2d806f8e3",
+      "target_name": "Check and Configure Software",
+      "condition": "Error detected"
+    },
+    {
+      "id": "d0c78f3f-67c6-45fa-b203-027fc6011911",
+      "source": "52ee1ff1-db57-4fee-a235-0fd2d806f8e3",
+      "source_name": "Check and Configure Software",
+      "target": "d37d0783-bf03-446d-b073-b049183ae512",
+      "target_name": "Test System Functionality"
+    }
+  ]
+}

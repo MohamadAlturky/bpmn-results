@@ -1,230 +1,219 @@
 {
     "nodes": [
-        {
-            "id": "876651e3-faee-455e-a1b9-5304727fd38d",
-            "name": "Sales Department",
-            "type": "pool"
-        },
-        {
-            "id": "c0ea41b5-144f-45ca-9634-0aafbca9f86b",
-            "name": "Receive Order",
-            "type": "Start_Event"
-        },
-        {
-            "id": "c2d51a77-d80f-46da-bc6c-47b574ce3ad5",
-            "name": "Reject Order",
-            "type": "UserTask"
-        },
-        {
-            "id": "9ea6d963-15f4-404f-8c2c-54feac106b8c",
-            "name": "Accept Order",
-            "type": "UserTask"
-        },
-        {
-            "id": "5af89b50-d2ed-40bf-9079-26b22f421700",
-            "name": "Ship Bicycle",
-            "type": "UserTask"
-        },
-        {
-            "id": "fa6f09a3-e5b8-4964-a1b4-2f0c4b50d9f7",
-            "name": "Finish Process",
-            "type": "End_Event"
-        },
-        {
-            "id": "52ff350d-6f85-4171-a425-72c3a9b1d8fe",
-            "name": "Storehouse",
-            "type": "pool"
-        },
-        {
-            "id": "6fc8df06-7d7a-4d3d-92db-6aba7c88b8c2",
-            "name": "Process Part List",
-            "type": "ManualTask"
-        },
-        {
-            "id": "fb895a4d-04a5-4454-9f12-b1b05e1ad5e5",
-            "name": "Reserve Part",
-            "type": "UserTask"
-        },
-        {
-            "id": "0674a319-ccbd-4cbd-9a6f-1bfcda50f4ae",
-            "name": "Back-order Part",
-            "type": "UserTask"
-        },
-        {
-            "id": "17a4e9bb-ac68-4081-8acd-6e9d7a1b7f02",
-            "name": "Engineering Department",
-            "type": "pool"
-        },
-        {
-            "id": "bc0ef00d-974d-4a85-8844-4624d36e4b0f",
-            "name": "Prepare for Assembling",
-            "type": "ServiceTask"
-        },
-        {
-            "id": "8e303058-8940-4e97-b375-b756512af83e",
-            "name": "Assemble Bicycle",
-            "type": "ManualTask"
-        },
-        {
-            "id": "d32b2e5d-ec76-4319-8021-7be7ce74151f",
-            "name": "gateway 1",
-            "type": "XOR"
-        },
-        {
-            "id": "b5543aa0-137d-44bc-b695-4eeb15f77e30",
-            "name": "Inform Storehouse and Engineering Department",
-            "type": "ServiceTask"
-        },
-        {
-            "id": "4fbe2593-1598-4466-a1bf-41838d510cdd",
-            "name": "gateway 2",
-            "type": "XOR"
-        },
-        {
-            "id": "276a2016-17b3-472c-98f4-ea67cedd9981",
-            "name": "gateway 3",
-            "type": "AND"
-        },
-        {
-            "id": "07d4968f-840f-4e69-94bf-78d5c7ed44d9",
-            "name": "gateway 4",
-            "type": "AND"
-        }
+      {
+        "id": "f1566110-1cec-42e8-9fc4-1a4e21458663",
+        "name": "Sales Department",
+        "parentId": null,
+        "type": "pool"
+      },
+      {
+        "id": "a450249e-34c2-42de-9b88-6518b8aad5c3",
+        "name": "Order Reception",
+        "parentId": "f1566110-1cec-42e8-9fc4-1a4e21458663",
+        "type": "Start_Event"
+      },
+      {
+        "id": "64cd3c9b-90cc-4723-bbdb-c9dc0180a552",
+        "name": "Accept Order",
+        "parentId": "f1566110-1cec-42e8-9fc4-1a4e21458663",
+        "type": "UserTask"
+      },
+      {
+        "id": "af2f5dfc-ad6a-405a-952b-162fe6f1ac0a",
+        "name": "Reject Order",
+        "parentId": "f1566110-1cec-42e8-9fc4-1a4e21458663",
+        "type": "End_Event"
+      },
+      {
+        "id": "7283800c-4704-489a-938c-20fef359ecf0",
+        "name": "Ship Bicycle",
+        "parentId": "f1566110-1cec-42e8-9fc4-1a4e21458663",
+        "type": "ManualTask"
+      },
+      {
+        "id": "d02ff18f-33c3-4d91-a656-c125dfbed987",
+        "name": "Finish Process Instance",
+        "parentId": "f1566110-1cec-42e8-9fc4-1a4e21458663",
+        "type": "End_Event"
+      },
+      {
+        "id": "8c308333-3aa5-47a2-b9d9-07d9baf96f86",
+        "name": "Storehouse",
+        "parentId": null,
+        "type": "pool"
+      },
+      {
+        "id": "d2141a25-d0a1-44c6-ae89-e986ae40c5ce",
+        "name": "Process Part List",
+        "parentId": "8c308333-3aa5-47a2-b9d9-07d9baf96f86",
+        "type": "ManualTask"
+      },
+      {
+        "id": "c93fa0d7-a8e6-4d94-878e-2b9666692e39",
+        "name": "Reserve Part",
+        "parentId": "8c308333-3aa5-47a2-b9d9-07d9baf96f86",
+        "type": "ManualTask"
+      },
+      {
+        "id": "a237e3bb-4e4f-464e-9af2-d1f0df5c4415",
+        "name": "Back-order Part",
+        "parentId": "8c308333-3aa5-47a2-b9d9-07d9baf96f86",
+        "type": "ManualTask"
+      },
+      {
+        "id": "86f616ee-8fa4-4517-97c6-383157e76072",
+        "name": "Engineering Department",
+        "parentId": null,
+        "type": "pool"
+      },
+      {
+        "id": "1ab0c907-02a3-42dd-90b4-f001a1822ada",
+        "name": "Prepare for Assembling",
+        "parentId": "86f616ee-8fa4-4517-97c6-383157e76072",
+        "type": "ManualTask"
+      },
+      {
+        "id": "25d5a95a-dcfe-428b-9c4c-b2054b7ba163",
+        "name": "Assemble Bicycle",
+        "parentId": "86f616ee-8fa4-4517-97c6-383157e76072",
+        "type": "ManualTask"
+      },
+      {
+        "id": "2d65348e-e0da-4fda-b8cf-f2bf642bf871",
+        "name": "gateway 1",
+        "parentId": null,
+        "type": "XOR"
+      },
+      {
+        "id": "029b9ac9-1ed8-4430-aa90-e281ff6ce207",
+        "name": "Inform Storehouse and Engineering Department",
+        "parentId": null,
+        "type": "ServiceTask"
+      },
+      {
+        "id": "149d6ee4-31b6-4105-9d08-8910f95fd65a",
+        "name": "gateway 2",
+        "parentId": null,
+        "type": "AND"
+      },
+      {
+        "id": "993e0635-86bc-4e36-9303-9894d14a1ae3",
+        "name": "gateway 3",
+        "parentId": null,
+        "type": "XOR"
+      }
     ],
     "edges": [
-        {
-            "id": "3573810b-73ea-440d-974a-1a8402205868",
-            "source": "c0ea41b5-144f-45ca-9634-0aafbca9f86b",
-            "source_name": "Receive Order",
-            "target": "d32b2e5d-ec76-4319-8021-7be7ce74151f",
-            "target_name": "gateway 1"
-        },
-        {
-            "id": "f97158fd-7026-4a84-bf5b-719fc84b1f4b",
-            "source": "d32b2e5d-ec76-4319-8021-7be7ce74151f",
-            "source_name": "gateway 1",
-            "target": "c2d51a77-d80f-46da-bc6c-47b574ce3ad5",
-            "target_name": "Reject Order",
-            "condition": "Order is rejected"
-        },
-        {
-            "id": "323db348-198d-423e-922a-5272c13d24e9",
-            "source": "d32b2e5d-ec76-4319-8021-7be7ce74151f",
-            "source_name": "gateway 1",
-            "target": "9ea6d963-15f4-404f-8c2c-54feac106b8c",
-            "target_name": "Accept Order",
-            "condition": "Order is accepted"
-        },
-        {
-            "id": "232ea0bc-1aef-47a6-9cd5-b652af91a7e1",
-            "source": "c2d51a77-d80f-46da-bc6c-47b574ce3ad5",
-            "source_name": "Reject Order",
-            "target": "fa6f09a3-e5b8-4964-a1b4-2f0c4b50d9f7",
-            "target_name": "Finish Process"
-        },
-        {
-            "id": "da243c62-90c6-41b4-95ab-d2ec28d3fa08",
-            "source": "9ea6d963-15f4-404f-8c2c-54feac106b8c",
-            "source_name": "Accept Order",
-            "target": "b5543aa0-137d-44bc-b695-4eeb15f77e30",
-            "target_name": "Inform Storehouse and Engineering Department"
-        },
-        {
-            "id": "bd470e6d-e27b-4ae5-99e7-f693a3a696b9",
-            "source": "b5543aa0-137d-44bc-b695-4eeb15f77e30",
-            "source_name": "Inform Storehouse and Engineering Department",
-            "target": "6fc8df06-7d7a-4d3d-92db-6aba7c88b8c2",
-            "target_name": "Process Part List"
-        },
-        {
-            "id": "bfc2890d-b88e-416d-8326-18d3206ec98a",
-            "source": "6fc8df06-7d7a-4d3d-92db-6aba7c88b8c2",
-            "source_name": "Process Part List",
-            "target": "4fbe2593-1598-4466-a1bf-41838d510cdd",
-            "target_name": "gateway 2"
-        },
-        {
-            "id": "ff478413-2d46-4f55-9653-c414673906a8",
-            "source": "4fbe2593-1598-4466-a1bf-41838d510cdd",
-            "source_name": "gateway 2",
-            "target": "fb895a4d-04a5-4454-9f12-b1b05e1ad5e5",
-            "target_name": "Reserve Part",
-            "condition": "Part is available in-house"
-        },
-        {
-            "id": "19a80cff-302f-4ab9-aab8-3369d0a09512",
-            "source": "4fbe2593-1598-4466-a1bf-41838d510cdd",
-            "source_name": "gateway 2",
-            "target": "0674a319-ccbd-4cbd-9a6f-1bfcda50f4ae",
-            "target_name": "Back-order Part",
-            "condition": "Part is not available in-house"
-        },
-        {
-            "id": "37ba2aa7-5ca9-41af-a906-751af930af35",
-            "source": "fb895a4d-04a5-4454-9f12-b1b05e1ad5e5",
-            "source_name": "Reserve Part",
-            "target": "276a2016-17b3-472c-98f4-ea67cedd9981",
-            "target_name": "gateway 3"
-        },
-        {
-            "id": "8ba0acaa-84c6-4cee-801c-361a7abfd855",
-            "source": "276a2016-17b3-472c-98f4-ea67cedd9981",
-            "source_name": "gateway 3",
-            "target": "8e303058-8940-4e97-b375-b756512af83e",
-            "target_name": "Assemble Bicycle",
-            "condition": "All parts are reserved and preparation is finished"
-        },
-        {
-            "id": "e0fbf79e-47be-442d-b795-86ad5192b1a4",
-            "source": "276a2016-17b3-472c-98f4-ea67cedd9981",
-            "source_name": "gateway 3",
-            "target": "bc0ef00d-974d-4a85-8844-4624d36e4b0f",
-            "target_name": "Prepare for Assembling",
-            "condition": "Not all parts are reserved yet"
-        },
-        {
-            "id": "8f8e9ae7-fe8a-4fb0-87cc-44b419acf19d",
-            "source": "8e303058-8940-4e97-b375-b756512af83e",
-            "source_name": "Assemble Bicycle",
-            "target": "5af89b50-d2ed-40bf-9079-26b22f421700",
-            "target_name": "Ship Bicycle"
-        },
-        {
-            "id": "df2251ca-7792-4997-ad39-41459d57e1f2",
-            "source": "5af89b50-d2ed-40bf-9079-26b22f421700",
-            "source_name": "Ship Bicycle",
-            "target": "fa6f09a3-e5b8-4964-a1b4-2f0c4b50d9f7",
-            "target_name": "Finish Process"
-        },
-        {
-            "id": "912df666-bec4-4a66-ad3f-f9b0c32efaa1",
-            "source": "0674a319-ccbd-4cbd-9a6f-1bfcda50f4ae",
-            "source_name": "Back-order Part",
-            "target": "07d4968f-840f-4e69-94bf-78d5c7ed44d9",
-            "target_name": "gateway 4"
-        },
-        {
-            "id": "3fdba4af-a52b-41f9-a849-11ebcf551401",
-            "source": "07d4968f-840f-4e69-94bf-78d5c7ed44d9",
-            "source_name": "gateway 4",
-            "target": "8e303058-8940-4e97-b375-b756512af83e",
-            "target_name": "Assemble Bicycle",
-            "condition": "All parts are back-ordered and preparation is finished"
-        },
-        {
-            "id": "f14bce04-55c7-449c-8dfe-9da2f1a69249",
-            "source": "07d4968f-840f-4e69-94bf-78d5c7ed44d9",
-            "source_name": "gateway 4",
-            "target": "bc0ef00d-974d-4a85-8844-4624d36e4b0f",
-            "target_name": "Prepare for Assembling",
-            "condition": "Not all parts are back-ordered yet"
-        },
-        {
-            "id": "845e6018-9548-446c-b2a5-7329563e3920",
-            "source": "bc0ef00d-974d-4a85-8844-4624d36e4b0f",
-            "source_name": "Prepare for Assembling",
-            "target": "8e303058-8940-4e97-b375-b756512af83e",
-            "target_name": "Assemble Bicycle"
-        }
+      {
+        "id": "2fb9764a-a51e-4d2e-8161-9ec6382a9f52",
+        "source": "a450249e-34c2-42de-9b88-6518b8aad5c3",
+        "source_name": "Order Reception",
+        "target": "2d65348e-e0da-4fda-b8cf-f2bf642bf871",
+        "target_name": "gateway 1"
+      },
+      {
+        "id": "21d250e3-aaad-4583-8c63-3f2792b1936f",
+        "source": "2d65348e-e0da-4fda-b8cf-f2bf642bf871",
+        "source_name": "gateway 1",
+        "target": "af2f5dfc-ad6a-405a-952b-162fe6f1ac0a",
+        "target_name": "Reject Order",
+        "condition": "sales department rejects the order"
+      },
+      {
+        "id": "22820870-1f84-4d87-9456-b9d699930ddf",
+        "source": "2d65348e-e0da-4fda-b8cf-f2bf642bf871",
+        "source_name": "gateway 1",
+        "target": "64cd3c9b-90cc-4723-bbdb-c9dc0180a552",
+        "target_name": "Accept Order",
+        "condition": "sales department accepts the order"
+      },
+      {
+        "id": "f59465bf-5f5d-4cc3-b695-e8847e95f506",
+        "source": "64cd3c9b-90cc-4723-bbdb-c9dc0180a552",
+        "source_name": "Accept Order",
+        "target": "029b9ac9-1ed8-4430-aa90-e281ff6ce207",
+        "target_name": "Inform Storehouse and Engineering Department"
+      },
+      {
+        "id": "45e67c08-0f12-4c68-83d2-439719e8c82b",
+        "source": "029b9ac9-1ed8-4430-aa90-e281ff6ce207",
+        "source_name": "Inform Storehouse and Engineering Department",
+        "target": "149d6ee4-31b6-4105-9d08-8910f95fd65a",
+        "target_name": "gateway 2"
+      },
+      {
+        "id": "3bc899ee-5747-4a2f-b974-7c877f944b0a",
+        "source": "149d6ee4-31b6-4105-9d08-8910f95fd65a",
+        "source_name": "gateway 2",
+        "target": "d2141a25-d0a1-44c6-ae89-e986ae40c5ce",
+        "target_name": "Process Part List",
+        "condition": "storehouse needs to process the part list"
+      },
+      {
+        "id": "7f04a541-90ed-4a8d-98ab-af8278140ae6",
+        "source": "149d6ee4-31b6-4105-9d08-8910f95fd65a",
+        "source_name": "gateway 2",
+        "target": "1ab0c907-02a3-42dd-90b4-f001a1822ada",
+        "target_name": "Prepare for Assembling",
+        "condition": "engineering department needs to prepare for assembling"
+      },
+      {
+        "id": "5f8c5b06-3002-46a2-8975-c71e69309174",
+        "source": "d2141a25-d0a1-44c6-ae89-e986ae40c5ce",
+        "source_name": "Process Part List",
+        "target": "993e0635-86bc-4e36-9303-9894d14a1ae3",
+        "target_name": "gateway 3"
+      },
+      {
+        "id": "56d651f1-47fe-4b08-a7e0-d0e562b8eff4",
+        "source": "993e0635-86bc-4e36-9303-9894d14a1ae3",
+        "source_name": "gateway 3",
+        "target": "c93fa0d7-a8e6-4d94-878e-2b9666692e39",
+        "target_name": "Reserve Part",
+        "condition": "the part is available in-house"
+      },
+      {
+        "id": "f9815de2-b812-48ff-aa03-5aef72b48d14",
+        "source": "993e0635-86bc-4e36-9303-9894d14a1ae3",
+        "source_name": "gateway 3",
+        "target": "a237e3bb-4e4f-464e-9af2-d1f0df5c4415",
+        "target_name": "Back-order Part",
+        "condition": "the part is not available in-house"
+      },
+      {
+        "id": "fb9b6de0-48fb-4126-86bb-a8d56efd61aa",
+        "source": "c93fa0d7-a8e6-4d94-878e-2b9666692e39",
+        "source_name": "Reserve Part",
+        "target": "25d5a95a-dcfe-428b-9c4c-b2054b7ba163",
+        "target_name": "Assemble Bicycle"
+      },
+      {
+        "id": "518f2940-f7bc-41f5-a11c-442b760a9619",
+        "source": "a237e3bb-4e4f-464e-9af2-d1f0df5c4415",
+        "source_name": "Back-order Part",
+        "target": "25d5a95a-dcfe-428b-9c4c-b2054b7ba163",
+        "target_name": "Assemble Bicycle"
+      },
+      {
+        "id": "b2ddd4c2-6693-4d95-a87e-826dca26ca44",
+        "source": "1ab0c907-02a3-42dd-90b4-f001a1822ada",
+        "source_name": "Prepare for Assembling",
+        "target": "25d5a95a-dcfe-428b-9c4c-b2054b7ba163",
+        "target_name": "Assemble Bicycle"
+      },
+      {
+        "id": "efe7798d-106d-41f1-908e-c3d9f95efa4e",
+        "source": "25d5a95a-dcfe-428b-9c4c-b2054b7ba163",
+        "source_name": "Assemble Bicycle",
+        "target": "7283800c-4704-489a-938c-20fef359ecf0",
+        "target_name": "Ship Bicycle"
+      },
+      {
+        "id": "912d1950-a93c-4588-8607-415cc03440f6",
+        "source": "7283800c-4704-489a-938c-20fef359ecf0",
+        "source_name": "Ship Bicycle",
+        "target": "d02ff18f-33c3-4d91-a656-c125dfbed987",
+        "target_name": "Finish Process Instance"
+      }
     ]
-}
+  }

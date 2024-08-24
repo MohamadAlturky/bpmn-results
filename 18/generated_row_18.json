@@ -1,517 +1,611 @@
 {
   "nodes": [
     {
-      "id": "ced063b0-3990-496c-af10-cbbf2b49b726",
+      "id": "8d0cc2b3-ac05-46b9-a01e-09d073696499",
       "name": "Customer",
+      "parentId": null,
       "type": "pool"
     },
     {
-      "id": "2dd9a287-f569-4484-8a29-786def7800ed",
-      "name": "Customer perceives service degradation",
+      "id": "ca7c52af-c897-4b89-bcd7-80215d6d05dc",
+      "name": "Customer Service Receives Problem Parameters",
+      "parentId": "8d0cc2b3-ac05-46b9-a01e-09d073696499",
       "type": "Start_Event"
     },
     {
-      "id": "454375c1-4fa2-4af1-bcc9-2bb522089a28",
-      "name": "Send problem parameters to Customer Service",
-      "type": "UserTask"
-    },
-    {
-      "id": "258cf46f-b2c0-4eaf-a3a8-c8542645dee2",
-      "name": "Send report to customer",
-      "type": "UserTask"
-    },
-    {
-      "id": "2669f1b7-5a25-4f3f-920e-a6f78a007f54",
+      "id": "97100249-c6b6-442e-90eb-dd3a372b63ad",
       "name": "Customer Service",
+      "parentId": null,
       "type": "pool"
     },
     {
-      "id": "29032cc8-36e9-4712-b1fe-79dda53ce934",
-      "name": "Enter problem report into system T",
+      "id": "dcf97824-768a-4fb3-a95b-9fc4e35db650",
+      "name": "Enter Problem Report into System T",
+      "parentId": "97100249-c6b6-442e-90eb-dd3a372b63ad",
       "type": "UserTask"
     },
     {
-      "id": "69f3a573-a338-4001-953e-f63590abcad0",
-      "name": "Compare problem report to customer SLA",
+      "id": "3746b4ca-03c7-490c-87b8-4bf904df97df",
+      "name": "Send Detailed Problem Report to Service Management",
+      "parentId": "97100249-c6b6-442e-90eb-dd3a372b63ad",
       "type": "ServiceTask"
     },
     {
-      "id": "0bf328a8-5d63-4fb2-b080-a4075a405a90",
-      "name": "Determine counter measures",
+      "id": "6461ab01-4847-4743-93e5-7dea752b0884",
+      "name": "Create Report for Customer",
+      "parentId": "97100249-c6b6-442e-90eb-dd3a372b63ad",
+      "type": "UserTask"
+    },
+    {
+      "id": "8e1a93a0-6caf-41ae-bc9f-72477d8d6007",
+      "name": "Send Report to Customer",
+      "parentId": "97100249-c6b6-442e-90eb-dd3a372b63ad",
       "type": "ServiceTask"
     },
     {
-      "id": "ec6db1d2-2260-4098-81e8-8035187b7d2f",
-      "name": "Create detailed problem report",
-      "type": "UserTask"
+      "id": "03729f74-67c5-4a82-9956-c04ebb8d1cfb",
+      "name": "Report SLA Violation Rebate to Billing & Collections",
+      "parentId": "97100249-c6b6-442e-90eb-dd3a372b63ad",
+      "type": "ServiceTask"
     },
     {
-      "id": "7ba08ea8-dddd-45cb-8392-1e3bf5134261",
-      "name": "Send detailed problem report to Service Management",
-      "type": "UserTask"
-    },
-    {
-      "id": "0be5cbe4-9c32-4b73-9adb-e3506aa93d85",
-      "name": "Send actual service performance to Customer Service",
-      "type": "UserTask"
-    },
-    {
-      "id": "4e892af3-10c2-4203-8d2e-6473d68095a1",
-      "name": "Create report for customer",
-      "type": "UserTask"
-    },
-    {
-      "id": "409e62e9-8a34-45d9-9038-9d72430706bd",
+      "id": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
       "name": "Service Management",
+      "parentId": null,
       "type": "pool"
     },
     {
-      "id": "83c68107-1cd0-46cd-ba68-9a7750632be1",
-      "name": "Investigate problem analyzability",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "0d228ff0-c3f7-4917-9b11-19f436b8b6c7",
-      "name": "Analyze problem",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "80d84ad6-b566-4d5d-ba0d-67ef4e9b7b76",
-      "name": "Create trouble report",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "6e59e8ff-c313-476e-bcb4-00bdf1ea7682",
-      "name": "Prepare final status report",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "36ef6c26-b86f-4678-ae92-bb867baa4540",
-      "name": "Send status report to Service Management",
-      "type": null
-    },
-    {
-      "id": "471b934c-58aa-4d15-8c59-013a8caf715c",
-      "name": "Minor corrective actions required",
-      "type": "Intermediate_Event"
-    },
-    {
-      "id": "ed943784-ba4c-40e9-96aa-af061ead0a7a",
-      "name": "Undertake corrective actions",
+      "id": "98423530-07d4-4884-8e54-e0b4776a95a9",
+      "name": "Compare Problem Report to Customer SLA",
+      "parentId": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
       "type": "UserTask"
     },
     {
-      "id": "7847e72c-5e67-4dc0-b1f6-aa549e2eae68",
-      "name": "Create problem resolution report",
+      "id": "b6161cbd-a797-486e-b781-28287e5264db",
+      "name": "Determine Counter Measures",
+      "parentId": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
       "type": "UserTask"
     },
     {
-      "id": "e7eb9029-987f-4fbd-a686-71a6c720f44a",
-      "name": "Create request for automatic resource restoration",
+      "id": "10cbd87c-34fc-4ffc-895f-e2177fd40905",
+      "name": "Create Detailed Problem Report",
+      "parentId": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
       "type": "ServiceTask"
     },
     {
-      "id": "591ecfe8-3d2c-4752-bd19-c27643714803",
-      "name": "Track errors",
+      "id": "bf933250-34f4-4e88-8923-1969eb06f59c",
+      "name": "Send Actual Service Performance to Customer Service",
+      "parentId": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
       "type": "ServiceTask"
     },
     {
-      "id": "34d453b3-df33-49dd-a79c-eabb42af1282",
+      "id": "fd072ac1-74e2-48f6-b31c-dbd5f0e1a429",
+      "name": "Undertake Corrective Actions at Service Management",
+      "parentId": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "272462d8-0bd9-4a57-93a2-2a05e18d70db",
+      "name": "Investigate Problem at Service Management Level",
+      "parentId": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
+      "type": "UserTask"
+    },
+    {
+      "id": "697ea75e-77ee-41ce-9aae-74dd3e8eba7c",
+      "name": "Analyze Problem at Service Management Level",
+      "parentId": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
+      "type": "UserTask"
+    },
+    {
+      "id": "b81778be-5fe7-48c4-9003-e1b95864f1b4",
+      "name": "Prepare Final Status Report",
+      "parentId": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "071406ca-afbe-4c2d-ad6d-12637b383fd4",
+      "name": "Create Problem Resolution Report",
+      "parentId": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "8f131006-c7eb-4226-8ce3-0e44ad6d1ab8",
+      "name": "Request Automatic Resource Restoration",
+      "parentId": "9e5e7983-b4ba-45e2-bd16-4c44e37c2cf1",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "7e6d74f9-5f61-437e-9e88-871f21414b73",
       "name": "Resource Provisioning",
+      "parentId": null,
       "type": "pool"
     },
     {
-      "id": "7d33a67b-70d3-4152-bb45-d9e6b81af02b",
-      "name": "Check for problems",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "2ebab1c9-d420-4121-ad24-8ca10390200e",
-      "name": "Create status report",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "94eab456-81aa-4f95-973a-fc4f0561918f",
-      "name": "Create notification about normal service execution",
-      "type": "ServiceTask"
-    },
-    {
-      "id": "645fdf43-f973-45e3-83af-c4a365389bb6",
-      "name": "Create trouble-shooting report",
+      "id": "861c857d-e3c8-451f-8290-9c93d3688bea",
+      "name": "Check for Possible Problems",
+      "parentId": "7e6d74f9-5f61-437e-9e88-871f21414b73",
       "type": "UserTask"
     },
     {
-      "id": "ddb17fb0-bf38-46fe-8bb7-eccdadb4f5e0",
-      "name": "Send trouble-shooting report to Service Management",
+      "id": "9aeec22b-a824-4594-b406-121c5234d07f",
+      "name": "Analyze Problem at Resource Provisioning Level",
+      "parentId": "7e6d74f9-5f61-437e-9e88-871f21414b73",
       "type": "UserTask"
     },
     {
-      "id": "69172f3a-b24c-47b8-96a1-a11cadf2cf8e",
+      "id": "647142d9-d10b-4864-b9c9-20e71ebea51e",
+      "name": "Create Trouble Report",
+      "parentId": "7e6d74f9-5f61-437e-9e88-871f21414b73",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "a841ab27-db04-40bc-a93c-51f3807f667a",
+      "name": "Track Errors at Resource Provisioning",
+      "parentId": "7e6d74f9-5f61-437e-9e88-871f21414b73",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "6096373b-f80f-4885-a9f5-6fdfed666605",
+      "name": "Undertake Corrective Actions at Resource Provisioning",
+      "parentId": "7e6d74f9-5f61-437e-9e88-871f21414b73",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "209d5b5e-0242-4f03-93ea-c10a5af13b0a",
+      "name": "Create Trouble-shooting Report",
+      "parentId": "7e6d74f9-5f61-437e-9e88-871f21414b73",
+      "type": "ServiceTask"
+    },
+    {
+      "id": "89b7cbe9-02f6-4f57-bbae-13477e947ef3",
+      "name": "Billing & Collections",
+      "parentId": null,
+      "type": "pool"
+    },
+    {
+      "id": "6110f5aa-14d9-45a5-a010-8377871b1a10",
       "name": "gateway 1",
-      "type": "XOR"
+      "parentId": null,
+      "type": "AND"
     },
     {
-      "id": "bc64d78e-3e63-4833-a551-5483a02e18a6",
-      "name": "Determine customer significance",
+      "id": "6a3c0dff-ce4b-414f-94d1-7055bd4895d1",
+      "name": "Determine Customer Significance",
+      "parentId": null,
       "type": "ServiceTask"
     },
     {
-      "id": "cf92991e-25cd-45c2-b551-2ddfcc0f9183",
-      "name": "No problem detected",
-      "type": "Intermediate_Event"
-    },
-    {
-      "id": "8d404f76-2c86-4f84-a020-75bae9a6916d",
-      "name": "Automatic resource restoration required",
-      "type": "Intermediate_Event"
-    },
-    {
-      "id": "c7ff9636-c404-442c-b17b-b4fa1f49572f",
+      "id": "bef94b15-2f82-441f-a2f1-eb84433ea270",
       "name": "gateway 2",
-      "type": "XOR"
+      "parentId": null,
+      "type": "AND"
     },
     {
-      "id": "097821c9-8cf6-4136-9c0f-36a83b5ebec2",
-      "name": "Re-prioritize counter measures",
-      "type": "End_Event"
-    },
-    {
-      "id": "cb5349da-79de-491a-9d51-6ea9675c1b20",
+      "id": "3444668f-8e06-4c9c-a8fe-7271f8a13af4",
       "name": "gateway 3",
+      "parentId": null,
       "type": "XOR"
     },
     {
-      "id": "1a7a9054-11b0-4be0-becb-4a8879635d29",
-      "name": "Send detailed problem report to Resource Provisioning",
-      "type": "UserTask"
-    },
-    {
-      "id": "88af8da9-97c8-48fe-a6f1-c280166a308f",
+      "id": "eef168a3-b5c0-426f-a9c3-76a5d4fb477b",
       "name": "gateway 4",
+      "parentId": null,
       "type": "XOR"
     },
     {
-      "id": "65ac67d3-5f0a-47ff-b74b-2e1e68ce21b5",
+      "id": "1e34f81b-f7d5-46c5-b78d-1e28045a0745",
+      "name": "Re-prioritize Counter Measures",
+      "parentId": null,
+      "type": "ManualTask"
+    },
+    {
+      "id": "5b1bb2dd-911b-4dff-ab99-773f868c7ce5",
       "name": "gateway 5",
+      "parentId": null,
       "type": "XOR"
     },
     {
-      "id": "ba871b4f-2eea-429c-8f8c-5bf06b1084db",
-      "name": "Send problem resolution report to Customer Service",
-      "type": "UserTask"
+      "id": "d0bc9b47-f0f9-4c1d-9d60-950d0868ee9a",
+      "name": "gateway 6",
+      "parentId": null,
+      "type": "XOR"
     },
     {
-      "id": "6b003525-8a22-42c7-874b-3a9786655c3a",
-      "name": "End process",
+      "id": "9b67f386-650c-4dc9-ac30-48af7709207b",
+      "name": "Send Detailed Problem Report to Resource Provisioning",
+      "parentId": null,
+      "type": "ServiceTask"
+    },
+    {
+      "id": "ecc85ce8-488b-45b8-9be3-a07ed9f36230",
+      "name": "Send Status Report to Service Management",
+      "parentId": null,
+      "type": "ServiceTask"
+    },
+    {
+      "id": "5a6a600d-8a6b-4700-ad71-58ae2267d939",
+      "name": "gateway 7",
+      "parentId": null,
+      "type": "XOR"
+    },
+    {
+      "id": "f18392d3-b38a-4784-97c8-39808a791533",
+      "name": "Create Notification about Normal Service Execution",
+      "parentId": null,
+      "type": "ServiceTask"
+    },
+    {
+      "id": "e5c6bc5a-0d76-48d9-8626-4baca7bd3683",
+      "name": "Send Problem Resolution Report to Customer Service",
+      "parentId": null,
+      "type": "ServiceTask"
+    },
+    {
+      "id": "afb503f7-a451-430d-92b4-b64e407a0c9b",
+      "name": "Send Trouble-shooting Report to Service Management",
+      "parentId": null,
+      "type": "ServiceTask"
+    },
+    {
+      "id": "f2bc6954-0120-4fcc-b2c0-fc777573aa17",
+      "name": "gateway 8",
+      "parentId": null,
+      "type": "AND"
+    },
+    {
+      "id": "8b17a011-05bb-47e1-9fcf-a0e7fbb57b2b",
+      "name": "End Process",
+      "parentId": null,
       "type": "End_Event"
     }
   ],
   "edges": [
     {
-      "id": "1b423f26-3473-4e09-bc64-6a4856cafc19",
-      "source": "2dd9a287-f569-4484-8a29-786def7800ed",
-      "source_name": "Customer perceives service degradation",
-      "target": "454375c1-4fa2-4af1-bcc9-2bb522089a28",
-      "target_name": "Send problem parameters to Customer Service"
+      "id": "fa977065-14ad-46f4-b8cb-4ab537f0f6df",
+      "source": "ca7c52af-c897-4b89-bcd7-80215d6d05dc",
+      "source_name": "Customer Service Receives Problem Parameters",
+      "target": "dcf97824-768a-4fb3-a95b-9fc4e35db650",
+      "target_name": "Enter Problem Report into System T"
     },
     {
-      "id": "432132ca-0507-4b76-99d1-df7f65f37b55",
-      "source": "454375c1-4fa2-4af1-bcc9-2bb522089a28",
-      "source_name": "Send problem parameters to Customer Service",
-      "target": "29032cc8-36e9-4712-b1fe-79dda53ce934",
-      "target_name": "Enter problem report into system T"
-    },
-    {
-      "id": "1108dca8-aed1-4835-b608-61dafb96e100",
-      "source": "29032cc8-36e9-4712-b1fe-79dda53ce934",
-      "source_name": "Enter problem report into system T",
-      "target": "69f3a573-a338-4001-953e-f63590abcad0",
-      "target_name": "Compare problem report to customer SLA"
-    },
-    {
-      "id": "2517a6cf-5f54-4a1a-a654-c390a61b0884",
-      "source": "69f3a573-a338-4001-953e-f63590abcad0",
-      "source_name": "Compare problem report to customer SLA",
-      "target": "0bf328a8-5d63-4fb2-b080-a4075a405a90",
-      "target_name": "Determine counter measures"
-    },
-    {
-      "id": "e276849c-1df9-42f6-9164-10d0d7b2a89e",
-      "source": "0bf328a8-5d63-4fb2-b080-a4075a405a90",
-      "source_name": "Determine counter measures",
-      "target": "69172f3a-b24c-47b8-96a1-a11cadf2cf8e",
+      "id": "f91babce-daeb-4d34-a5b8-bc3f5b872a46",
+      "source": "dcf97824-768a-4fb3-a95b-9fc4e35db650",
+      "source_name": "Enter Problem Report into System T",
+      "target": "6110f5aa-14d9-45a5-a010-8377871b1a10",
       "target_name": "gateway 1"
     },
     {
-      "id": "6ad6e17c-ae6c-439e-be32-ea9e01a614f9",
-      "source": "69172f3a-b24c-47b8-96a1-a11cadf2cf8e",
+      "id": "51b56719-6a20-423f-b777-c6d6a2f9c7f6",
+      "source": "6110f5aa-14d9-45a5-a010-8377871b1a10",
       "source_name": "gateway 1",
-      "target": "bc64d78e-3e63-4833-a551-5483a02e18a6",
-      "target_name": "Determine customer significance",
-      "condition": "customer is premium"
+      "target": "98423530-07d4-4884-8e54-e0b4776a95a9",
+      "target_name": "Compare Problem Report to Customer SLA",
+      "condition": "Problem report received"
     },
     {
-      "id": "6844c2a1-729f-48cd-b14f-d5f826dda6b1",
-      "source": "69172f3a-b24c-47b8-96a1-a11cadf2cf8e",
+      "id": "bffa09cd-1021-4b6b-86c8-3cf607dbbd9f",
+      "source": "6110f5aa-14d9-45a5-a010-8377871b1a10",
       "source_name": "gateway 1",
-      "target": "cf92991e-25cd-45c2-b551-2ddfcc0f9183",
-      "target_name": "No problem detected",
-      "condition": "not mentioned"
+      "target": "6a3c0dff-ce4b-414f-94d1-7055bd4895d1",
+      "target_name": "Determine Customer Significance",
+      "condition": "Customer significance needs to be determined"
     },
     {
-      "id": "487cd018-1d98-40ed-9015-9f8dd4b00214",
-      "source": "69172f3a-b24c-47b8-96a1-a11cadf2cf8e",
-      "source_name": "gateway 1",
-      "target": "471b934c-58aa-4d15-8c59-013a8caf715c",
-      "target_name": "Minor corrective actions required",
-      "condition": "not mentioned"
-    },
-    {
-      "id": "a2f1cd9d-f820-44e3-97d2-08fc7aea3302",
-      "source": "69172f3a-b24c-47b8-96a1-a11cadf2cf8e",
-      "source_name": "gateway 1",
-      "target": "8d404f76-2c86-4f84-a020-75bae9a6916d",
-      "target_name": "Automatic resource restoration required",
-      "condition": "not mentioned"
-    },
-    {
-      "id": "bfc9a402-97f8-4913-ba79-17a612193a2a",
-      "source": "bc64d78e-3e63-4833-a551-5483a02e18a6",
-      "source_name": "Determine customer significance",
-      "target": "c7ff9636-c404-442c-b17b-b4fa1f49572f",
+      "id": "23482dee-4023-4ff4-94bc-3c3cde9d28d1",
+      "source": "98423530-07d4-4884-8e54-e0b4776a95a9",
+      "source_name": "Compare Problem Report to Customer SLA",
+      "target": "bef94b15-2f82-441f-a2f1-eb84433ea270",
       "target_name": "gateway 2"
     },
     {
-      "id": "6b2e626e-9625-43f7-ba66-39bfd65f6aac",
-      "source": "c7ff9636-c404-442c-b17b-b4fa1f49572f",
+      "id": "3c689f58-3bed-4ab8-83c4-7b68a3f17b07",
+      "source": "bef94b15-2f82-441f-a2f1-eb84433ea270",
       "source_name": "gateway 2",
-      "target": "097821c9-8cf6-4136-9c0f-36a83b5ebec2",
-      "target_name": "Re-prioritize counter measures",
-      "condition": "customer is of certain significance"
+      "target": "b6161cbd-a797-486e-b781-28287e5264db",
+      "target_name": "Determine Counter Measures",
+      "condition": "Problem report compared to customer SLA"
     },
     {
-      "id": "84a20415-307b-44d7-a7e1-4da62eeea526",
-      "source": "c7ff9636-c404-442c-b17b-b4fa1f49572f",
+      "id": "13a1cd06-42e8-4bde-86dd-e793e0076b3c",
+      "source": "bef94b15-2f82-441f-a2f1-eb84433ea270",
       "source_name": "gateway 2",
-      "target": "ec6db1d2-2260-4098-81e8-8035187b7d2f",
-      "target_name": "Create detailed problem report",
-      "condition": "customer is not of certain significance"
+      "target": "6a3c0dff-ce4b-414f-94d1-7055bd4895d1",
+      "target_name": "Determine Customer Significance",
+      "condition": "Customer significance needs to be determined"
     },
     {
-      "id": "c91c0b36-c196-459d-89f5-51d2ce6e631d",
-      "source": "ec6db1d2-2260-4098-81e8-8035187b7d2f",
-      "source_name": "Create detailed problem report",
-      "target": "7ba08ea8-dddd-45cb-8392-1e3bf5134261",
-      "target_name": "Send detailed problem report to Service Management"
-    },
-    {
-      "id": "0f9ffed7-66c6-415c-be6e-cb83cdbbf1db",
-      "source": "7ba08ea8-dddd-45cb-8392-1e3bf5134261",
-      "source_name": "Send detailed problem report to Service Management",
-      "target": "83c68107-1cd0-46cd-ba68-9a7750632be1",
-      "target_name": "Investigate problem analyzability"
-    },
-    {
-      "id": "f74d77af-3f73-4145-99d5-1764ff8cc7dc",
-      "source": "83c68107-1cd0-46cd-ba68-9a7750632be1",
-      "source_name": "Investigate problem analyzability",
-      "target": "cb5349da-79de-491a-9d51-6ea9675c1b20",
+      "id": "cc5dbde8-f40d-4c43-92cc-d4c55e385a53",
+      "source": "b6161cbd-a797-486e-b781-28287e5264db",
+      "source_name": "Determine Counter Measures",
+      "target": "3444668f-8e06-4c9c-a8fe-7271f8a13af4",
       "target_name": "gateway 3"
     },
     {
-      "id": "9125dc61-63a6-41fb-b2d8-7b9e34841d68",
-      "source": "cb5349da-79de-491a-9d51-6ea9675c1b20",
+      "id": "ffe02c77-6f63-4242-b863-0c098b5214af",
+      "source": "3444668f-8e06-4c9c-a8fe-7271f8a13af4",
       "source_name": "gateway 3",
-      "target": "1a7a9054-11b0-4be0-becb-4a8879635d29",
-      "target_name": "Send detailed problem report to Resource Provisioning",
-      "condition": "the problem is not analyzable by Service Management"
+      "target": "10cbd87c-34fc-4ffc-895f-e2177fd40905",
+      "target_name": "Create Detailed Problem Report",
+      "condition": "Counter measures determined and prioritized"
     },
     {
-      "id": "f9b969ea-7ff0-4fc1-ad21-adbdd48c9090",
-      "source": "cb5349da-79de-491a-9d51-6ea9675c1b20",
+      "id": "061d7227-53d0-4984-84a8-04c4a0a937d3",
+      "source": "3444668f-8e06-4c9c-a8fe-7271f8a13af4",
       "source_name": "gateway 3",
-      "target": "0d228ff0-c3f7-4917-9b11-19f436b8b6c7",
-      "target_name": "Analyze problem",
-      "condition": "the problem is analyzable by Service Management"
+      "target": "bf933250-34f4-4e88-8923-1969eb06f59c",
+      "target_name": "Send Actual Service Performance to Customer Service",
+      "condition": "No problem detected"
     },
     {
-      "id": "2b4edcf4-b0b0-412a-bf8a-d884e46775a1",
-      "source": "0d228ff0-c3f7-4917-9b11-19f436b8b6c7",
-      "source_name": "Analyze problem",
-      "target": "80d84ad6-b566-4d5d-ba0d-67ef4e9b7b76",
-      "target_name": "Create trouble report"
+      "id": "d3f8bbab-3994-4e03-bf93-21f82d486ed6",
+      "source": "3444668f-8e06-4c9c-a8fe-7271f8a13af4",
+      "source_name": "gateway 3",
+      "target": "fd072ac1-74e2-48f6-b31c-dbd5f0e1a429",
+      "target_name": "Undertake Corrective Actions at Service Management",
+      "condition": "Minor corrective actions required"
     },
     {
-      "id": "e1238aa5-262d-48ad-a903-a836ed4be1ab",
-      "source": "1a7a9054-11b0-4be0-becb-4a8879635d29",
-      "source_name": "Send detailed problem report to Resource Provisioning",
-      "target": "7d33a67b-70d3-4152-bb45-d9e6b81af02b",
-      "target_name": "Check for problems"
+      "id": "a86437a8-ecde-4b75-8a4a-1ef7d60944d8",
+      "source": "3444668f-8e06-4c9c-a8fe-7271f8a13af4",
+      "source_name": "gateway 3",
+      "target": "8f131006-c7eb-4226-8ce3-0e44ad6d1ab8",
+      "target_name": "Request Automatic Resource Restoration",
+      "condition": "Automatic resource restoration required"
     },
     {
-      "id": "4b806548-72da-46e5-8d1a-d7b8d920313d",
-      "source": "7d33a67b-70d3-4152-bb45-d9e6b81af02b",
-      "source_name": "Check for problems",
-      "target": "88af8da9-97c8-48fe-a6f1-c280166a308f",
+      "id": "511d79a2-71e2-41fa-abf0-9bb6a3eae013",
+      "source": "6a3c0dff-ce4b-414f-94d1-7055bd4895d1",
+      "source_name": "Determine Customer Significance",
+      "target": "eef168a3-b5c0-426f-a9c3-76a5d4fb477b",
       "target_name": "gateway 4"
     },
     {
-      "id": "b3376f89-c76b-4ead-93d3-c077e7785b51",
-      "source": "88af8da9-97c8-48fe-a6f1-c280166a308f",
+      "id": "03d9a3dd-294e-4eba-a26a-95b30142988f",
+      "source": "eef168a3-b5c0-426f-a9c3-76a5d4fb477b",
       "source_name": "gateway 4",
-      "target": "94eab456-81aa-4f95-973a-fc4f0561918f",
-      "target_name": "Create notification about normal service execution",
-      "condition": "no problems are detected"
+      "target": "10cbd87c-34fc-4ffc-895f-e2177fd40905",
+      "target_name": "Create Detailed Problem Report",
+      "condition": "Customer significance determined and counter measures adjusted"
     },
     {
-      "id": "7e93224b-9a2d-40d0-9db2-687574005683",
-      "source": "88af8da9-97c8-48fe-a6f1-c280166a308f",
+      "id": "79186a30-a22d-4633-a1c1-12e3e07299ff",
+      "source": "eef168a3-b5c0-426f-a9c3-76a5d4fb477b",
       "source_name": "gateway 4",
-      "target": "0d228ff0-c3f7-4917-9b11-19f436b8b6c7",
-      "target_name": "Analyze problem",
-      "condition": "a problem is detected"
+      "target": "1e34f81b-f7d5-46c5-b78d-1e28045a0745",
+      "target_name": "Re-prioritize Counter Measures",
+      "condition": "Customer significance affects counter measures"
     },
     {
-      "id": "ecf87b14-72fd-4182-9b28-d37ce2b7f68e",
-      "source": "80d84ad6-b566-4d5d-ba0d-67ef4e9b7b76",
-      "source_name": "Create trouble report",
-      "target": "2ebab1c9-d420-4121-ad24-8ca10390200e",
-      "target_name": "Create status report"
+      "id": "1f7aaf55-998b-4b11-bab8-a723d13a2a5a",
+      "source": "10cbd87c-34fc-4ffc-895f-e2177fd40905",
+      "source_name": "Create Detailed Problem Report",
+      "target": "3746b4ca-03c7-490c-87b8-4bf904df97df",
+      "target_name": "Send Detailed Problem Report to Service Management"
     },
     {
-      "id": "40294a60-5161-4fdd-9ba4-16783e5f8c60",
-      "source": "2ebab1c9-d420-4121-ad24-8ca10390200e",
-      "source_name": "Create status report",
-      "target": "36ef6c26-b86f-4678-ae92-bb867baa4540",
-      "target_name": "Send status report to Service Management"
+      "id": "1f269df4-088f-4f2f-b813-631e991b09fd",
+      "source": "1e34f81b-f7d5-46c5-b78d-1e28045a0745",
+      "source_name": "Re-prioritize Counter Measures",
+      "target": "10cbd87c-34fc-4ffc-895f-e2177fd40905",
+      "target_name": "Create Detailed Problem Report"
     },
     {
-      "id": "283c8587-b2bc-40bb-b4f5-01399ee7cd99",
-      "source": "94eab456-81aa-4f95-973a-fc4f0561918f",
-      "source_name": "Create notification about normal service execution",
-      "target": "2ebab1c9-d420-4121-ad24-8ca10390200e",
-      "target_name": "Create status report"
-    },
-    {
-      "id": "9cb82468-f8d2-4820-bc40-629a3d118da2",
-      "source": "36ef6c26-b86f-4678-ae92-bb867baa4540",
-      "source_name": "Send status report to Service Management",
-      "target": "6e59e8ff-c313-476e-bcb4-00bdf1ea7682",
-      "target_name": "Prepare final status report"
-    },
-    {
-      "id": "72b82fcc-994b-4474-8cb3-79868650010e",
-      "source": "6e59e8ff-c313-476e-bcb4-00bdf1ea7682",
-      "source_name": "Prepare final status report",
-      "target": "0bf328a8-5d63-4fb2-b080-a4075a405a90",
-      "target_name": "Determine counter measures"
-    },
-    {
-      "id": "283c3c87-541d-47d4-89c1-8564bae43bea",
-      "source": "cf92991e-25cd-45c2-b551-2ddfcc0f9183",
-      "source_name": "No problem detected",
-      "target": "0be5cbe4-9c32-4b73-9adb-e3506aa93d85",
-      "target_name": "Send actual service performance to Customer Service"
-    },
-    {
-      "id": "7b8e9d1b-3d17-4296-8687-c2dc9a37bffb",
-      "source": "471b934c-58aa-4d15-8c59-013a8caf715c",
-      "source_name": "Minor corrective actions required",
-      "target": "ed943784-ba4c-40e9-96aa-af061ead0a7a",
-      "target_name": "Undertake corrective actions"
-    },
-    {
-      "id": "335350ba-089e-4635-86a2-9f80e9786e01",
-      "source": "ed943784-ba4c-40e9-96aa-af061ead0a7a",
-      "source_name": "Undertake corrective actions",
-      "target": "65ac67d3-5f0a-47ff-b74b-2e1e68ce21b5",
+      "id": "5db272c7-86fa-494e-9441-39877324e7b9",
+      "source": "3746b4ca-03c7-490c-87b8-4bf904df97df",
+      "source_name": "Send Detailed Problem Report to Service Management",
+      "target": "5b1bb2dd-911b-4dff-ab99-773f868c7ce5",
       "target_name": "gateway 5"
     },
     {
-      "id": "84a5fda3-3005-4407-b5f9-05d5eab22ae5",
-      "source": "65ac67d3-5f0a-47ff-b74b-2e1e68ce21b5",
+      "id": "954aa9cd-e5dc-4af8-9403-3ed2cebf6f8c",
+      "source": "5b1bb2dd-911b-4dff-ab99-773f868c7ce5",
       "source_name": "gateway 5",
-      "target": "7847e72c-5e67-4dc0-b1f6-aa549e2eae68",
-      "target_name": "Create problem resolution report",
-      "condition": "minor corrective actions are required"
+      "target": "272462d8-0bd9-4a57-93a2-2a05e18d70db",
+      "target_name": "Investigate Problem at Service Management Level",
+      "condition": "Problem report received"
     },
     {
-      "id": "cef5a0ea-3a54-404e-a7a7-99be9fff0e3f",
-      "source": "65ac67d3-5f0a-47ff-b74b-2e1e68ce21b5",
+      "id": "f92c60c9-99fa-418a-965f-0327f0314914",
+      "source": "5b1bb2dd-911b-4dff-ab99-773f868c7ce5",
       "source_name": "gateway 5",
-      "target": "645fdf43-f973-45e3-83af-c4a365389bb6",
-      "target_name": "Create trouble-shooting report",
-      "condition": "automatic resource restoration is required"
+      "target": "697ea75e-77ee-41ce-9aae-74dd3e8eba7c",
+      "target_name": "Analyze Problem at Service Management Level",
+      "condition": "Problem report received"
     },
     {
-      "id": "c64d1ef6-bc3a-4908-acfe-d85e2fd66a9d",
-      "source": "7847e72c-5e67-4dc0-b1f6-aa549e2eae68",
-      "source_name": "Create problem resolution report",
-      "target": "ba871b4f-2eea-429c-8f8c-5bf06b1084db",
-      "target_name": "Send problem resolution report to Customer Service"
+      "id": "1d81dd66-c9ff-4a8c-8494-a869442f259b",
+      "source": "272462d8-0bd9-4a57-93a2-2a05e18d70db",
+      "source_name": "Investigate Problem at Service Management Level",
+      "target": "d0bc9b47-f0f9-4c1d-9d60-950d0868ee9a",
+      "target_name": "gateway 6"
     },
     {
-      "id": "3e441061-0a23-448e-a868-1a49bb7b37dc",
-      "source": "8d404f76-2c86-4f84-a020-75bae9a6916d",
-      "source_name": "Automatic resource restoration required",
-      "target": "e7eb9029-987f-4fbd-a686-71a6c720f44a",
-      "target_name": "Create request for automatic resource restoration"
+      "id": "61d6304c-ba70-442c-9620-cfeb436aaed2",
+      "source": "d0bc9b47-f0f9-4c1d-9d60-950d0868ee9a",
+      "source_name": "gateway 6",
+      "target": "9b67f386-650c-4dc9-ac30-48af7709207b",
+      "target_name": "Send Detailed Problem Report to Resource Provisioning",
+      "condition": "Problem cannot be analyzed at Service Management level"
     },
     {
-      "id": "3d43d10b-170c-4b19-b3a1-04146dd33868",
-      "source": "e7eb9029-987f-4fbd-a686-71a6c720f44a",
-      "source_name": "Create request for automatic resource restoration",
-      "target": "591ecfe8-3d2c-4752-bd19-c27643714803",
-      "target_name": "Track errors"
+      "id": "15920da3-56e5-43b0-9a7f-94e67d16638e",
+      "source": "d0bc9b47-f0f9-4c1d-9d60-950d0868ee9a",
+      "source_name": "gateway 6",
+      "target": "697ea75e-77ee-41ce-9aae-74dd3e8eba7c",
+      "target_name": "Analyze Problem at Service Management Level",
+      "condition": "Problem can be analyzed at Service Management level"
     },
     {
-      "id": "24978cbd-9950-41bd-87cf-3233dfa36334",
-      "source": "591ecfe8-3d2c-4752-bd19-c27643714803",
-      "source_name": "Track errors",
-      "target": "ed943784-ba4c-40e9-96aa-af061ead0a7a",
-      "target_name": "Undertake corrective actions"
+      "id": "0905311a-650d-4d5b-bf2e-1d184ffcda5e",
+      "source": "9b67f386-650c-4dc9-ac30-48af7709207b",
+      "source_name": "Send Detailed Problem Report to Resource Provisioning",
+      "target": "861c857d-e3c8-451f-8290-9c93d3688bea",
+      "target_name": "Check for Possible Problems"
     },
     {
-      "id": "f0e736ae-a411-4147-83e4-d4d17a5715d3",
-      "source": "645fdf43-f973-45e3-83af-c4a365389bb6",
-      "source_name": "Create trouble-shooting report",
-      "target": "ddb17fb0-bf38-46fe-8bb7-eccdadb4f5e0",
-      "target_name": "Send trouble-shooting report to Service Management"
+      "id": "d148bbbf-c420-4cad-925f-fffd578f97e4",
+      "source": "697ea75e-77ee-41ce-9aae-74dd3e8eba7c",
+      "source_name": "Analyze Problem at Service Management Level",
+      "target": "647142d9-d10b-4864-b9c9-20e71ebea51e",
+      "target_name": "Create Trouble Report"
     },
     {
-      "id": "af91a869-6d5c-4891-9ce2-3aafcdce9996",
-      "source": "ddb17fb0-bf38-46fe-8bb7-eccdadb4f5e0",
-      "source_name": "Send trouble-shooting report to Service Management",
-      "target": "7847e72c-5e67-4dc0-b1f6-aa549e2eae68",
-      "target_name": "Create problem resolution report"
+      "id": "0a43400e-f35b-446f-9531-c6c6854b9fcd",
+      "source": "647142d9-d10b-4864-b9c9-20e71ebea51e",
+      "source_name": "Create Trouble Report",
+      "target": "ecc85ce8-488b-45b8-9be3-a07ed9f36230",
+      "target_name": "Send Status Report to Service Management"
     },
     {
-      "id": "775a74a4-472f-4cc1-aa74-4577a3a52db0",
-      "source": "0be5cbe4-9c32-4b73-9adb-e3506aa93d85",
-      "source_name": "Send actual service performance to Customer Service",
-      "target": "4e892af3-10c2-4203-8d2e-6473d68095a1",
-      "target_name": "Create report for customer"
+      "id": "11f43f4a-e155-46fa-80d9-86383f88e8f9",
+      "source": "861c857d-e3c8-451f-8290-9c93d3688bea",
+      "source_name": "Check for Possible Problems",
+      "target": "5a6a600d-8a6b-4700-ad71-58ae2267d939",
+      "target_name": "gateway 7"
     },
     {
-      "id": "321ea152-a313-458c-833d-ce0eafce26ed",
-      "source": "4e892af3-10c2-4203-8d2e-6473d68095a1",
-      "source_name": "Create report for customer",
-      "target": "258cf46f-b2c0-4eaf-a3a8-c8542645dee2",
-      "target_name": "Send report to customer"
+      "id": "e19c27bc-db6a-43fe-ab9b-6ebd3bc96f55",
+      "source": "5a6a600d-8a6b-4700-ad71-58ae2267d939",
+      "source_name": "gateway 7",
+      "target": "f18392d3-b38a-4784-97c8-39808a791533",
+      "target_name": "Create Notification about Normal Service Execution",
+      "condition": "No problems detected"
     },
     {
-      "id": "17e62b04-1290-4fbe-8078-947a3836fea0",
-      "source": "ba871b4f-2eea-429c-8f8c-5bf06b1084db",
-      "source_name": "Send problem resolution report to Customer Service",
-      "target": "4e892af3-10c2-4203-8d2e-6473d68095a1",
-      "target_name": "Create report for customer"
+      "id": "0e5a66ac-10fa-4dee-bb5c-74c2d6615bf6",
+      "source": "5a6a600d-8a6b-4700-ad71-58ae2267d939",
+      "source_name": "gateway 7",
+      "target": "9aeec22b-a824-4594-b406-121c5234d07f",
+      "target_name": "Analyze Problem at Resource Provisioning Level",
+      "condition": "Problems detected"
     },
     {
-      "id": "52cbec4c-0790-421f-b5c3-df59c4e10a0a",
-      "source": "258cf46f-b2c0-4eaf-a3a8-c8542645dee2",
-      "source_name": "Send report to customer",
-      "target": "6b003525-8a22-42c7-874b-3a9786655c3a",
-      "target_name": "End process"
+      "id": "44c2c1a5-a5f8-4841-b696-217efa40126f",
+      "source": "f18392d3-b38a-4784-97c8-39808a791533",
+      "source_name": "Create Notification about Normal Service Execution",
+      "target": "ecc85ce8-488b-45b8-9be3-a07ed9f36230",
+      "target_name": "Send Status Report to Service Management"
+    },
+    {
+      "id": "362f9970-e670-4973-8b6d-4bd32c65d8e7",
+      "source": "9aeec22b-a824-4594-b406-121c5234d07f",
+      "source_name": "Analyze Problem at Resource Provisioning Level",
+      "target": "647142d9-d10b-4864-b9c9-20e71ebea51e",
+      "target_name": "Create Trouble Report"
+    },
+    {
+      "id": "ed012c57-48b7-4c68-b953-3201990d600c",
+      "source": "ecc85ce8-488b-45b8-9be3-a07ed9f36230",
+      "source_name": "Send Status Report to Service Management",
+      "target": "b81778be-5fe7-48c4-9003-e1b95864f1b4",
+      "target_name": "Prepare Final Status Report"
+    },
+    {
+      "id": "30f010a9-48e1-4d6a-b55c-7e60da167d0a",
+      "source": "b81778be-5fe7-48c4-9003-e1b95864f1b4",
+      "source_name": "Prepare Final Status Report",
+      "target": "b6161cbd-a797-486e-b781-28287e5264db",
+      "target_name": "Determine Counter Measures"
+    },
+    {
+      "id": "39b32386-a2ee-4a18-a180-4207df9aa77f",
+      "source": "bf933250-34f4-4e88-8923-1969eb06f59c",
+      "source_name": "Send Actual Service Performance to Customer Service",
+      "target": "6461ab01-4847-4743-93e5-7dea752b0884",
+      "target_name": "Create Report for Customer"
+    },
+    {
+      "id": "8bbfff37-133f-4ace-a8b9-c5b44867fb40",
+      "source": "6461ab01-4847-4743-93e5-7dea752b0884",
+      "source_name": "Create Report for Customer",
+      "target": "8e1a93a0-6caf-41ae-bc9f-72477d8d6007",
+      "target_name": "Send Report to Customer"
+    },
+    {
+      "id": "e37517a1-239c-4fdb-916b-4a4906286041",
+      "source": "fd072ac1-74e2-48f6-b31c-dbd5f0e1a429",
+      "source_name": "Undertake Corrective Actions at Service Management",
+      "target": "071406ca-afbe-4c2d-ad6d-12637b383fd4",
+      "target_name": "Create Problem Resolution Report"
+    },
+    {
+      "id": "0431cb19-469a-4183-a8c9-17caa66de543",
+      "source": "071406ca-afbe-4c2d-ad6d-12637b383fd4",
+      "source_name": "Create Problem Resolution Report",
+      "target": "e5c6bc5a-0d76-48d9-8626-4baca7bd3683",
+      "target_name": "Send Problem Resolution Report to Customer Service"
+    },
+    {
+      "id": "3267faf6-99fc-4b6f-8900-eb4d089e1005",
+      "source": "8f131006-c7eb-4226-8ce3-0e44ad6d1ab8",
+      "source_name": "Request Automatic Resource Restoration",
+      "target": "a841ab27-db04-40bc-a93c-51f3807f667a",
+      "target_name": "Track Errors at Resource Provisioning"
+    },
+    {
+      "id": "7ba6dba0-29d6-43d3-80b1-992a2f32242d",
+      "source": "a841ab27-db04-40bc-a93c-51f3807f667a",
+      "source_name": "Track Errors at Resource Provisioning",
+      "target": "6096373b-f80f-4885-a9f5-6fdfed666605",
+      "target_name": "Undertake Corrective Actions at Resource Provisioning"
+    },
+    {
+      "id": "ba00e526-3703-4ab0-992f-58b2e185efbe",
+      "source": "6096373b-f80f-4885-a9f5-6fdfed666605",
+      "source_name": "Undertake Corrective Actions at Resource Provisioning",
+      "target": "209d5b5e-0242-4f03-93ea-c10a5af13b0a",
+      "target_name": "Create Trouble-shooting Report"
+    },
+    {
+      "id": "abd51e54-f282-45ab-a9a6-8c7dfa63d164",
+      "source": "209d5b5e-0242-4f03-93ea-c10a5af13b0a",
+      "source_name": "Create Trouble-shooting Report",
+      "target": "afb503f7-a451-430d-92b4-b64e407a0c9b",
+      "target_name": "Send Trouble-shooting Report to Service Management"
+    },
+    {
+      "id": "0eb8cf6c-c8a9-452a-82f9-cf4763e086e1",
+      "source": "afb503f7-a451-430d-92b4-b64e407a0c9b",
+      "source_name": "Send Trouble-shooting Report to Service Management",
+      "target": "071406ca-afbe-4c2d-ad6d-12637b383fd4",
+      "target_name": "Create Problem Resolution Report"
+    },
+    {
+      "id": "c8662596-6dbe-44e4-a02f-e2fcef4ca985",
+      "source": "e5c6bc5a-0d76-48d9-8626-4baca7bd3683",
+      "source_name": "Send Problem Resolution Report to Customer Service",
+      "target": "f2bc6954-0120-4fcc-b2c0-fc777573aa17",
+      "target_name": "gateway 8"
+    },
+    {
+      "id": "bed759e7-b8d0-45df-ae63-51b72fb791fc",
+      "source": "f2bc6954-0120-4fcc-b2c0-fc777573aa17",
+      "source_name": "gateway 8",
+      "target": "6461ab01-4847-4743-93e5-7dea752b0884",
+      "target_name": "Create Report for Customer",
+      "condition": "Problem resolution report received"
+    },
+    {
+      "id": "039d9cf4-026c-49c0-b8cf-7e9a641a8626",
+      "source": "f2bc6954-0120-4fcc-b2c0-fc777573aa17",
+      "source_name": "gateway 8",
+      "target": "03729f74-67c5-4a82-9956-c04ebb8d1cfb",
+      "target_name": "Report SLA Violation Rebate to Billing & Collections",
+      "condition": "SLA violation rebate applicable"
+    },
+    {
+      "id": "53ff0a5c-bdfb-4259-90d6-90869ef80ea2",
+      "source": "8e1a93a0-6caf-41ae-bc9f-72477d8d6007",
+      "source_name": "Send Report to Customer",
+      "target": "8b17a011-05bb-47e1-9fcf-a0e7fbb57b2b",
+      "target_name": "End Process"
+    },
+    {
+      "id": "cc045858-daa2-4a66-8aaa-31d1b4f3da5c",
+      "source": "03729f74-67c5-4a82-9956-c04ebb8d1cfb",
+      "source_name": "Report SLA Violation Rebate to Billing & Collections",
+      "target": "8b17a011-05bb-47e1-9fcf-a0e7fbb57b2b",
+      "target_name": "End Process"
     }
   ]
 }

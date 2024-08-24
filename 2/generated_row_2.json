@@ -1,346 +1,196 @@
 {
   "nodes": [
     {
-      "id": "6b9f6e97-1110-45f6-aafe-52388cd147a9",
-      "name": "Guest",
+      "id": "58ea73d3-bb26-45ec-9a2f-9baab78b8434",
+      "name": "Room-Service Manager",
+      "parentId": null,
       "type": "pool"
     },
     {
-      "id": "f51a79be-7836-4510-adfc-373bb175a043",
-      "name": "Guest Calls",
+      "id": "5b19cd6d-495d-4141-891d-159557c38225",
+      "name": "Take Down Order",
+      "parentId": "58ea73d3-bb26-45ec-9a2f-9baab78b8434",
       "type": "Start_Event"
     },
     {
-      "id": "3abfcd08-fe23-45c7-9620-569354cb400a",
-      "name": "Manager",
-      "type": "pool"
+      "id": "aa600a72-a9d9-4df4-82f6-af72a639bd1a",
+      "name": "Submit Order Ticket",
+      "parentId": "58ea73d3-bb26-45ec-9a2f-9baab78b8434",
+      "type": "ServiceTask"
     },
     {
-      "id": "636b94b0-2401-4913-9b17-6c05d8e6a587",
-      "name": "Manager Takes Down Order",
-      "type": "UserTask"
+      "id": "6acc6017-5ccf-403c-b9b8-06f008fa394b",
+      "name": "Give Order to Sommelier",
+      "parentId": "58ea73d3-bb26-45ec-9a2f-9baab78b8434",
+      "type": "ServiceTask"
     },
     {
-      "id": "ee0638b6-9667-445e-b8e1-2629c25f528a",
-      "name": "Manager Submits Order to Kitchen",
-      "type": "UserTask"
+      "id": "b6b22d50-864f-4cc3-9ce7-29b0601e7a38",
+      "name": "Assign Order to Waiter",
+      "parentId": "58ea73d3-bb26-45ec-9a2f-9baab78b8434",
+      "type": "ServiceTask"
     },
     {
-      "id": "8f3e650f-b45e-4265-8fff-ea633ffd03d5",
-      "name": "Manager Gives Order to Sommelier",
-      "type": "UserTask"
-    },
-    {
-      "id": "6395b39d-80a3-48c5-879e-a19c691730ee",
-      "name": "Manager Assigns Order to Waiter",
-      "type": "UserTask"
-    },
-    {
-      "id": "a2ee93c2-b1ab-4f92-ae13-e1c8acd9508e",
-      "name": "Sommelier",
-      "type": "pool"
-    },
-    {
-      "id": "f290d7d5-9ce4-4dff-bade-bdfab65c7651",
-      "name": "Sommelier Prepares Beverages",
-      "type": "ManualTask"
-    },
-    {
-      "id": "08115e5b-1af0-49e9-8d6d-87d69ec577cf",
-      "name": "Sommelier Passes Order to Waiter",
-      "type": "ManualTask"
-    },
-    {
-      "id": "9dd8f86d-7b30-4902-b7a0-ac6e2304a35e",
-      "name": "Sommelier Notifies No Alcoholic Beverage Needed",
-      "type": "ManualTask"
-    },
-    {
-      "id": "07ebef85-4b81-4b6a-ba65-b5157ba06fd1",
-      "name": "Sommelier Passes Alcoholic Beverages",
-      "type": "ManualTask"
-    },
-    {
-      "id": "eb9c1e68-844e-40ca-af4d-f483ce0db2d4",
-      "name": "Waiter",
-      "type": "pool"
-    },
-    {
-      "id": "b53336a5-cc07-427e-b9c9-5cfaca56e9d3",
-      "name": "Waiter Readies Cart",
-      "type": "ManualTask"
-    },
-    {
-      "id": "4d849466-5c23-4303-b945-d963e789b42c",
-      "name": "Waiter Prepares Nonalcoholic Beverages",
-      "type": "ManualTask"
-    },
-    {
-      "id": "0d29ff31-5353-414a-856f-f4adcd515f05",
-      "name": "Waiter Delivers to Guest's Room",
-      "type": "ManualTask"
-    },
-    {
-      "id": "89dbd4c9-d0bf-48d6-816b-0086e10e311f",
-      "name": "Waiter Debits Guest's Account",
-      "type": "End_Event"
-    },
-    {
-      "id": "366d42bd-79f9-4798-a594-13ae74c35141",
+      "id": "0469b12e-6639-425e-a284-c2e14987111c",
       "name": "Kitchen",
+      "parentId": null,
       "type": "pool"
     },
     {
-      "id": "188f8944-1c2d-40b1-b5d5-8517ab62c004",
-      "name": "Kitchen Prepares Food",
-      "type": "ServiceTask"
+      "id": "4befe3b9-4f0c-4610-8775-6283b07997ed",
+      "name": "Prepare Food",
+      "parentId": "0469b12e-6639-425e-a284-c2e14987111c",
+      "type": "ManualTask"
     },
     {
-      "id": "1cb0ce2f-81d0-40ad-bd80-3496b84a1d96",
-      "name": "Kitchen Passes Food to Waiter",
-      "type": "ServiceTask"
+      "id": "b6485683-64a2-49c4-90ed-37afaadd4f67",
+      "name": "Sommelier",
+      "parentId": null,
+      "type": "pool"
     },
     {
-      "id": "4a9a9cab-b9ad-4e27-97f8-8b919e05a6f3",
+      "id": "91f7a251-8b09-44a4-b64a-b4beef9f489a",
+      "name": "Fetch Wine",
+      "parentId": "b6485683-64a2-49c4-90ed-37afaadd4f67",
+      "type": "ManualTask"
+    },
+    {
+      "id": "53c5027d-aa94-495f-878a-986d692152e7",
+      "name": "Waiter",
+      "parentId": null,
+      "type": "pool"
+    },
+    {
+      "id": "d082f13e-43dd-4f23-8002-d5958f2e22c3",
+      "name": "Ready Cart",
+      "parentId": "53c5027d-aa94-495f-878a-986d692152e7",
+      "type": "ManualTask"
+    },
+    {
+      "id": "6e77503b-f93b-425c-96ea-0404e70841fc",
+      "name": "Deliver Food",
+      "parentId": "53c5027d-aa94-495f-878a-986d692152e7",
+      "type": "ManualTask"
+    },
+    {
+      "id": "89e64dbb-b106-479c-8930-3389dcda8f58",
+      "name": "Deliver Wine",
+      "parentId": "53c5027d-aa94-495f-878a-986d692152e7",
+      "type": "ManualTask"
+    },
+    {
+      "id": "d5470dcb-0cf1-484c-8259-ec8f066d5ce4",
+      "name": "Debit Guest's Account",
+      "parentId": "53c5027d-aa94-495f-878a-986d692152e7",
+      "type": "UserTask"
+    },
+    {
+      "id": "511a4924-45a5-4ef4-954b-708d530f9462",
       "name": "gateway 1",
-      "type": "XOR"
-    },
-    {
-      "id": "b5aedb1e-058a-4c54-b7f4-959fbc07a0e7",
-      "name": "gateway 2",
+      "parentId": null,
       "type": "AND"
     },
     {
-      "id": "90444d8c-f294-4aac-8b58-0968f0d8fe94",
-      "name": "gateway 3",
-      "type": "XOR"
-    },
-    {
-      "id": "fa348907-bed9-4ed0-98e7-df459762a3b8",
-      "name": "gateway 4",
-      "type": "AND"
-    },
-    {
-      "id": "ee645217-f9f9-4466-b6d6-de0fa6cdb7c0",
-      "name": "gateway 5",
-      "type": "AND"
-    },
-    {
-      "id": "eaec87e8-f658-410d-98a3-8ee91dd4f28b",
-      "name": "gateway 6",
-      "type": "XOR"
+      "id": "2ed166b6-89ea-473d-bc2e-7a7e1bdae673",
+      "name": "None",
+      "parentId": null,
+      "type": "End_Event"
     }
   ],
   "edges": [
     {
-      "id": "38f858e8-0fef-486f-a5bb-42fb526d578c",
-      "source": "f51a79be-7836-4510-adfc-373bb175a043",
-      "source_name": "Guest Calls",
-      "target": "636b94b0-2401-4913-9b17-6c05d8e6a587",
-      "target_name": "Manager Takes Down Order"
-    },
-    {
-      "id": "701e92cd-4815-4b53-b857-e49fc3c9ec2a",
-      "source": "636b94b0-2401-4913-9b17-6c05d8e6a587",
-      "source_name": "Manager Takes Down Order",
-      "target": "4a9a9cab-b9ad-4e27-97f8-8b919e05a6f3",
+      "id": "20706087-4322-43a5-9acc-9863478d6c47",
+      "source": "5b19cd6d-495d-4141-891d-159557c38225",
+      "source_name": "Take Down Order",
+      "target": "511a4924-45a5-4ef4-954b-708d530f9462",
       "target_name": "gateway 1"
     },
     {
-      "id": "588a44fd-45a0-4895-8e1c-04a86cc224ac",
-      "source": "4a9a9cab-b9ad-4e27-97f8-8b919e05a6f3",
+      "id": "c8e06371-efef-4330-a3d2-5d402c8c072c",
+      "source": "511a4924-45a5-4ef4-954b-708d530f9462",
       "source_name": "gateway 1",
-      "target": "ee0638b6-9667-445e-b8e1-2629c25f528a",
-      "target_name": "Manager Submits Order to Kitchen",
-      "condition": "Always"
+      "target": "aa600a72-a9d9-4df4-82f6-af72a639bd1a",
+      "target_name": "Submit Order Ticket",
+      "condition": "true"
     },
     {
-      "id": "dded99e5-6547-4d9a-ba58-2d45a2a5b19a",
-      "source": "4a9a9cab-b9ad-4e27-97f8-8b919e05a6f3",
+      "id": "0215c719-f9ea-46a5-be78-a5c56fd5955b",
+      "source": "511a4924-45a5-4ef4-954b-708d530f9462",
       "source_name": "gateway 1",
-      "target": "8f3e650f-b45e-4265-8fff-ea633ffd03d5",
-      "target_name": "Manager Gives Order to Sommelier",
-      "condition": "80% of room-service orders include wine or other alcoholic beverages"
+      "target": "6acc6017-5ccf-403c-b9b8-06f008fa394b",
+      "target_name": "Give Order to Sommelier",
+      "condition": "The order includes wine or some other alcoholic beverage (80% of room-service orders)"
     },
     {
-      "id": "42da3b15-b0b4-4792-82db-058cdc6d1068",
-      "source": "ee0638b6-9667-445e-b8e1-2629c25f528a",
-      "source_name": "Manager Submits Order to Kitchen",
-      "target": "b5aedb1e-058a-4c54-b7f4-959fbc07a0e7",
-      "target_name": "gateway 2"
+      "id": "ccce242a-bda6-4cd5-9210-d8ecc578ef96",
+      "source": "511a4924-45a5-4ef4-954b-708d530f9462",
+      "source_name": "gateway 1",
+      "target": "b6b22d50-864f-4cc3-9ce7-29b0601e7a38",
+      "target_name": "Assign Order to Waiter",
+      "condition": "true"
     },
     {
-      "id": "b794cf15-ad5b-48f3-bb0d-7412f9dfffa6",
-      "source": "b5aedb1e-058a-4c54-b7f4-959fbc07a0e7",
-      "source_name": "gateway 2",
-      "target": "8f3e650f-b45e-4265-8fff-ea633ffd03d5",
-      "target_name": "Manager Gives Order to Sommelier",
-      "condition": "Always"
+      "id": "73c07fa7-7ae9-41cb-a30e-16340df8d528",
+      "source": "aa600a72-a9d9-4df4-82f6-af72a639bd1a",
+      "source_name": "Submit Order Ticket",
+      "target": "4befe3b9-4f0c-4610-8775-6283b07997ed",
+      "target_name": "Prepare Food"
     },
     {
-      "id": "d7bbb2f0-5f29-4892-8f7b-bf30aff951ad",
-      "source": "b5aedb1e-058a-4c54-b7f4-959fbc07a0e7",
-      "source_name": "gateway 2",
-      "target": "6395b39d-80a3-48c5-879e-a19c691730ee",
-      "target_name": "Manager Assigns Order to Waiter",
-      "condition": "Always"
+      "id": "e94ad114-3dd5-465c-a304-9204cbbb2b7a",
+      "source": "6acc6017-5ccf-403c-b9b8-06f008fa394b",
+      "source_name": "Give Order to Sommelier",
+      "target": "91f7a251-8b09-44a4-b64a-b4beef9f489a",
+      "target_name": "Fetch Wine"
     },
     {
-      "id": "686b469b-2553-466a-b934-0f8193b27525",
-      "source": "8f3e650f-b45e-4265-8fff-ea633ffd03d5",
-      "source_name": "Manager Gives Order to Sommelier",
-      "target": "90444d8c-f294-4aac-8b58-0968f0d8fe94",
-      "target_name": "gateway 3"
+      "id": "dc0da121-2aa3-44ef-9d93-1f207ddfa670",
+      "source": "b6b22d50-864f-4cc3-9ce7-29b0601e7a38",
+      "source_name": "Assign Order to Waiter",
+      "target": "d082f13e-43dd-4f23-8002-d5958f2e22c3",
+      "target_name": "Ready Cart"
     },
     {
-      "id": "6d860f3a-9aff-4ba5-8626-34f587f25b04",
-      "source": "90444d8c-f294-4aac-8b58-0968f0d8fe94",
-      "source_name": "gateway 3",
-      "target": "f290d7d5-9ce4-4dff-bade-bdfab65c7651",
-      "target_name": "Sommelier Prepares Beverages",
-      "condition": "Wine or other alcoholic beverages are ordered"
+      "id": "cfa69037-dfe0-41e4-9523-8bc99b62c565",
+      "source": "4befe3b9-4f0c-4610-8775-6283b07997ed",
+      "source_name": "Prepare Food",
+      "target": "6e77503b-f93b-425c-96ea-0404e70841fc",
+      "target_name": "Deliver Food"
     },
     {
-      "id": "403e561f-73de-45ae-9b16-1804235439a5",
-      "source": "90444d8c-f294-4aac-8b58-0968f0d8fe94",
-      "source_name": "gateway 3",
-      "target": "08115e5b-1af0-49e9-8d6d-87d69ec577cf",
-      "target_name": "Sommelier Passes Order to Waiter",
-      "condition": "Wine or other alcoholic beverages are ordered"
+      "id": "2eb5faa9-bb2d-47c8-9a22-5d6978bdcb64",
+      "source": "91f7a251-8b09-44a4-b64a-b4beef9f489a",
+      "source_name": "Fetch Wine",
+      "target": "89e64dbb-b106-479c-8930-3389dcda8f58",
+      "target_name": "Deliver Wine"
     },
     {
-      "id": "a52f9d08-f6ce-4a7c-bc66-4f244f89082a",
-      "source": "90444d8c-f294-4aac-8b58-0968f0d8fe94",
-      "source_name": "gateway 3",
-      "target": "6395b39d-80a3-48c5-879e-a19c691730ee",
-      "target_name": "Manager Assigns Order to Waiter",
-      "condition": "Always"
+      "id": "fb79327f-1909-41c1-bfcd-f7f7f456e77b",
+      "source": "d082f13e-43dd-4f23-8002-d5958f2e22c3",
+      "source_name": "Ready Cart",
+      "target": "6e77503b-f93b-425c-96ea-0404e70841fc",
+      "target_name": "Deliver Food"
     },
     {
-      "id": "c364d412-9c80-4bb0-8ee7-cbbb2c007eea",
-      "source": "f290d7d5-9ce4-4dff-bade-bdfab65c7651",
-      "source_name": "Sommelier Prepares Beverages",
-      "target": "08115e5b-1af0-49e9-8d6d-87d69ec577cf",
-      "target_name": "Sommelier Passes Order to Waiter"
+      "id": "8bcc06eb-f227-4b3f-81b7-1f02fba0ddbc",
+      "source": "6e77503b-f93b-425c-96ea-0404e70841fc",
+      "source_name": "Deliver Food",
+      "target": "d5470dcb-0cf1-484c-8259-ec8f066d5ce4",
+      "target_name": "Debit Guest's Account"
     },
     {
-      "id": "6c8379f9-ce7c-4bff-b30f-8d36ee8ec700",
-      "source": "08115e5b-1af0-49e9-8d6d-87d69ec577cf",
-      "source_name": "Sommelier Passes Order to Waiter",
-      "target": "b53336a5-cc07-427e-b9c9-5cfaca56e9d3",
-      "target_name": "Waiter Readies Cart"
+      "id": "8d63af96-aaff-416d-8ab8-72032aa7e9df",
+      "source": "89e64dbb-b106-479c-8930-3389dcda8f58",
+      "source_name": "Deliver Wine",
+      "target": "d5470dcb-0cf1-484c-8259-ec8f066d5ce4",
+      "target_name": "Debit Guest's Account"
     },
     {
-      "id": "c7484fe9-6d12-4f15-a560-9aee60248fab",
-      "source": "b53336a5-cc07-427e-b9c9-5cfaca56e9d3",
-      "source_name": "Waiter Readies Cart",
-      "target": "fa348907-bed9-4ed0-98e7-df459762a3b8",
-      "target_name": "gateway 4"
-    },
-    {
-      "id": "7a84ec4f-a14d-496a-8478-90f9255147a8",
-      "source": "fa348907-bed9-4ed0-98e7-df459762a3b8",
-      "source_name": "gateway 4",
-      "target": "188f8944-1c2d-40b1-b5d5-8517ab62c004",
-      "target_name": "Kitchen Prepares Food",
-      "condition": "Always"
-    },
-    {
-      "id": "a0d2db35-3d25-4b95-a35e-c1e004bcc43e",
-      "source": "fa348907-bed9-4ed0-98e7-df459762a3b8",
-      "source_name": "gateway 4",
-      "target": "4d849466-5c23-4303-b945-d963e789b42c",
-      "target_name": "Waiter Prepares Nonalcoholic Beverages",
-      "condition": "Always"
-    },
-    {
-      "id": "3a18a7d0-ad72-4e87-89b1-1f5c6c761229",
-      "source": "188f8944-1c2d-40b1-b5d5-8517ab62c004",
-      "source_name": "Kitchen Prepares Food",
-      "target": "ee645217-f9f9-4466-b6d6-de0fa6cdb7c0",
-      "target_name": "gateway 5"
-    },
-    {
-      "id": "a770d5ee-878d-44e4-900c-04eec47198b3",
-      "source": "ee645217-f9f9-4466-b6d6-de0fa6cdb7c0",
-      "source_name": "gateway 5",
-      "target": "1cb0ce2f-81d0-40ad-bd80-3496b84a1d96",
-      "target_name": "Kitchen Passes Food to Waiter",
-      "condition": "Always"
-    },
-    {
-      "id": "2e4865ea-67aa-4f83-b259-9bd5ebd04ff4",
-      "source": "ee645217-f9f9-4466-b6d6-de0fa6cdb7c0",
-      "source_name": "gateway 5",
-      "target": "4d849466-5c23-4303-b945-d963e789b42c",
-      "target_name": "Waiter Prepares Nonalcoholic Beverages",
-      "condition": "Always"
-    },
-    {
-      "id": "6364d1f1-0855-4640-b9e1-cd9ba3dfebc2",
-      "source": "1cb0ce2f-81d0-40ad-bd80-3496b84a1d96",
-      "source_name": "Kitchen Passes Food to Waiter",
-      "target": "0d29ff31-5353-414a-856f-f4adcd515f05",
-      "target_name": "Waiter Delivers to Guest's Room"
-    },
-    {
-      "id": "56e7313b-9b57-4211-b505-99cae72942fb",
-      "source": "0d29ff31-5353-414a-856f-f4adcd515f05",
-      "source_name": "Waiter Delivers to Guest's Room",
-      "target": "89dbd4c9-d0bf-48d6-816b-0086e10e311f",
-      "target_name": "Waiter Debits Guest's Account"
-    },
-    {
-      "id": "bde4f9c3-3df4-481f-9c9e-4569258096a1",
-      "source": "4d849466-5c23-4303-b945-d963e789b42c",
-      "source_name": "Waiter Prepares Nonalcoholic Beverages",
-      "target": "eaec87e8-f658-410d-98a3-8ee91dd4f28b",
-      "target_name": "gateway 6"
-    },
-    {
-      "id": "bcbcc3c7-a856-4995-8cb1-83103cf551af",
-      "source": "eaec87e8-f658-410d-98a3-8ee91dd4f28b",
-      "source_name": "gateway 6",
-      "target": "0d29ff31-5353-414a-856f-f4adcd515f05",
-      "target_name": "Waiter Delivers to Guest's Room",
-      "condition": "Always, if wine or other alcoholic beverages are ordered"
-    },
-    {
-      "id": "8752ed37-ed81-462c-a9ee-13a88c710c8f",
-      "source": "eaec87e8-f658-410d-98a3-8ee91dd4f28b",
-      "source_name": "gateway 6",
-      "target": "9dd8f86d-7b30-4902-b7a0-ac6e2304a35e",
-      "target_name": "Sommelier Notifies No Alcoholic Beverage Needed",
-      "condition": "No wine or other alcoholic beverages are ordered"
-    },
-    {
-      "id": "bb7d2841-6ee3-4aaa-91e0-294032f32682",
-      "source": "eaec87e8-f658-410d-98a3-8ee91dd4f28b",
-      "source_name": "gateway 6",
-      "target": "07ebef85-4b81-4b6a-ba65-b5157ba06fd1",
-      "target_name": "Sommelier Passes Alcoholic Beverages",
-      "condition": "Wine or other alcoholic beverages are ordered"
-    },
-    {
-      "id": "4059d25b-075a-49a6-bcdd-632da5b590d9",
-      "source": "6395b39d-80a3-48c5-879e-a19c691730ee",
-      "source_name": "Manager Assigns Order to Waiter",
-      "target": "b53336a5-cc07-427e-b9c9-5cfaca56e9d3",
-      "target_name": "Waiter Readies Cart"
-    },
-    {
-      "id": "a649da94-d491-43fb-bc8f-89d3510af6fd",
-      "source": "9dd8f86d-7b30-4902-b7a0-ac6e2304a35e",
-      "source_name": "Sommelier Notifies No Alcoholic Beverage Needed",
-      "target": "0d29ff31-5353-414a-856f-f4adcd515f05",
-      "target_name": "Waiter Delivers to Guest's Room"
-    },
-    {
-      "id": "0e5c425b-9a75-4132-bf19-6535dcdc2a77",
-      "source": "07ebef85-4b81-4b6a-ba65-b5157ba06fd1",
-      "source_name": "Sommelier Passes Alcoholic Beverages",
-      "target": "0d29ff31-5353-414a-856f-f4adcd515f05",
-      "target_name": "Waiter Delivers to Guest's Room"
+      "id": "11f895fe-d935-4c4b-a533-606d134b790b",
+      "source": "d5470dcb-0cf1-484c-8259-ec8f066d5ce4",
+      "source_name": "Debit Guest's Account",
+      "target": "2ed166b6-89ea-473d-bc2e-7a7e1bdae673",
+      "target_name": "None"
     }
   ]
 }
